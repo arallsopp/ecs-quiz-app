@@ -1,0 +1,589 @@
+{
+    "metadata": {
+      "title": "ECS Health, Safety and Environmental Assessment",
+      "version": "2024",
+      "totalQuestions": 232,
+      "passScore": 43,
+      "totalQuestionsInExam": 50,
+      "timeLimit": 30
+    },
+    "categories": [
+      {
+        "id": "general",
+        "name": "General Health and Safety at Work",
+        "examQuestions": 6
+      },
+      {
+        "id": "manual",
+        "name": "Manual Handling Operations",
+        "examQuestions": 4
+      },
+      {
+        "id": "accidents",
+        "name": "Reporting Accidents",
+        "examQuestions": 3
+      },
+      {
+        "id": "ppe",
+        "name": "Personal Protective Equipment at Work",
+        "examQuestions": 4
+      },
+      {
+        "id": "health",
+        "name": "Health and Hygiene",
+        "examQuestions": 3
+      },
+      {
+        "id": "fire",
+        "name": "Fire and Emergency",
+        "examQuestions": 9
+      },
+      {
+        "id": "height",
+        "name": "Work at Height",
+        "examQuestions": 5
+      },
+      {
+        "id": "equipment",
+        "name": "Work Equipment",
+        "examQuestions": 4
+      },
+      {
+        "id": "hazards",
+        "name": "Special Site Hazards",
+        "examQuestions": 3
+      },
+      {
+        "id": "electro",
+        "name": "Electrotechnical",
+        "examQuestions": 6
+      },
+      {
+        "id": "environmental",
+        "name": "Environmental",
+        "examQuestions": 3
+      }
+    ],
+    "questions": [
+      {
+        "id": "1.1",
+        "category": "general",
+        "question": "What do the letters CDM stand for?",
+        "answers": [
+          "Control of Demolition and Management Regulations",
+          "Control of Dangerous Materials Regulations",
+          "Construction (Demolition Management) Regulations",
+          "Construction (Design and Management) Regulations"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The CDM Regulations impose duties to manage construction projects, ensure physical safeguards are provided to prevent danger during such projects and that adequate welfare facilities are provided."
+      },
+      {
+        "id": "1.2",
+        "category": "general",
+        "question": "Identify one method of enforcing regulations that are available to the Health and Safety Executive:",
+        "answers": [
+          "Health Notice",
+          "Improvement Notice",
+          "Obstruction Notice",
+          "Increasing insurance premiums"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Improvement notices require action to achieve standards which meet health and safety law."
+      },
+      {
+        "id": "1.3",
+        "category": "general",
+        "question": "What happens if a Prohibition Notice is issued by an Inspector of the local authority or the HSE?",
+        "answers": [
+          "The work in hand can be completed, but no new work started",
+          "The work can continue if adequate safety precautions are put in place",
+          "The work that is subject to the notice must cease",
+          "The work can continue, provided a risk assessment is carried out"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The work activity covered by a prohibition notice must cease, until the identified danger is removed."
+      },
+      {
+        "id": "1.4",
+        "category": "general",
+        "question": "Health and Safety Executive Inspector can?",
+        "answers": [
+          "Only visit if they have made an appointment",
+          "Visit at any time",
+          "Only visit if accompanied by the principal contractor",
+          "Only visit to interview the site manager"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Inspectors have a range of powers, including the right to visit premises at any time."
+      },
+      {
+        "id": "1.5",
+        "category": "general",
+        "question": "Prohibition Notice means:",
+        "answers": [
+          "When you finish the work you must not start again",
+          "The work must stop immediately",
+          "Work is to stop for that day only",
+          "Work may continue until the end of the day"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The work activity covered by the prohibition notice must cease, until the identified danger is removed."
+      },
+      {
+        "id": "1.6",
+        "category": "general",
+        "question": "In what circumstances can an HSE Improvement Notice be issued?",
+        "answers": [
+          "If there is a breach of legal requirements",
+          "By warrant through the police",
+          "Only between Monday and Friday on site",
+          "Through the prosecution office"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Improvement notices require action to achieve standards which meet health and safety law."
+      },
+      {
+        "id": "1.7",
+        "category": "general",
+        "question": "What is an Improvement Notice?",
+        "answers": [
+          "A notice issued by the site principal contractor to tidy up the site",
+          "A notice from the client to the principal contractor to speed up the work",
+          "A notice issued by a Building Control Officer to deepen foundations",
+          "A notice issued by an HSE/local authority Inspector to enforce compliance with health and safety legislation"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Improvement notices require action to achieve standards which meet health and safety law."
+      },
+      {
+        "id": "1.8",
+        "category": "general",
+        "question": "If a Health and Safety Executive Inspector issues a Prohibition Notice, this means that:",
+        "answers": [
+          "The Site Manager can choose whether or not to ignore the notice",
+          "Specific work activities, highlighted on the notice, must stop",
+          "The HSE must supervise the work covered by the notice",
+          "The HSE must supervise all work from then on"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Prohibition notices are intended to stop activities which can cause serious injury."
+      },
+      {
+        "id": "1.9",
+        "category": "general",
+        "question": "Employers are required to provide information to their employees on their health and safety rights and responsibilities and how to get advice by:",
+        "answers": [
+          "Telling them verbally when they start work for them",
+          "Displaying a poster or giving them leaflets approved by the HSE",
+          "Making them read the company health and safety policy",
+          "E-mailing the information to them"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This is a requirement of the Health and Safety Information for Employees Regulations (as amended)."
+      },
+      {
+        "id": "1.10",
+        "category": "general",
+        "question": "Who is responsible for signing a Company Safety Policy?",
+        "answers": [
+          "Site Manager",
+          "Company Safety Officer",
+          "Company Secretary",
+          "Managing Director"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Health and Safety at Work Act requires the most senior member of management to sign the health and safety policy statement."
+      },
+      {
+        "id": "1.11",
+        "category": "general",
+        "question": "Which one of the following must be in a company's written Health and Safety Policy?",
+        "answers": [
+          "Aims and objectives of the company",
+          "Organisation and arrangements in force for carrying out the health and safety policy",
+          "Name of the Health and Safety Adviser",
+          "Company Director's home address"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This is a specific requirement of the Health and Safety at Work Act."
+      },
+      {
+        "id": "1.12",
+        "category": "general",
+        "question": "Employers have to produce a written Health and Safety Policy statement when:",
+        "answers": [
+          "A contract commences",
+          "They employ five people or more",
+          "The safety representative requests it",
+          "The HSE notifies them"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This is a specific requirement of the Health and Safety at Work Act."
+      },
+      {
+        "id": "1.13",
+        "category": "general",
+        "question": "Companies employing five or more people must have a written Health and Safety Policy because:",
+        "answers": [
+          "The principal contractor gives them work on site",
+          "The HSAWA 1974 requires it",
+          "The Social Security Act requires it",
+          "The trade unions require it"
+        ],
+        "correctAnswer": 1,
+        "explanation": ""
+      },
+      {
+        "id": "1.14",
+        "category": "general",
+        "question": "What do the letters HSE stand for?",
+        "answers": [
+          "Highly Safe Electrician",
+          "Health and Safety Exercise",
+          "Health and Safety Examiner",
+          "Health and Safety Executive"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The Health and Safety Executive was established under the Health and Safety at Work Act 1974."
+      },
+      {
+        "id": "1.15",
+        "category": "general",
+        "question": "The Health and Safety Executive is:",
+        "answers": [
+          "Part of the National Health Service",
+          "The regulatory body for the promotion of health and safety at work",
+          "The jury in health and safety court cases",
+          "Part of the police force"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The Health and Safety Executive is part of the Department for Work and Pensions."
+      },
+      {
+        "id": "1.16",
+        "category": "general",
+        "question": "The Health and Safety at Work Act requires employers to provide what for their employees?",
+        "answers": [
+          "Adequate rest periods",
+          "Payment for work done",
+          "A safe place of work",
+          "Suitable transport to work"
+        ],
+        "correctAnswer": 2,
+        "explanation": "This is a specific requirement of Section 2 of the Health and Safety at Work Act."
+      },
+      {
+        "id": "1.17",
+        "category": "general",
+        "question": "The Health and Safety at Work Act 1974 and any regulations made under the Act are:",
+        "answers": [
+          "Not compulsory, but should be complied with if convenient",
+          "Advisory to companies and individuals",
+          "Practical advice for the employer to follow",
+          "Legally binding"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The requirements of health and safety law are mandatory and failure to follow them can lead to prosecution."
+      },
+      {
+        "id": "1.18",
+        "category": "general",
+        "question": "Under the Health and Safety at Work Act 1974, which of the following have a duty to work safely?",
+        "answers": [
+          "Employees only",
+          "The general public",
+          "Employers only",
+          "All people at work"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Employers, employees and the self-employed all have duties to work safely under the Act."
+      },
+      {
+        "id": "1.19",
+        "category": "general",
+        "question": "What is the MAXIMUM penalty that a Higher Court, can currently impose for a breach of the Health and Safety at Work Act?",
+        "answers": [
+          "£20,000 fine and two years' imprisonment",
+          "£15,000 fine and three years' imprisonment",
+          "£1,000 fine and six months imprisonment",
+          "Unlimited fine and two years' imprisonment"
+        ],
+        "correctAnswer": 3,
+        "explanation": "A Lower Court can impose a fine of up to £20,000 and/or up to six months imprisonment for certain offences. The potential fine in a Higher Court, however, is unlimited and the term of imprisonment can be up to 2 years."
+      },
+      {
+        "id": "1.20",
+        "category": "general",
+        "question": "What do the letters ACOP stand for?",
+        "answers": [
+          "Accepted Code of Provisions",
+          "Approved Condition of Practice",
+          "Approved Code of Practice",
+          "Accepted Code of Practice"
+        ],
+        "correctAnswer": 2,
+        "explanation": "An ACOP is a code of practice approved by the Health and Safety Executive (or the Health and Safety Commission prior to April 2008)."
+      },
+      {
+        "id": "1.21",
+        "category": "general",
+        "question": "Where should you look for official advice on health and safety matters?",
+        "answers": [
+          "A set of health and safety guidelines provided by suppliers",
+          "The health and safety rules as laid down by the employer",
+          "Guidance issued by the Health and Safety Executive",
+          "A professionally approved guide book on regulations"
+        ],
+        "correctAnswer": 2,
+        "explanation": "The HSE is the UK enforcing body and its guidance can be regarded as 'official'."
+      },
+      {
+        "id": "1.22",
+        "category": "general",
+        "question": "Regulations that govern health and safety on construction sites:",
+        "answers": [
+          "Apply only to inexperienced workers",
+          "Do not apply during 'out of hours' working",
+          "Apply only to large companies",
+          "Are mandatory (that is, compulsory)"
+        ],
+        "correctAnswer": 3,
+        "explanation": "The requirements of health and safety law are mandatory, and failure to follow them can lead to prosecutions."
+      },
+      {
+        "id": "1.23",
+        "category": "general",
+        "question": "Which of the following statements is correct?",
+        "answers": [
+          "The duty for health and safety falls only on the employer",
+          "All employees must take reasonable care, not only to protect themselves but also their colleagues",
+          "Employees have no responsibility for Health and Safety on site",
+          "Only the client is responsible for safety on site"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This is a legal requirement under Section 7 of the Health & Safety at Work Act."
+      },
+      {
+        "id": "1.24",
+        "category": "general",
+        "question": "Who of the following would you expect to be responsible for managing health and safety on site?",
+        "answers": [
+          "Foreman",
+          "Your employer",
+          "Main sub-contractor",
+          "HSE Inspector"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The responsibility for management of health and safety at work rests with the employer."
+      },
+      {
+        "id": "1.25",
+        "category": "general",
+        "question": "Which of the following is correct for risk assessment?",
+        "answers": [
+          "It is a good idea but not essential",
+          "Only required to be done for hazardous work",
+          "Must always be done",
+          "Only required on major jobs"
+        ],
+        "correctAnswer": 2,
+        "explanation": "There is a legal requirement for all work to be suitably risk assessed."
+      },
+      {
+        "id": "1.26",
+        "category": "general",
+        "question": "In the context of a risk assessment, what do you understand by the term risk?",
+        "answers": [
+          "An unsafe act or condition",
+          "Something with the potential to cause injury",
+          "Any work activity that can be described as dangerous",
+          "The likelihood that harm from a particular hazard will occur"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Hazard and risk are not the same. Risk reflects the chance of being harmed by a hazard."
+      },
+      {
+        "id": "1.27",
+        "category": "general",
+        "question": "Who would you expect to carry out a risk assessment on your working site?",
+        "answers": [
+          "The CDM Co-ordinator",
+          "A visiting HSE Inspector",
+          "The construction project designer",
+          "A competent person"
+        ],
+        "correctAnswer": 3,
+        "explanation": "A risk assessment must be conducted by a 'competent person'."
+      },
+      {
+        "id": "1.28",
+        "category": "general",
+        "question": "What is a HAZARD?",
+        "answers": [
+          "Where an accident is likely to happen",
+          "An accident waiting to happen",
+          "Something with the potential to cause harm",
+          "The likelihood of something going wrong"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Examples of hazards include: a drum of acid, breeze blocks on an elevated plank; cables running across a floor."
+      },
+      {
+        "id": "1.29",
+        "category": "general",
+        "question": "What must be done before any work begins?",
+        "answers": [
+          "Emergency plan",
+          "Assessment of risk",
+          "Soil assessment",
+          "Geological survey"
+        ],
+        "correctAnswer": 1,
+        "explanation": "This is a legal requirement of the Management of Health and Safety at Work Regulations."
+      },
+      {
+        "id": "1.30",
+        "category": "general",
+        "question": "Complete the following sentence: A risk assessment:",
+        "answers": [
+          "Is a piece of paper required by law",
+          "Prevents accidents",
+          "Is a means of analysing what might go wrong",
+          "Isn't particularly useful"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Risk assessment involves a careful review of what can cause harm and the practical measures to be taken to reduce the risk of harm."
+      },
+      {
+        "id": "1.31",
+        "category": "general",
+        "question": "Why would your supervisor ask you to read the method statement and risk assessment before you start your next job?",
+        "answers": [
+          "They think you have got nothing better to do",
+          "The documents contain information on how to carry out the job in a safe manner",
+          "They wouldn't as they think they are a waste of time",
+          "As someone has taken the time and trouble to write them, you might as well read them"
+        ],
+        "correctAnswer": 1,
+        "explanation": "The supervisor must, by law, keep workers advised of significant risks, and control measures."
+      },
+      {
+        "id": "1.32",
+        "category": "general",
+        "question": "What do the blue and white health and safety signs tell you?",
+        "answers": [
+          "Things you must do",
+          "Where the nearest fire exit is",
+          "The hazards in the area",
+          "Things you must not do"
+        ],
+        "correctAnswer": 0,
+        "explanation": "Blue and white signs show a 'mandatory' requirement."
+      },
+      {
+        "id": "1.33",
+        "category": "general",
+        "question": "What colours are emergency exit signs?",
+        "answers": [
+          "Green and white",
+          "Red and yellow",
+          "Red and white",
+          "Blue and white"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The colours are prescribed in the Health and Safety (Safety Signs and Signals) Regulations."
+      },
+      {
+        "id": "1.34",
+        "category": "general",
+        "question": "What is the main colour on a safety sign stating that you must NOT do something?",
+        "answers": [
+          "Blue",
+          "Green",
+          "Red",
+          "Yellow"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Prohibitory signs are round and feature a black pictogram on a white background with red edging and diagonal line."
+      },
+      {
+        "id": "1.35",
+        "category": "general",
+        "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of signs. What colours are used on a sign indicating a warning, for example 'Fork-lift trucks operating'?",
+        "answers": [
+          "Blue and white",
+          "Green and white",
+          "Yellow and black",
+          "Red and white"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Warning signs are triangular and feature a black pictogram on a yellow background with black edging."
+      },
+      {
+        "id": "1.36",
+        "category": "general",
+        "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a prohibited activity, for example 'No access for pedestrians'?",
+        "answers": [
+          "Green and white",
+          "Red, black and white",
+          "Blue and white",
+          "Yellow and black"
+        ],
+        "correctAnswer": 1,
+        "explanation": "Prohibitory signs are round and feature a black pictogram on a white background with red edging and diagonal line."
+      },
+      {
+        "id": "1.37",
+        "category": "general",
+        "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a mandatory activity, for example 'Safety helmets must be worn'?",
+        "answers": [
+          "Green and white",
+          "Red, black and white",
+          "Blue and white",
+          "Yellow and black"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Mandatory signs are round and feature a white pictogram on a blue background."
+      },
+      {
+        "id": "1.38",
+        "category": "general",
+        "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a safe condition, for example First Aid kit?",
+        "answers": [
+          "Red, black and white",
+          "Blue and white",
+          "Yellow and black",
+          "Green and white"
+        ],
+        "correctAnswer": 3,
+        "explanation": "Emergency escape and first-aid signs are rectangular or square and feature a white pictogram on a green background."
+      },
+      {
+        "id": "1.39",
+        "category": "general",
+        "question": "Why should regular inspections of the workplace take place?",
+        "answers": [
+          "To check whether the working environment is safe",
+          "To check that all employees are present",
+          "To check that everyone is doing their job",
+          "To prepare for a visit from an HSE Inspector"
+        ],
+        "correctAnswer": 0,
+        "explanation": "The Management of Health and Safety at Work Regulations require that routine inspections of workplaces are carried out to ensure that preventative and protective measures are in place and effective."
+      },
+      {
+        "id": "1.40",
+        "category": "general",
+        "question": "How can you help to prevent accidents?",
+        "answers": [
+          "Don't report them",
+          "Know how to get help quickly",
+          "Report any unsafe conditions",
+          "Know where the first-aid kit is kept"
+        ],
+        "correctAnswer": 2,
+        "explanation": "Action to improve safety can only be taken if the risk is known about. Employees have a duty of care to other employees."
+      }
+    ]
+  }
