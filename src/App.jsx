@@ -73,17 +73,30 @@ function App() {
 
     return (
         <>
-            {!quizStarted && <button onClick={handleStartQuiz}>Start Quiz</button>}
+            {!quizStarted && <>
+                <div className='logo'></div>
+                <h1>ECS Health and Safety Quiz</h1>
+                <br/>
+                <label>Questions to ask
+                <input id="questionsToAsk"
+                       type="number"
+                       min="1" max={questionsData.questions.length}
+                       value={questionsToAsk}
+                       onChange={(event) => {
+                           setQuestionsToAsk(parseInt(event.target.value))}
+                       }
+                />
+                </label><br/>
+                <button onClick={handleStartQuiz}>Start Quiz</button>
+            </>}
             {quizStarted &&
                 <>
-                    <div className='logo'></div>
-                    <h1>ECS Health and Safety Quiz</h1>
                     {showScore ?
                         <div>
                             <h2>Quiz Complete!</h2>
                             <p>You scored {score} out of {questionsToAsk}</p>
                             <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
-                            <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'You need 86% to pass'}</p>
+                            <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'Sorry. You needed 86% to pass'}</p>
                             <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
                         </div>
                         : <Question
