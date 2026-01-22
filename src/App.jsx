@@ -1,9 +1,8 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
 import './App.css'
-
 
 
 function App() {
@@ -48,57 +47,57 @@ function App() {
     };
 
     const handleAnswerClick = (answerIndex) => {
-    setSelectedAnswer(answerIndex);
-    setShowingFeedback(true);
+        setSelectedAnswer(answerIndex);
+        setShowingFeedback(true);
 
-    // Check if correct and update score
-    const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
-    if (correct) setScore(score + 1);
+        // Check if correct and update score
+        const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
+        if (correct) setScore(score + 1);
 
-    // DON'T move to next question yet!
-  };
+        // DON'T move to next question yet!
+    };
 
-  const handleNextQuestion = () => {
-    setSelectedAnswer(null);
-    setShowingFeedback(false);
+    const handleNextQuestion = () => {
+        setSelectedAnswer(null);
+        setShowingFeedback(false);
 
-    const nextQuestion = currentQuestionIndex + 1;
-    if (nextQuestion < questionsToAsk) {
-      setCurrentQuestionIndex(nextQuestion);
-    } else {
-      setShowScore(true);
-    }
-  };
+        const nextQuestion = currentQuestionIndex + 1;
+        if (nextQuestion < questionsToAsk) {
+            setCurrentQuestionIndex(nextQuestion);
+        } else {
+            setShowScore(true);
+        }
+    };
 
-  console.log('Current score:', score); // This will show updates!
+    console.log('Current score:', score); // This will show updates!
 
-  return (
-    <>
-    { !quizStarted && <button onClick={handleStartQuiz}>Start Quiz</button> }
-    { quizStarted &&
+    return (
         <>
-        <div className='logo'></div>
-      <h1>ECS Health and Safety Quiz</h1>
-        { showScore ?
-            <div>
-                <h2>Quiz Complete!</h2>
-                <p>You scored {score} out of {questionsToAsk}</p>
-                <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
-                <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'You need 86% to pass'}</p>
-                <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
-            </div>
-            : <Question
-        questionData={questions[currentQuestionIndex]}
-        onAnswer={handleAnswerClick}
-        selectedAnswer={selectedAnswer}
-        showingFeedback={showingFeedback}
-        onNextQuestion={handleNextQuestion}
-        />
-      }
-      </>
-    }
-    </>
-  );
+            {!quizStarted && <button onClick={handleStartQuiz}>Start Quiz</button>}
+            {quizStarted &&
+                <>
+                    <div className='logo'></div>
+                    <h1>ECS Health and Safety Quiz</h1>
+                    {showScore ?
+                        <div>
+                            <h2>Quiz Complete!</h2>
+                            <p>You scored {score} out of {questionsToAsk}</p>
+                            <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
+                            <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'You need 86% to pass'}</p>
+                            <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
+                        </div>
+                        : <Question
+                            questionData={questions[currentQuestionIndex]}
+                            onAnswer={handleAnswerClick}
+                            selectedAnswer={selectedAnswer}
+                            showingFeedback={showingFeedback}
+                            onNextQuestion={handleNextQuestion}
+                        />
+                    }
+                </>
+            }
+        </>
+    );
 }
 
 export default App;
