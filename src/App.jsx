@@ -8,9 +8,13 @@ function App() {
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
 
+  console.log('Current score:', score); // This will show updates!
 
   const handleAnswerClick = (answerIndex) => {
     const correct = (questionsData.questions[currentQuestionIndex].correctAnswer === answerIndex);
+    if(correct){
+      setScore(score + 1);
+    }
     console.log('answered', answerIndex, correct ? 'yes':'no');
   };
 
