@@ -14,6 +14,12 @@ function App() {
     const correct = (questionsData.questions[currentQuestionIndex].correctAnswer === answerIndex);
     if(correct){
       setScore(score + 1);
+      const nextQuestion = currentQuestionIndex + 1;
+      if(nextQuestion < questionsData.questions.length){
+        setCurrentQuestionIndex(nextQuestion);
+      }else{
+        console.log('end of questions');
+      }
     }
     console.log('answered', answerIndex, correct ? 'yes':'no');
   };
