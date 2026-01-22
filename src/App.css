@@ -9,3 +9,16 @@
   width: 100%;
   margin:0 0 0.25rem 0;
 }
+.chosen{
+  background-color: lightgray;
+  color:black;
+}
+.chosen.correct{
+  background-color: green;
+}
+.chosen.wrong{
+  background-color: red;
+}
+.answer.correct{
+  background-color: darkgreen;
+}

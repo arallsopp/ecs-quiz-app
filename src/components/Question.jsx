@@ -1,26 +1,18 @@
 import { useState } from "react";
+import {shuffle} from "../utils/shuffle.js";
 
 
-// Fisher–Yates shuffle
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-function Question({ questionData, onAnswer }) {
+function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
     
-    //shuffle answers once
+    //shuffle answers once? No, I want to do this when render happens, I think?
     const [shuffledAnswers] = useState(() => {
         const withIndex = questionData.answers.map((text, index) => ({
             text,
             originalIndex: index
         }));
-        shuffle(withIndex);
-        return withIndex;    
+        return shuffle(withIndex);
     })
-
+    console.log('rendering!');
 
     return (
       <div>
@@ -29,12 +21,23 @@ function Question({ questionData, onAnswer }) {
         {shuffledAnswers.map((answer) => (
             <button 
             key={answer.originalIndex} 
-            className="answer"
+            className={`answer 
+                ${selectedAnswer === answer.originalIndex ? 'chosen' : ''}
+                ${ (showingFeedback ?
+                    (answer.originalIndex === questionData.correctAnswer) ? 'correct' : 'wrong'
+                    : '')}
+                `}
+            disabled ={showingFeedback}
             onClick={() => {
                 console.log('component saw answer click',answer.originalIndex);
                 onAnswer(answer.originalIndex)
             }}>{answer.text}</button>
-        ))}   
+        ))}
+
+          {showingFeedback ?
+              <button onClick={() => {
+                  onNextQuestion() //go to next question
+              }}>Next Question</button> : null}
       </div>
     )
   }

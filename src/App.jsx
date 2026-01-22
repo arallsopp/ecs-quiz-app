@@ -1,31 +1,46 @@
 import { useState } from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
+import {shuffle} from "./utils/shuffle.js";
 import './App.css'
 
+
+
 function App() {
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
-  
-  console.log('Current score:', score); // This will show updates!
+  const questionsToAsk = 3;
+
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showingFeedback, setShowingFeedback] = useState(false);
 
   const handleAnswerClick = (answerIndex) => {
-    const correct = (questionsData.questions[currentQuestionIndex].correctAnswer === answerIndex);
-    if(correct){
-      setScore(score + 1);
-      const nextQuestion = currentQuestionIndex + 1;
-      if(nextQuestion < questionsData.questions.length){
-        setCurrentQuestionIndex(nextQuestion);
-      }else{
-        console.log('end of questions');
-        setShowScore(true);
-      }
-    }
-    console.log('answered', answerIndex, correct ? 'yes':'no');
+    setSelectedAnswer(answerIndex);
+    setShowingFeedback(true);
+
+    // Check if correct and update score
+    const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
+    if (correct) setScore(score + 1);
+
+    // DON'T move to next question yet!
   };
 
-  console.log('Questions loaded',questionsData);
+  const handleNextQuestion = () => {
+    setSelectedAnswer(null);
+    setShowingFeedback(false);
+
+    const nextQuestion = currentQuestionIndex + 1;
+    if (nextQuestion < questionsToAsk) {
+      setCurrentQuestionIndex(nextQuestion);
+    } else {
+      setShowScore(true);
+    }
+  };
+
+  const [questions] = useState(() => shuffle(questionsData.questions));
+  console.log('Current score:', score); // This will show updates!
 
   return (
     <>
@@ -34,8 +49,11 @@ function App() {
       { showScore ? 
         <p>End of quiz. Score is { score }</p>
       : <Question 
-        questionData={questionsData.questions[currentQuestionIndex]}
+        questionData={questions[currentQuestionIndex]}
         onAnswer={handleAnswerClick}
+        selectedAnswer={selectedAnswer}
+        showingFeedback={showingFeedback}
+        onNextQuestion={handleNextQuestion}
         />
       }
     </>
