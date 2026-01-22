@@ -2,6 +2,7 @@
 function Question({ questionData, onAnswer }) {
     return (
       <div>
+        <small>Question: {questionData.id}</small>
         <h2>{questionData.question}</h2>
         {questionData.answers.map((answer,index) => (
             <button 

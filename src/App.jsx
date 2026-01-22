@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
+import './App.css'
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <>
-      <h1>My App</h1>
+    <div className='logo'></div>
+      <h1>ECS Health and Safety Quiz</h1>
       <Question 
         questionData={questionsData.questions[currentQuestionIndex]}
         onAnswer={handleAnswerClick}
