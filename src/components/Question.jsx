@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import {shuffle} from "../utils/shuffle.js";
 
 function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
 
-    const [shuffledAnswers, setShuffledAnswers] = useState([]);
-
-    // Re-shuffle whenever questionData changes
-    useEffect(() => {
+    // Memo-ize the shuffled answers - only recalculate when questionData changes
+    const shuffledAnswers = useMemo(() => {
         const withIndex = questionData.answers.map((text, index) => ({
             text,
             originalIndex: index
         }));
-        setShuffledAnswers(shuffle(withIndex));
-    }, [questionData]); // Re-run when questionData changes
+        return shuffle(withIndex);
+    }, [questionData]);
 
     return (
         <div>
