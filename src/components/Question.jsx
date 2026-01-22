@@ -9,22 +9,24 @@ function shuffle(array) {
     }
 }
 
-
 function Question({ questionData, onAnswer }) {
     
-    //store original position.
-    const withIndex = questionData.answers.map((text, index) => ({
-        text,
-        originalIndex: index
-    }));
+    //shuffle answers once
+    const [shuffledAnswers] = useState(() => {
+        const withIndex = questionData.answers.map((text, index) => ({
+            text,
+            originalIndex: index
+        }));
+        shuffle(withIndex);
+        return withIndex;    
+    })
 
-    shuffle(withIndex);
 
     return (
       <div>
         <small>Question: {questionData.id}</small>
         <h2>{questionData.question}</h2>
-        {withIndex.map((answer) => (
+        {shuffledAnswers.map((answer) => (
             <button 
             key={answer.originalIndex} 
             className="answer"
