@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {shuffle} from "../utils/shuffle.js";
 
 
 function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
-    
-    //shuffle answers once? No, I want to do this when render happens, I think?
-    const [shuffledAnswers] = useState(() => {
+
+    const [shuffledAnswers, setShuffledAnswers] = useState([]);
+
+    // Re-shuffle whenever questionData changes
+    useEffect(() => {
         const withIndex = questionData.answers.map((text, index) => ({
             text,
             originalIndex: index
         }));
-        return shuffle(withIndex);
-    })
+        setShuffledAnswers(shuffle(withIndex));
+    }, [questionData]); // Re-run when questionData changes
     console.log('rendering!');
 
     return (
