@@ -7,7 +7,7 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [showScore, setShowScore] = useState(false)
-
+  
   console.log('Current score:', score); // This will show updates!
 
   const handleAnswerClick = (answerIndex) => {
@@ -19,6 +19,7 @@ function App() {
         setCurrentQuestionIndex(nextQuestion);
       }else{
         console.log('end of questions');
+        setShowScore(true);
       }
     }
     console.log('answered', answerIndex, correct ? 'yes':'no');
@@ -30,10 +31,13 @@ function App() {
     <>
     <div className='logo'></div>
       <h1>ECS Health and Safety Quiz</h1>
-      <Question 
+      { showScore ? 
+        <p>End of quiz. Score is { score }</p>
+      : <Question 
         questionData={questionsData.questions[currentQuestionIndex]}
         onAnswer={handleAnswerClick}
         />
+      }
     </>
   );
 }
