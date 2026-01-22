@@ -46,9 +46,14 @@ function App() {
     <>
     <div className='logo'></div>
       <h1>ECS Health and Safety Quiz</h1>
-      { showScore ? 
-        <p>End of quiz. Score is { score }</p>
-      : <Question 
+        { showScore ?
+            <div>
+                <h2>Quiz Complete!</h2>
+                <p>You scored {score} out of {questionsToAsk}</p>
+                <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
+                <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'PASS ✓' : 'FAIL ✗'}</p>
+            </div>
+            : <Question
         questionData={questions[currentQuestionIndex]}
         onAnswer={handleAnswerClick}
         selectedAnswer={selectedAnswer}
