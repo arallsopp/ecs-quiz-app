@@ -8,15 +8,46 @@ import './App.css'
 
 function App() {
 
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [score, setScore] = useState(0)
-  const [showScore, setShowScore] = useState(false)
-  const questionsToAsk = 3;
+    // Quiz settings (set on splash screen)
+    const [questionsToAsk, setQuestionsToAsk] = useState(3);
+    const [mode, setMode] = useState('practice'); // 'practice' or 'exam'
 
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showingFeedback, setShowingFeedback] = useState(false);
+    // Quiz state
+    const [quizStarted, setQuizStarted] = useState(false);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [score, setScore] = useState(0);
+    const [showScore, setShowScore] = useState(false);
 
-  const handleAnswerClick = (answerIndex) => {
+    // Feedback state (only used in practice mode)
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [showingFeedback, setShowingFeedback] = useState(false);
+
+    // Timer state
+    const [timeRemaining, setTimeRemaining] = useState(null);
+
+    const [questions, setQuestions] = useState(questionsData.questions);
+
+    const handleStartQuiz = () => {
+        // Shuffle questions
+        setQuestions(shuffle([...questionsData.questions]));
+
+        // Reset everything
+        setCurrentQuestionIndex(0);
+        setScore(0);
+        setShowScore(false);
+        setSelectedAnswer(null);
+        setShowingFeedback(false);
+
+        // Set timer if exam mode
+        if (mode === 'exam') {
+            setTimeRemaining(questionsToAsk * 0.6 * 60); // Convert to seconds
+        }
+
+        // Start the quiz
+        setQuizStarted(true);
+    };
+
+    const handleAnswerClick = (answerIndex) => {
     setSelectedAnswer(answerIndex);
     setShowingFeedback(true);
 
@@ -39,7 +70,6 @@ function App() {
     }
   };
 
-  const [questions] = useState(() => shuffle(questionsData.questions));
   console.log('Current score:', score); // This will show updates!
 
   return (
@@ -52,6 +82,7 @@ function App() {
                 <p>You scored {score} out of {questionsToAsk}</p>
                 <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
                 <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'You need 86% to pass'}</p>
+                <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
             </div>
             : <Question
         questionData={questions[currentQuestionIndex]}
