@@ -74,7 +74,10 @@ function App() {
 
   return (
     <>
-    <div className='logo'></div>
+    { !quizStarted && <button onClick={handleStartQuiz}>Start Quiz</button> }
+    { quizStarted &&
+        <>
+        <div className='logo'></div>
       <h1>ECS Health and Safety Quiz</h1>
         { showScore ?
             <div>
@@ -92,6 +95,8 @@ function App() {
         onNextQuestion={handleNextQuestion}
         />
       }
+      </>
+    }
     </>
   );
 }
