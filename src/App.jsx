@@ -51,7 +51,7 @@ function App() {
                 <h2>Quiz Complete!</h2>
                 <p>You scored {score} out of {questionsToAsk}</p>
                 <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
-                <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'PASS ✓' : 'FAIL ✗'}</p>
+                <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'You need 86% to pass'}</p>
             </div>
             : <Question
         questionData={questions[currentQuestionIndex]}
