@@ -3,6 +3,7 @@ import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
 import './App.css'
+import Countdown from "./components/Countdown.jsx";
 
 
 function App() {
@@ -73,6 +74,9 @@ function App() {
         }
     };
 
+    const handleOutOfTime = () => {
+        setShowScore(true);
+    }
 
     console.log('Current score:', score); // This will show updates!
 
@@ -105,9 +109,12 @@ function App() {
             </>}
             {quizStarted &&
                 <>
-                    {mode === 'exam' && <div className="timeRemaining">
-                        Time remaining: {timeRemaining} seconds
-                    </div>}
+                    {mode === 'exam' &&
+                        <Countdown
+                            onComplete={handleOutOfTime}
+                            initialSeconds = {timeRemaining}>
+                        </Countdown>
+                    }
                     <div>{mode}</div>
                     <div onClick={() => {setQuizStarted(false)}}>Quit</div>
 
