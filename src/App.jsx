@@ -85,27 +85,34 @@ function App() {
                 <div>
                     <label htmlFor="questionsToAsk">Questions to ask</label>
                     <input id="questionsToAsk"
+                           className="w-20 rounded-lg border border-gray-300 px-2 py-2 mx-2"
                            type="number"
                            min="1" max={questionsData.questions.length}
                            value={questionsToAsk}
                            onChange={(event) => {
                                setQuestionsToAsk(parseInt(event.target.value) || 1)
-                           }
-                           }
+                           }}
                     />
                 </div>
                 <div>
                     <label htmlFor="mode">Mode</label>
-                    <select id="mode" value={mode} onChange={(event) => setMode(event.target.value)}>
+                    <select id="mode"
+                            value={mode}
+                            onChange={(event) => setMode(event.target.value)}
+                            className="w-auto rounded-lg border border-gray-300 px-2 py-2 mx-2">
                         <option value="practice">Practice</option>
                         <option value="exam">Exam</option>
                     </select>
                 </div>
 
-                <button onClick={handleStartQuiz}>Start Quiz</button>
+                <button className="inline-flex items-center justify-center rounded-md
+         bg-blue-600 px-4 py-2 text-sm font-medium text-white
+         hover:bg-blue-700 active:bg-blue-800
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+         disabled:opacity-50 disabled:pointer-events-none" onClick={handleStartQuiz}>Start Quiz</button>
             </>}
             {quizStarted && <div>
-                <div className="flex items-center">
+                <div className="relative flex items-center">
                     {mode === 'exam' && !showScore && (
                         <div className="mr-auto">
                             <Countdown
@@ -115,8 +122,7 @@ function App() {
                         </div>
                     )}
 
-                    <div>{mode}</div>
-
+                    <div className="absolute left-1/2 -translate-x-1/2">{mode}</div>
 
                     <div className="ml-auto" onClick={() => {
                         setQuizStarted(false)
