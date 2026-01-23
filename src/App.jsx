@@ -26,6 +26,9 @@ function App() {
 
     const [questions, setQuestions] = useState(questionsData.questions);
 
+    const passingScore = Math.ceil(questionsToAsk * 0.86);
+    const passed = score >= passingScore;
+
     const handleStartQuiz = () => {
         // Shuffle questions
         setQuestions(shuffle([...questionsData.questions]));
@@ -169,14 +172,14 @@ function App() {
                                     <p className="text-xl text-gray-600 mb-6">
                                         You scored {score} out of {questionsToAsk}
                                     </p>
-                                    {score >= Math.ceil(questionsToAsk * 0.86) ? (
+                                    {passed ? (
                                         <p className="text-2xl text-green-600 font-bold mb-6">
                                             ✓ PASS
                                         </p>
                                     ) : (
                                         <p className="text-2xl text-red-600 font-bold mb-6">
-                                            { mode === "practice" && <span>In exam conditions, you'd have needed to get { Math.ceil(questionsToAsk * 0.86 )} correct.</span>}
-                                            { mode === "exam" &&  <span>✗ FAIL. You needed 86% to pass</span>}
+                                            { mode === "practice" && <span>In exam conditions, you'd have needed to get { passingScore } correct.</span>}
+                                            { mode === "exam" &&  <span>✗ FAIL. You needed 86% ({passingScore}/{questionsToAsk}) to pass</span>}
                                         </p>
                                     )}
                                     <button
