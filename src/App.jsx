@@ -107,21 +107,28 @@ function App() {
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-700 mb-2"> Topics to Include </label>
                             <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3">
-                                {questionsData.categories.map(category => (
-                                    <label key={category.id} className="flex items-center gap-2 cursor-pointer"> <input
-                                        type="checkbox"
-                                        checked={selectedCategories.includes(category.id)}
-                                        onChange={(e) => {
-                                            if (e.target.checked) {
-                                                setSelectedCategories([...selectedCategories, category.id]);
-                                            } else {
-                                                setSelectedCategories(selectedCategories.filter(id => id !== category.id));
-                                            }
-                                        }}
-                                        className="w-4 h-4 text-blue-600 rounded"
-                                    /> <span className="text-sm">{category.name}</span>
-                                    </label>
-                                ))}
+                                {questionsData.categories
+                                    .filter(category =>
+                                        questionsData.questions.some(q => q.category === category.id)
+                                    )
+                                    .map(category => (
+                                        <label key={category.id} className="flex items-center gap-2 cursor-pointer">
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedCategories.includes(category.id)}
+                                                onChange={(e) => {
+                                                    if (e.target.checked) {
+                                                        setSelectedCategories([...selectedCategories, category.id]);
+                                                    } else {
+                                                        setSelectedCategories(selectedCategories.filter(id => id !== category.id));
+                                                    }
+                                                }}
+                                                className="w-4 h-4 text-blue-600 rounded"
+                                            />
+                                            <span className="text-sm">{category.name}</span>
+                                        </label>
+                                    ))
+                                }
                             </div>
 
                             <button
