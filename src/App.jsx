@@ -95,18 +95,18 @@ function App() {
     console.log('Current score:', score); // This will show updates!
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {!quizStarted && (
                 <div className="max-w-md mx-auto pt-20 px-4">
                     <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
-                    <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+                    <h1 className="text-4xl font-bold text-center text-gray-100 text-gray-900 mb-8">
                         ECS Health & Safety Quiz
                     </h1>
 
-                    <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+                    <div className="bg-white dark:bg-black rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700 mb-2"> Topics to Include </label>
-                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </label>
+                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-800 rounded-lg p-3">
                                 {questionsData.categories
                                     .filter(category =>
                                         questionsData.questions.some(q => q.category === category.id)
@@ -123,9 +123,9 @@ function App() {
                                                         setSelectedCategories(selectedCategories.filter(id => id !== category.id));
                                                     }
                                                 }}
-                                                className="w-4 h-4 text-blue-600 rounded"
+                                                className="w-4 h-4 text-blue-600 dark:text-blue-400 rounded"
                                             />
-                                            <span className="text-sm">{category.name}</span>
+                                            <span className="text-sm text-black dark:text-white">{category.name}</span>
                                         </label>
                                     ))
                                 }
@@ -133,14 +133,14 @@ function App() {
 
                             <button
                                 onClick={() => setSelectedCategories(questionsData.categories.map(c => c.id))}
-                                className="text-xs text-blue-600 hover:underline mt-2"
+                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline mt-2"
                             >
                                 Select All
                             </button>
                         </div>
                         <div>
                             <label htmlFor="questionsToAsk"
-                                   className="block text-sm font-medium text-gray-700 mb-2"> Number of
+                                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Number of
                                 Questions </label> <input
                             id="questionsToAsk"
                             type="number"
@@ -154,7 +154,7 @@ function App() {
 
                         <div>
                             <label htmlFor="mode"
-                                   className="block text-sm font-medium text-gray-700 mb-2"> Mode </label>
+                                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Mode </label>
                             <select
                                 id="mode"
                                 value={mode}
@@ -178,7 +178,7 @@ function App() {
             {quizStarted && (
                 <div className="min-h-screen flex flex-col">
                     {/* Header Bar */}
-                    <div className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
+                    <div className="bg-white dark:bg-black shadow-sm border-b border-gray-200 dark:border-gray-800 px-6 py-4">
                         <div className="max-w-4xl mx-auto flex items-center justify-between">
                             <div className="flex items-center gap-4">
                                 {mode === 'exam' && !showScore && (
@@ -195,7 +195,7 @@ function App() {
                             </div>
 
                             <div className="flex items-center gap-4">
-                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">
                                 {mode === 'exam' ? 'Exam Mode' : 'Practice Mode'}
                             </span>
                                 <button
@@ -212,8 +212,8 @@ function App() {
                     <div className="flex-1 px-6 py-8">
                         <div className="max-w-4xl mx-auto">
                             {showScore ? (
-                                <div className="bg-white rounded-lg shadow-md p-8 text-center">
-                                    <h2 className="text-3xl font-bold mb-4">Quiz Complete!</h2>
+                                <div className="bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-md p-8 text-center">
+                                    <h2 className="text-3xl font-bold">Finished</h2>
                                     <div className="text-6xl font-bold mb-4">
                                         {((score / questionsToAsk) * 100).toFixed(1)}%
                                     </div>
