@@ -28,7 +28,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                     <button
                         key={answer.originalIndex}
                         className={`
-                        px-6 py-4 rounded-lg transition-all w-full text-left font-medium
+                        px-3 py-2 sm:px-6 sm:py-4 rounded-lg transition-all w-full text-left font-medium
                         ${!showingFeedback && 'bg-gray-100 hover:bg-gray-200 text-gray-900'}
                         ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 border-2 border-green-600 text-green-900'}
                         ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 border-2 border-red-600 text-red-900'}
