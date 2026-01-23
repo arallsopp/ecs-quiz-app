@@ -19,7 +19,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
             {shuffledAnswers.map((answer) => (
                 <button
                     key={answer.originalIndex}
-                    className={`answer 
+                    className={`px-4 py-2 bg-gray-700 text-white rounded-lg answer hover:bg-gray-600
                 ${selectedAnswer === answer.originalIndex ? 'chosen' : ''}
                 ${showingFeedback && answer.originalIndex === questionData.correctAnswer ? 'correct' : ''}
                 ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer ? 'wrong' : ''}
@@ -35,7 +35,8 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                 <div>
                     <p>{selectedAnswer === questionData.correctAnswer ? 'Correct. ' : 'Wrong'}</p>
                     <p className="explanation">{questionData.explanation}</p>
-                    <button onClick={onNextQuestion}>Continue</button>
+                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                            onClick={onNextQuestion}>Continue</button>
                 </div>
             )}
         </div>
