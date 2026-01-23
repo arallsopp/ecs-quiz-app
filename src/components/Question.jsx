@@ -18,7 +18,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                 <div className="text-sm text-gray-500 mb-2">
                     Category: {questionData.category}
                 </div>
-                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-100">
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-400">
                     {questionData.question}
                 </h2>
             </div>
@@ -30,9 +30,9 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                         className={`
                             px-3 py-2 sm:px-6 sm:py-4 rounded-lg transition-colors w-full text-left font-medium
                             border-2 
-                            ${!showingFeedback && 'border-transparent bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-100'}
-                            ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 dark:bg-green-900 border-green-600 dark:border-green-400 text-green-900 dark:text-green-100'}
-                            ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 dark:bg-red-900 border-red-600 dark:border-red-400 text-red-900 dark:text-red-100'}
+                            ${!showingFeedback && 'border-transparent bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-300'}
+                            ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 dark:bg-green-950 border-green-600 text-green-900 dark:text-green-100'}
+                            ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 dark:bg-red-950 border-red-600 text-red-900 dark:text-red-100'}
                             ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'dark: border-gray-800 bg-gray-50 dark:bg-gray-950 text-gray-400 dark:text-gray-600'}
                         `}
                         disabled={showingFeedback}

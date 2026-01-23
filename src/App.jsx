@@ -99,14 +99,14 @@ function App() {
             {!quizStarted && (
                 <div className="max-w-md mx-auto pt-20 px-4">
                     <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
-                    <h1 className="text-4xl font-bold text-center text-gray-100 text-gray-900 mb-8">
+                    <h1 className="text-4xl font-bold text-center text-gray-100 dark:text-gray-400 mb-8">
                         ECS Health & Safety Quiz
                     </h1>
 
-                    <div className="bg-white dark:bg-black rounded-lg shadow-md p-6 space-y-4">
+                    <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </label>
-                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-800 rounded-lg p-3">
+                            <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
+                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg p-3">
                                 {questionsData.categories
                                     .filter(category =>
                                         questionsData.questions.some(q => q.category === category.id)
@@ -148,7 +148,7 @@ function App() {
                             max={questionsData.questions.length}
                             value={questionsToAsk}
                             onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
-                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                            className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2"
                         />
                         </div>
 
@@ -159,7 +159,7 @@ function App() {
                                 id="mode"
                                 value={mode}
                                 onChange={(e) => setMode(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 px-4 py-2">
+                                className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2">
                                 <option value="practice">Practice Mode</option>
                                 <option value="exam">Exam Conditions</option>
                             </select>
@@ -200,7 +200,7 @@ function App() {
                             </span>
                                 <button
                                     onClick={() => setQuizStarted(false)}
-                                    className="text-sm text-gray-600 hover:text-gray-900"
+                                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 hover:text-gray-100"
                                 >
                                     Quit
                                 </button>
@@ -212,12 +212,12 @@ function App() {
                     <div className="flex-1 px-6 py-8">
                         <div className="max-w-4xl mx-auto">
                             {showScore ? (
-                                <div className="bg-white dark:bg-black text-black dark:text-white rounded-lg shadow-md p-8 text-center">
+                                <div className="bg-white dark:bg-black text-black dark:text-gray-400 rounded-lg shadow-md p-8 text-center">
                                     <h2 className="text-3xl font-bold">Finished</h2>
                                     <div className="text-6xl font-bold mb-4">
                                         {((score / questionsToAsk) * 100).toFixed(1)}%
                                     </div>
-                                    <p className="text-xl text-gray-600 mb-6">
+                                    <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
                                         You scored {score} out of {questionsToAsk}
                                     </p>
                                     {passed ? (
@@ -225,7 +225,7 @@ function App() {
                                             ✓ PASS
                                         </p>
                                     ) : (
-                                        <p className="text-2xl text-red-600 font-bold mb-6">
+                                        <p className="text-2xl text-red-600 dark:text-red-800 font-bold mb-6">
                                             { mode === "practice" && <span>In exam conditions, you'd have needed to get { passingScore } correct.</span>}
                                             { mode === "exam" &&  <span>✗ FAIL. You needed 86% ({passingScore}/{questionsToAsk}) to pass</span>}
                                         </p>
