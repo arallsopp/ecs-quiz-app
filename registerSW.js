@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/ecs-quiz-app/sw.js', { scope: '/ecs-quiz-app/' })})}
