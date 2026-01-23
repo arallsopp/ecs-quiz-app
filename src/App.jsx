@@ -80,7 +80,7 @@ function App() {
         <>
             {!quizStarted && <>
                 <div className='logo'></div>
-                <h1>ECS Health and Safety Quiz</h1>
+                <h1 className="text-3xl font-bold">ECS Health and Safety Quiz</h1>
 
                 <div>
                     <label htmlFor="questionsToAsk">Questions to ask</label>
