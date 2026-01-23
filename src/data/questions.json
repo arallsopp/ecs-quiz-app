@@ -830,7 +830,7 @@
         "Getting a friend to help you with the load"
       ],
       "correctAnswer": 2,
-      "explanation": "Kinetic lifting means lifting in the most safe and effective way."
+      "explanation": ""
     },
     {
       "id": "2.20",
@@ -844,6 +844,97 @@
       ],
       "correctAnswer": 1,
       "explanation": "You or your employer must assess the risk of injury before lifting."
+    },
+    {
+      "id": "2.21",
+      "category": "manual",
+      "question": "Before picking up a load, you should:",
+      "answers": [
+        "Bend your knees",
+        "Choose a pair of gloves",
+        "Ask a work mate to help you",
+        "Assess the risks"
+      ],
+      "correctAnswer": 3,
+      "explanation": "You or your employer must assess the risk of injury before lifting."
+    },
+    {
+      "id": "2.22",
+      "category": "manual",
+      "question": "When picking up an object, you should:",
+      "answers": [
+        "Bend your arms",
+        "Bend your back",
+        "Wear a back brace",
+        "Bend your knees"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Generally, the legs should do most of the work when lifting a load."
+    },
+    {
+      "id": "2.23",
+      "category": "manual",
+      "question": "When judging 'individual capability' for manual handling, you should assume:",
+      "answers": [
+        "All women are equally capable",
+        "Young men are weak",
+        "All people are different",
+        "All men are equally capable"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Assessing ability for manual handling must be done on an individual basis."
+    },
+    {
+      "id": "2.24",
+      "category": "manual",
+      "question": "When an article has to be moved for a long distance, you should:",
+      "answers": [
+        "Use a barrow or trolley",
+        "Get someone else to do it for you",
+        "Drag it all the way",
+        "Carry it all the way"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The use of handling aids can reduce the risk of injury."
+    },
+    {
+      "id": "2.25",
+      "category": "manual",
+      "question": "Which is the correct way to lift a load?",
+      "answers": [
+        "Squat near load, bend back and use leg muscles",
+        "Squat near to the load, keeping the back as straight as possible and using leg muscles",
+        "Keep feet apart and bend back",
+        "Keep feet together and bend back"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Handling techniques which allow the use of relatively strong leg muscles rather than those of the back are preferable."
+    },
+    {
+      "id": "2.26",
+      "category": "manual",
+      "question": "Which would you consider to be generally correct when lifting a load?",
+      "answers": [
+        "Larger loads should be split into smaller loads if possible",
+        "Keep the load away from the body",
+        "When lifting you should bend your back",
+        "The feet should be together and the load lifted at arm's length"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is a recommendation in HSE guidance (INDG143)."
+    },
+    {
+      "id": "2.27",
+      "category": "manual",
+      "question": "If a load has an uneven centre of gravity, how should you lift it?",
+      "answers": [
+        "Keep the heaviest side of the load away from you",
+        "Keep the heaviest side of the load on the strongest arm",
+        "Keep the heaviest side of the load towards you",
+        "Keep the heaviest side of the load on the weakest arm"
+      ],
+      "correctAnswer": 2,
+      "explanation": "There is less risk of injury if a weight's centre of gravity is near the torso."
     }
   ]
 }
