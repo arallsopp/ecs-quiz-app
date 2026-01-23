@@ -19,11 +19,13 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
             {shuffledAnswers.map((answer) => (
                 <button
                     key={answer.originalIndex}
-                    className={`px-4 py-2 bg-gray-700 text-white rounded-lg answer hover:bg-gray-600
-                ${selectedAnswer === answer.originalIndex ? 'chosen' : ''}
-                ${showingFeedback && answer.originalIndex === questionData.correctAnswer ? 'correct' : ''}
-                ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer ? 'wrong' : ''}
-            `}
+                    className={`
+                        px-4 py-2 rounded-lg transition-colors w-full text-left mb-2
+                        ${!showingFeedback && 'bg-gray-700 text-white hover:bg-gray-600'}
+                        ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-600 text-white'}
+                        ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-600 text-white'}
+                        ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'bg-gray-300 text-gray-500'}
+                    `}
                     disabled={showingFeedback}
                     onClick={() => onAnswer(answer.originalIndex)}
                 >
