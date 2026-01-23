@@ -54,9 +54,9 @@ function App() {
         const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
         if (correct) setScore(score + 1);
 
-        if(mode === 'exam') {
-           handleNextQuestion(); //remember, this handles asynchronously, so score won't be updated immediately.
-        }else {
+        if (mode === 'exam') {
+            handleNextQuestion(); //remember, this handles asynchronously, so score won't be updated immediately.
+        } else {
             setShowingFeedback(true);
             // DON'T move to next question yet! You're showing explanation
         }
@@ -89,7 +89,8 @@ function App() {
                            min="1" max={questionsData.questions.length}
                            value={questionsToAsk}
                            onChange={(event) => {
-                               setQuestionsToAsk(parseInt(event.target.value) || 1)}
+                               setQuestionsToAsk(parseInt(event.target.value) || 1)
+                           }
                            }
                     />
                 </div>
@@ -103,34 +104,43 @@ function App() {
 
                 <button onClick={handleStartQuiz}>Start Quiz</button>
             </>}
-            {mode === 'exam' && quizStarted && !showScore && (
-                <Countdown
-                    initialSeconds={timeLimit}
-                    onComplete={() => setShowScore(true)}
-                />
-            )}
-            {quizStarted &&
-                <>
-                    <div>{mode}</div>
-                    <div onClick={() => {setQuizStarted(false)}}>Quit</div>
-
-                    {showScore ?
-                        <div>
-                            <h2>Quiz Complete!</h2>
-                            <p>You scored {score} out of {questionsToAsk}</p>
-                            <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
-                            <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'Sorry. You needed 86% to pass'}</p>
-                            <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
+            {quizStarted && <div>
+                <div className="flex items-center">
+                    {mode === 'exam' && !showScore && (
+                        <div className="mr-auto">
+                            <Countdown
+                            initialSeconds={timeLimit}
+                            onComplete={() => setShowScore(true)}
+                            />
                         </div>
-                        : <Question
-                            questionData={questions[currentQuestionIndex]}
-                            onAnswer={handleAnswerClick}
-                            selectedAnswer={selectedAnswer}
-                            showingFeedback={showingFeedback}
-                            onNextQuestion={handleNextQuestion}
-                        />
-                    }
-                </>
+                    )}
+
+                    <div>{mode}</div>
+
+
+                    <div className="ml-auto" onClick={() => {
+                        setQuizStarted(false)
+                    }}>Quit
+                    </div>
+                </div>
+
+                {showScore ?
+                    <div>
+                        <h2>Quiz Complete!</h2>
+                        <p>You scored {score} out of {questionsToAsk}</p>
+                        <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
+                        <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'Sorry. You needed 86% to pass'}</p>
+                        <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
+                    </div>
+                    : <Question
+                        questionData={questions[currentQuestionIndex]}
+                        onAnswer={handleAnswerClick}
+                        selectedAnswer={selectedAnswer}
+                        showingFeedback={showingFeedback}
+                        onNextQuestion={handleNextQuestion}
+                    />
+                }
+            </div>
             }
         </>
     );
