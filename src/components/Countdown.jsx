@@ -22,7 +22,7 @@ function Countdown({ initialSeconds, onComplete }) {  // Destructure props!
     // Format as MM:SS
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    const formatted = `${minutes}:${secs.toString().padStart(2, '0')}`;
+    const formatted = `${minutes}:${secs.toFixed(0).padStart(2, '0')}`;
 
     return <div className="timer">Time: {formatted}</div>;
 }
