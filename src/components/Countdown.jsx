@@ -4,17 +4,20 @@ function Countdown({ initialSeconds, onComplete }) {  // Destructure props!
     const [seconds, setSeconds] = useState(initialSeconds);
 
     useEffect(() => {
-        if (seconds <= 0) {
-            onComplete();
-            return;
-        }
+        if (initialSeconds <= 0) return;
 
         const interval = setInterval(() => {
-            setSeconds(prev => prev - 1);
+            setSeconds(prev => {
+                if (prev <= 1) {
+                    onComplete();
+                    return 0;
+                }
+                return prev - 1;
+            });
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [seconds, onComplete]);  // This is OK - will recreate interval each second
+    }, [initialSeconds, onComplete]);  // Only recreate if these change
 
     // Format as MM:SS
     const minutes = Math.floor(seconds / 60);

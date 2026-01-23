@@ -23,7 +23,7 @@ function App() {
     const [showingFeedback, setShowingFeedback] = useState(false);
 
     // Timer state
-    const [timeRemaining, setTimeRemaining] = useState(null);
+    const [timeLimit, setTimeLimit] = useState(null);
 
     const [questions, setQuestions] = useState(questionsData.questions);
 
@@ -40,7 +40,7 @@ function App() {
 
         // Set timer if exam mode
         if (mode === 'exam') {
-            setTimeRemaining(questionsToAsk * 0.6 * 60); // Convert to seconds
+            setTimeLimit(questionsToAsk * 0.6 * 60); // Convert to seconds
         }
 
         // Start the quiz
@@ -74,10 +74,6 @@ function App() {
         }
     };
 
-    const handleOutOfTime = () => {
-        setShowScore(true);
-    }
-
     console.log('Current score:', score); // This will show updates!
 
     return (
@@ -107,14 +103,14 @@ function App() {
 
                 <button onClick={handleStartQuiz}>Start Quiz</button>
             </>}
+            {mode === 'exam' && quizStarted && !showScore && (
+                <Countdown
+                    initialSeconds={timeLimit}
+                    onComplete={() => setShowScore(true)}
+                />
+            )}
             {quizStarted &&
                 <>
-                    {mode === 'exam' &&
-                        <Countdown
-                            onComplete={handleOutOfTime}
-                            initialSeconds = {timeRemaining}>
-                        </Countdown>
-                    }
                     <div>{mode}</div>
                     <div onClick={() => {setQuizStarted(false)}}>Quit</div>
 
