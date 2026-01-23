@@ -84,7 +84,7 @@ function App() {
                            min="1" max={questionsData.questions.length}
                            value={questionsToAsk}
                            onChange={(event) => {
-                               setQuestionsToAsk(parseInt(event.target.value))}
+                               setQuestionsToAsk(parseInt(event.target.value) || 1)}
                            }
                     />
                 </div>
