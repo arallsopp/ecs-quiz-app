@@ -78,7 +78,7 @@ function App() {
     return (
         <>
             {!quizStarted && <>
-                <div className='logo'>bob</div>
+                <img src="/images/icon.png" alt="ECS Logo" className="w-24 h-24" />
                 <h1 className="text-3xl font-bold">ECS Health and Safety Quiz</h1>
 
                 <div>
