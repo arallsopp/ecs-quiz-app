@@ -3,6 +3,7 @@ import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
 import Countdown from "./components/Countdown.jsx";
+import icon from './assets/icon.png'
 
 
 function App() {
@@ -82,7 +83,7 @@ function App() {
         <div className="min-h-screen bg-gray-50">
             {!quizStarted && (
                 <div className="max-w-md mx-auto pt-20 px-4">
-                    <img src="/images/icon.png" alt="ECS" className="hidden w-32 h-32 mx-auto mb-6" />
+                    <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
                     <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
                         ECS Health & Safety Quiz
                     </h1>
