@@ -8,7 +8,7 @@ import Countdown from "./components/Countdown.jsx";
 function App() {
 
     // Quiz settings (set on splash screen)
-    const [questionsToAsk, setQuestionsToAsk] = useState(3);
+    const [questionsToAsk, setQuestionsToAsk] = useState(8);
     const [mode, setMode] = useState('practice'); // 'practice' or 'exam'
 
     // Quiz state
@@ -175,7 +175,8 @@ function App() {
                                         </p>
                                     ) : (
                                         <p className="text-2xl text-red-600 font-bold mb-6">
-                                            ✗ FAIL - You needed 86% to pass
+                                            { mode === "practice" && <span>In exam conditions, you'd have needed to get { Math.ceil(questionsToAsk * 0.86 )} correct.</span>}
+                                            { mode === "exam" &&  <span>✗ FAIL. You needed 86% to pass</span>}
                                         </p>
                                     )}
                                     <button
