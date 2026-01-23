@@ -2,7 +2,6 @@ import {useState} from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
-import './App.css'
 import Countdown from "./components/Countdown.jsx";
 
 
