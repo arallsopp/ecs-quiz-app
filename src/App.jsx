@@ -105,6 +105,12 @@ function App() {
             </>}
             {quizStarted &&
                 <>
+                    {mode === 'exam' && <div className="timeRemaining">
+                        Time remaining: {timeRemaining} seconds
+                    </div>}
+                    <div>{mode}</div>
+                    <div onClick={() => {setQuizStarted(false)}}>Quit</div>
+
                     {showScore ?
                         <div>
                             <h2>Quiz Complete!</h2>
