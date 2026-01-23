@@ -78,7 +78,7 @@ function App() {
                 <h1>ECS Health and Safety Quiz</h1>
 
                 <div>
-                    <label>Questions to ask
+                    <label htmlFor="questionsToAsk">Questions to ask</label>
                     <input id="questionsToAsk"
                            type="number"
                            min="1" max={questionsData.questions.length}
@@ -87,15 +87,13 @@ function App() {
                                setQuestionsToAsk(parseInt(event.target.value))}
                            }
                     />
-                    </label>
                 </div>
                 <div>
-                    <label>Mode
-                    <select value={mode} onChange={(event) => setMode(event.target.value)}>
+                    <label htmlFor="mode">Mode</label>
+                    <select id="mode" value={mode} onChange={(event) => setMode(event.target.value)}>
                         <option value="practice">Practice</option>
                         <option value="exam">Exam</option>
                     </select>
-                    </label>
                 </div>
 
                 <button onClick={handleStartQuiz}>Start Quiz</button>
