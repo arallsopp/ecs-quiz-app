@@ -33,9 +33,9 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
 
             {showingFeedback && (
                 <div>
-                    <p>{selectedAnswer === questionData.correctAnswer ? '✓ Correct!' : '✗ Incorrect'}</p>
+                    <p>{selectedAnswer === questionData.correctAnswer ? 'Correct. ' : 'Wrong'}</p>
                     <p className="explanation">{questionData.explanation}</p>
-                    <button onClick={onNextQuestion}>Next Question</button>
+                    <button onClick={onNextQuestion}>Continue</button>
                 </div>
             )}
         </div>

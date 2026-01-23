@@ -1,24 +1,31 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
-.answer{
-  display: block;
-  width: 100%;
-  margin:0 0 0.25rem 0;
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.25rem 0;
 }
-.chosen{
-  background-color: lightgray;
-  color:black;
+
+.answer.chosen.correct {
+    background-color: green;
+    color: white;
 }
-.chosen.correct{
-  background-color: green;
+
+.chosen.wrong {
+    background-color: red;
+    color: white;
 }
-.chosen.wrong{
-  background-color: red;
+
+.answer.correct {
+    background-color: darkgreen;
+    color: white;
 }
-.answer.correct{
-  background-color: darkgreen;
+
+.answer:disabled:hover {
+    border-color: transparent;
 }
