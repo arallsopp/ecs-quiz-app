@@ -54,7 +54,11 @@ function App() {
         const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
         if (correct) setScore(score + 1);
 
-        // DON'T move to next question yet!
+        if(mode === 'exam') {
+           handleNextQuestion();
+        }else {
+            // DON'T move to next question yet! You're showing explanation
+        }
     };
 
     const handleNextQuestion = () => {
@@ -68,6 +72,7 @@ function App() {
             setShowScore(true);
         }
     };
+
 
     console.log('Current score:', score); // This will show updates!
 
