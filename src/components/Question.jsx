@@ -18,7 +18,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                 <div className="text-sm text-gray-500 mb-2">
                     Category: {questionData.category}
                 </div>
-                <h2 className="text-2xl font-semibold text-gray-900">
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     {questionData.question}
                 </h2>
             </div>
