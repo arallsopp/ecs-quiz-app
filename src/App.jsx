@@ -48,15 +48,15 @@ function App() {
 
     const handleAnswerClick = (answerIndex) => {
         setSelectedAnswer(answerIndex);
-        setShowingFeedback(true);
 
         // Check if correct and update score
         const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
         if (correct) setScore(score + 1);
 
         if(mode === 'exam') {
-           handleNextQuestion();
+           handleNextQuestion(); //remember, this handles asynchronously, so score won't be updated immediately.
         }else {
+            setShowingFeedback(true);
             // DON'T move to next question yet! You're showing explanation
         }
     };
