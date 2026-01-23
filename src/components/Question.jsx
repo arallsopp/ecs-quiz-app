@@ -13,32 +13,57 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
     }, [questionData]);
 
     return (
-        <div>
-            <small>Question: {questionData.id}</small>
-            <h2>{questionData.question}</h2>
-            {shuffledAnswers.map((answer) => (
-                <button
-                    key={answer.originalIndex}
-                    className={`
-                        px-4 py-2 rounded-lg transition-colors w-full text-left mb-2
-                        ${!showingFeedback && 'bg-gray-700 text-white hover:bg-gray-600'}
-                        ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-600 text-white'}
-                        ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-600 text-white'}
-                        ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'bg-gray-300 text-gray-500'}
+        <div className="space-y-6">
+            <div>
+                <div className="text-sm text-gray-500 mb-2">
+                    Category: {questionData.category}
+                </div>
+                <h2 className="text-2xl font-semibold text-gray-900">
+                    {questionData.question}
+                </h2>
+            </div>
+
+            <div className="space-y-3">
+                {shuffledAnswers.map((answer) => (
+                    <button
+                        key={answer.originalIndex}
+                        className={`
+                        px-6 py-4 rounded-lg transition-all w-full text-left font-medium
+                        ${!showingFeedback && 'bg-gray-100 hover:bg-gray-200 text-gray-900'}
+                        ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 border-2 border-green-600 text-green-900'}
+                        ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 border-2 border-red-600 text-red-900'}
+                        ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'bg-gray-50 text-gray-400'}
                     `}
-                    disabled={showingFeedback}
-                    onClick={() => onAnswer(answer.originalIndex)}
-                >
-                    {answer.text}
-                </button>
-            ))}
+                        disabled={showingFeedback}
+                        onClick={() => onAnswer(answer.originalIndex)}
+                    >
+                        <div className="flex items-center justify-between">
+                            <span>{answer.text}</span>
+                            {showingFeedback && answer.originalIndex === questionData.correctAnswer && (
+                                <span className="text-green-600 text-xl">✓</span>
+                            )}
+                            {showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && (
+                                <span className="text-red-600 text-xl">✗</span>
+                            )}
+                        </div>
+                    </button>
+                ))}
+            </div>
 
             {showingFeedback && (
-                <div>
-                    <p>{selectedAnswer === questionData.correctAnswer ? 'Correct. ' : 'Wrong'}</p>
-                    <p className="explanation">{questionData.explanation}</p>
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                            onClick={onNextQuestion}>Continue</button>
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+                    <div className="font-semibold text-blue-900 mb-2">
+                        {selectedAnswer === questionData.correctAnswer ? '✓ Correct!' : '✗ Incorrect'}
+                    </div>
+                    <p className="text-blue-800 text-sm">
+                        {questionData.explanation}
+                    </p>
+                    <button
+                        onClick={onNextQuestion}
+                        className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
+                    >
+                        Continue →
+                    </button>
                 </div>
             )}
         </div>
