@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
 
-function Countdown(initialSeconds, onComplete ) {
+function Countdown({ initialSeconds, onComplete }) {  // Destructure props!
     const [seconds, setSeconds] = useState(initialSeconds);
 
     useEffect(() => {
-        if (seconds <= 0) return;
+        if (seconds <= 0) {
+            onComplete();
+            return;
+        }
 
         const interval = setInterval(() => {
-            setSeconds(prev => {
-                if (prev <=1){
-                    clearInterval(interval);
-                    onComplete();
-                    return 0
-                }else{
-                    return prev - 1;
-                }
-            });
+            setSeconds(prev => prev - 1);
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [seconds,onComplete]);
+    }, [seconds, onComplete]);  // This is OK - will recreate interval each second
 
-    return <div>{seconds}</div>;
+    // Format as MM:SS
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    const formatted = `${minutes}:${secs.toString().padStart(2, '0')}`;
+
+    return <div className="timer">Time: {formatted}</div>;
 }
 
 export default Countdown;
