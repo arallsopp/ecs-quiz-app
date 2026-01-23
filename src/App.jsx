@@ -79,7 +79,7 @@ function App() {
     return (
         <>
             {!quizStarted && <>
-                <div className='logo'></div>
+                <div className='logo'>bob</div>
                 <h1 className="text-3xl font-bold">ECS Health and Safety Quiz</h1>
 
                 <div>

@@ -33,3 +33,6 @@
 .answer:disabled:hover {
     border-color: transparent;
 }
+.logo{
+    background-image: url("/images/logo.png");
+}
