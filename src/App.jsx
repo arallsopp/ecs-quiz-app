@@ -89,6 +89,12 @@ function App() {
                     </h1>
 
                     <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+                        <div className="hidden">
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Sections
+                            </label>
+                            working on this...
+                        </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                                 Number of Questions
