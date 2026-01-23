@@ -76,78 +76,126 @@ function App() {
     console.log('Current score:', score); // This will show updates!
 
     return (
-        <>
-            {!quizStarted && <>
-                <img src="/images/icon.png" alt="ECS Logo" className="w-24 h-24" />
-                <h1 className="text-3xl font-bold">ECS Health and Safety Quiz</h1>
+        <div className="min-h-screen bg-gray-50">
+            {!quizStarted && (
+                <div className="max-w-md mx-auto pt-20 px-4">
+                    <img src="/images/icon.png" alt="ECS" className="w-32 h-32 mx-auto mb-6" />
+                    <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+                        ECS Health & Safety Quiz
+                    </h1>
 
-                <div>
-                    <label htmlFor="questionsToAsk">Questions to ask</label>
-                    <input id="questionsToAsk"
-                           className="w-20 rounded-lg border border-gray-300 px-2 py-2 mx-2"
-                           type="number"
-                           min="1" max={questionsData.questions.length}
-                           value={questionsToAsk}
-                           onChange={(event) => {
-                               setQuestionsToAsk(parseInt(event.target.value) || 1)
-                           }}
-                    />
-                </div>
-                <div>
-                    <label htmlFor="mode">Mode</label>
-                    <select id="mode"
-                            value={mode}
-                            onChange={(event) => setMode(event.target.value)}
-                            className="w-auto rounded-lg border border-gray-300 px-2 py-2 mx-2">
-                        <option value="practice">Practice</option>
-                        <option value="exam">Exam</option>
-                    </select>
-                </div>
-
-                <button className="inline-flex items-center justify-center rounded-md
-         bg-blue-600 px-4 py-2 text-sm font-medium text-white
-         hover:bg-blue-700 active:bg-blue-800
-         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-         disabled:opacity-50 disabled:pointer-events-none" onClick={handleStartQuiz}>Start Quiz</button>
-            </>}
-            {quizStarted && <div>
-                <div className="relative flex items-center">
-                    {mode === 'exam' && !showScore && (
-                        <div className="mr-auto">
-                            <Countdown
-                            initialSeconds={timeLimit}
-                            onComplete={() => setShowScore(true)}
+                    <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Number of Questions
+                            </label>
+                            <input
+                                type="number"
+                                min="1"
+                                max={questionsData.questions.length}
+                                value={questionsToAsk}
+                                onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
+                                className="w-full rounded-lg border border-gray-300 px-4 py-2"
                             />
                         </div>
-                    )}
 
-                    <div className="absolute left-1/2 -translate-x-1/2">{mode}</div>
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Mode
+                            </label>
+                            <select
+                                value={mode}
+                                onChange={(e) => setMode(e.target.value)}
+                                className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                            >
+                                <option value="practice">Practice Mode</option>
+                                <option value="exam">Exam Conditions</option>
+                            </select>
+                        </div>
 
-                    <div className="ml-auto" onClick={() => {
-                        setQuizStarted(false)
-                    }}>Quit
+                        <button
+                            onClick={handleStartQuiz}
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                        >
+                            Start Quiz
+                        </button>
                     </div>
                 </div>
+            )}
 
-                {showScore ?
-                    <div>
-                        <h2>Quiz Complete!</h2>
-                        <p>You scored {score} out of {questionsToAsk}</p>
-                        <p className="percentage">{((score / questionsToAsk) * 100).toFixed(1)}%</p>
-                        <p>{score >= Math.ceil(questionsToAsk * 0.86) ? 'You have passed' : 'Sorry. You needed 86% to pass'}</p>
-                        <button onClick={() => setQuizStarted(false)}>Back to Splash</button>
+            {quizStarted && (
+                <div className="min-h-screen flex flex-col">
+                    {/* Header Bar */}
+                    <div className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
+                        <div className="max-w-4xl mx-auto flex items-center justify-between">
+                            <div className="flex items-center gap-4">
+                                {mode === 'exam' && !showScore && (
+                                    <Countdown
+                                        initialSeconds={timeLimit}
+                                        onComplete={() => setShowScore(true)}
+                                    />
+                                )}
+                                <span className="text-sm text-gray-600">
+                                Question {currentQuestionIndex + 1} of {questionsToAsk}
+                            </span>
+                            </div>
+
+                            <div className="flex items-center gap-4">
+                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                                {mode === 'exam' ? 'Exam Mode' : 'Practice Mode'}
+                            </span>
+                                <button
+                                    onClick={() => setQuizStarted(false)}
+                                    className="text-sm text-gray-600 hover:text-gray-900"
+                                >
+                                    Quit
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    : <Question
-                        questionData={questions[currentQuestionIndex]}
-                        onAnswer={handleAnswerClick}
-                        selectedAnswer={selectedAnswer}
-                        showingFeedback={showingFeedback}
-                        onNextQuestion={handleNextQuestion}
-                    />
-                }
-            </div>
-            }
-        </>
+
+                    {/* Main Content */}
+                    <div className="flex-1 px-6 py-8">
+                        <div className="max-w-4xl mx-auto">
+                            {showScore ? (
+                                <div className="bg-white rounded-lg shadow-md p-8 text-center">
+                                    <h2 className="text-3xl font-bold mb-4">Quiz Complete!</h2>
+                                    <div className="text-6xl font-bold mb-4">
+                                        {((score / questionsToAsk) * 100).toFixed(1)}%
+                                    </div>
+                                    <p className="text-xl text-gray-600 mb-6">
+                                        You scored {score} out of {questionsToAsk}
+                                    </p>
+                                    {score >= Math.ceil(questionsToAsk * 0.86) ? (
+                                        <p className="text-2xl text-green-600 font-bold mb-6">
+                                            ✓ PASS
+                                        </p>
+                                    ) : (
+                                        <p className="text-2xl text-red-600 font-bold mb-6">
+                                            ✗ FAIL - You needed 86% to pass
+                                        </p>
+                                    )}
+                                    <button
+                                        onClick={() => setQuizStarted(false)}
+                                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+                                    >
+                                        Take Another Quiz
+                                    </button>
+                                </div>
+                            ) : (
+                                <Question
+                                    questionData={questions[currentQuestionIndex]}
+                                    onAnswer={handleAnswerClick}
+                                    selectedAnswer={selectedAnswer}
+                                    showingFeedback={showingFeedback}
+                                    onNextQuestion={handleNextQuestion}
+                                />
+                            )}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }
 
