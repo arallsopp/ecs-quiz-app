@@ -28,22 +28,23 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                     <button
                         key={answer.originalIndex}
                         className={`
-                        px-3 py-2 sm:px-6 sm:py-4 rounded-lg transition-all w-full text-left font-medium
-                        ${!showingFeedback && 'bg-gray-100 hover:bg-gray-200 text-gray-900'}
-                        ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 border-2 border-green-600 text-green-900'}
-                        ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 border-2 border-red-600 text-red-900'}
-                        ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'bg-gray-50 text-gray-400'}
-                    `}
+                            px-3 py-2 sm:px-6 sm:py-4 rounded-lg transition-colors w-full text-left font-medium
+                            border-2
+                            ${!showingFeedback && 'border-transparent bg-gray-100 hover:bg-gray-200 text-gray-900'}
+                            ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 border-green-600 text-green-900'}
+                            ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 border-red-600 text-red-900'}
+                            ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'bg-gray-50 text-gray-400'}
+                        `}
                         disabled={showingFeedback}
                         onClick={() => onAnswer(answer.originalIndex)}
                     >
                         <div className="flex items-center justify-between">
                             <span>{answer.text}</span>
                             {showingFeedback && answer.originalIndex === questionData.correctAnswer && (
-                                <span className="text-green-600 text-xl">✓</span>
+                                <span className="text-green-600">✓</span>
                             )}
                             {showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && (
-                                <span className="text-red-600 text-xl">✗</span>
+                                <span className="text-red-600">✗</span>
                             )}
                         </div>
                     </button>
