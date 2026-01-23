@@ -12,6 +12,10 @@ function App() {
     const [questionsToAsk, setQuestionsToAsk] = useState(8);
     const [mode, setMode] = useState('practice'); // 'practice' or 'exam'
 
+    const [selectedCategories, setSelectedCategories] = useState(
+        questionsData.categories.map(cat => cat.id) // All selected by default
+    );
+
     // Quiz state
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -31,8 +35,19 @@ function App() {
     const passed = score >= passingScore;
 
     const handleStartQuiz = () => {
+
+        // Filter questions by selected categories
+        const filteredQuestions = questionsData.questions.filter(q =>
+            selectedCategories.includes(q.category)
+        );
+
+        if (selectedCategories.length === 0) {
+            alert('Please select at least one topic');
+            return;
+        }
+
         // Shuffle questions
-        setQuestions(shuffle([...questionsData.questions]));
+        setQuestions(shuffle([...filteredQuestions]));
 
         // Reset everything
         setCurrentQuestionIndex(0);
@@ -89,38 +104,54 @@ function App() {
                     </h1>
 
                     <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
-                        <div className="hidden">
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Sections
-                            </label>
-                            working on this...
+                        <div className="mb-4">
+                            <label className="block text-sm font-medium text-gray-700 mb-2"> Topics to Include </label>
+                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 rounded-lg p-3">
+                                {questionsData.categories.map(category => (
+                                    <label key={category.id} className="flex items-center gap-2 cursor-pointer"> <input
+                                        type="checkbox"
+                                        checked={selectedCategories.includes(category.id)}
+                                        onChange={(e) => {
+                                            if (e.target.checked) {
+                                                setSelectedCategories([...selectedCategories, category.id]);
+                                            } else {
+                                                setSelectedCategories(selectedCategories.filter(id => id !== category.id));
+                                            }
+                                        }}
+                                        className="w-4 h-4 text-blue-600 rounded"
+                                    /> <span className="text-sm">{category.name}</span>
+                                    </label>
+                                ))}
+                            </div>
+
+                            <button
+                                onClick={() => setSelectedCategories(questionsData.categories.map(c => c.id))}
+                                className="text-xs text-blue-600 hover:underline mt-2"
+                            >
+                                Select All
+                            </button>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Number of Questions
-                            </label>
-                            <input
-                                type="number"
-                                min="1"
-                                max={questionsData.questions.length}
-                                value={questionsToAsk}
-                                onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
-                                className="w-full rounded-lg border border-gray-300 px-4 py-2"
-                            />
+                            <label className="block text-sm font-medium text-gray-700 mb-2"> Number of
+                                Questions </label> <input
+                            type="number"
+                            min="1"
+                            max={questionsData.questions.length}
+                            value={questionsToAsk}
+                            onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        />
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Mode
-                            </label>
-                            <select
-                                value={mode}
-                                onChange={(e) => setMode(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 px-4 py-2"
-                            >
-                                <option value="practice">Practice Mode</option>
-                                <option value="exam">Exam Conditions</option>
-                            </select>
+                            <label className="block text-sm font-medium text-gray-700 mb-2"> Mode </label> <select
+                            value={mode}
+                            onChange={(e) => setMode(e.target.value)}
+                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
+                        >
+                            <option value="practice">Practice Mode</option>
+                            <option value="exam">Exam Conditions</option>
+                        </select>
                         </div>
 
                         <button
@@ -147,8 +178,7 @@ function App() {
                                             onComplete={() => setShowScore(true)}
                                         />
                                     </div>
-                                )}
-                                <span className="text-sm text-gray-600">
+                                )} <span className="text-sm text-gray-600">
                                 Question {currentQuestionIndex + 1} of {questionsToAsk}
                             </span>
                             </div>
