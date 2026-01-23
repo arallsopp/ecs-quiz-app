@@ -139,8 +139,10 @@ function App() {
                             </button>
                         </div>
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2"> Number of
+                            <label htmlFor="questionsToAsk"
+                                   className="block text-sm font-medium text-gray-700 mb-2"> Number of
                                 Questions </label> <input
+                            id="questionsToAsk"
                             type="number"
                             min="1"
                             max={questionsData.questions.length}
@@ -151,14 +153,16 @@ function App() {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2"> Mode </label> <select
-                            value={mode}
-                            onChange={(e) => setMode(e.target.value)}
-                            className="w-full rounded-lg border border-gray-300 px-4 py-2"
-                        >
-                            <option value="practice">Practice Mode</option>
-                            <option value="exam">Exam Conditions</option>
-                        </select>
+                            <label htmlFor="mode"
+                                   className="block text-sm font-medium text-gray-700 mb-2"> Mode </label>
+                            <select
+                                id="mode"
+                                value={mode}
+                                onChange={(e) => setMode(e.target.value)}
+                                className="w-full rounded-lg border border-gray-300 px-4 py-2">
+                                <option value="practice">Practice Mode</option>
+                                <option value="exam">Exam Conditions</option>
+                            </select>
                         </div>
 
                         <button
