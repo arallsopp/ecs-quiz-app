@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Countdown({ initialSeconds, onComplete }) {  // Destructure props!
+function Countdown({ initialSeconds, onComplete, className = '' }) {  // Destructure props!
     const [seconds, setSeconds] = useState(initialSeconds);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function Countdown({ initialSeconds, onComplete }) {  // Destructure props!
     const secs = seconds % 60;
     const formatted = `${minutes}:${secs.toFixed(0).padStart(2, '0')}`;
 
-    return <div className="timer">Time: {formatted}</div>;
+    return <div className={`timer ${className}`}>Time: {formatted}</div>;
 }
 
 export default Countdown;
