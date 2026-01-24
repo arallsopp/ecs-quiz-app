@@ -67,7 +67,6 @@
   "questions": [
     {
       "id": "1.1",
-      "category": "general",
       "question": "What do the letters CDM stand for?",
       "answers": [
         "Control of Demolition and Management Regulations",
@@ -80,7 +79,6 @@
     },
     {
       "id": "1.2",
-      "category": "general",
       "question": "Identify one method of enforcing regulations that are available to the Health and Safety Executive:",
       "answers": [
         "Health Notice",
@@ -93,7 +91,6 @@
     },
     {
       "id": "1.3",
-      "category": "general",
       "question": "What happens if a Prohibition Notice is issued by an Inspector of the local authority or the HSE?",
       "answers": [
         "The work in hand can be completed, but no new work started",
@@ -106,7 +103,6 @@
     },
     {
       "id": "1.4",
-      "category": "general",
       "question": "Health and Safety Executive Inspector can?",
       "answers": [
         "Only visit if they have made an appointment",
@@ -119,7 +115,6 @@
     },
     {
       "id": "1.5",
-      "category": "general",
       "question": "Prohibition Notice means:",
       "answers": [
         "When you finish the work you must not start again",
@@ -132,7 +127,6 @@
     },
     {
       "id": "1.6",
-      "category": "general",
       "question": "In what circumstances can an HSE Improvement Notice be issued?",
       "answers": [
         "If there is a breach of legal requirements",
@@ -145,7 +139,6 @@
     },
     {
       "id": "1.7",
-      "category": "general",
       "question": "What is an Improvement Notice?",
       "answers": [
         "A notice issued by the site principal contractor to tidy up the site",
@@ -158,7 +151,6 @@
     },
     {
       "id": "1.8",
-      "category": "general",
       "question": "If a Health and Safety Executive Inspector issues a Prohibition Notice, this means that:",
       "answers": [
         "The Site Manager can choose whether or not to ignore the notice",
@@ -171,7 +163,6 @@
     },
     {
       "id": "1.9",
-      "category": "general",
       "question": "Employers are required to provide information to their employees on their health and safety rights and responsibilities and how to get advice by:",
       "answers": [
         "Telling them verbally when they start work for them",
@@ -184,7 +175,6 @@
     },
     {
       "id": "1.10",
-      "category": "general",
       "question": "Who is responsible for signing a Company Safety Policy?",
       "answers": [
         "Site Manager",
@@ -197,7 +187,6 @@
     },
     {
       "id": "1.11",
-      "category": "general",
       "question": "Which one of the following must be in a company's written Health and Safety Policy?",
       "answers": [
         "Aims and objectives of the company",
@@ -210,7 +199,6 @@
     },
     {
       "id": "1.12",
-      "category": "general",
       "question": "Employers have to produce a written Health and Safety Policy statement when:",
       "answers": [
         "A contract commences",
@@ -223,7 +211,6 @@
     },
     {
       "id": "1.13",
-      "category": "general",
       "question": "Companies employing five or more people must have a written Health and Safety Policy because:",
       "answers": [
         "The principal contractor gives them work on site",
@@ -236,7 +223,6 @@
     },
     {
       "id": "1.14",
-      "category": "general",
       "question": "What do the letters HSE stand for?",
       "answers": [
         "Highly Safe Electrician",
@@ -249,7 +235,6 @@
     },
     {
       "id": "1.15",
-      "category": "general",
       "question": "The Health and Safety Executive is:",
       "answers": [
         "Part of the National Health Service",
@@ -262,7 +247,6 @@
     },
     {
       "id": "1.16",
-      "category": "general",
       "question": "The Health and Safety at Work Act requires employers to provide what for their employees?",
       "answers": [
         "Adequate rest periods",
@@ -275,7 +259,6 @@
     },
     {
       "id": "1.17",
-      "category": "general",
       "question": "The Health and Safety at Work Act 1974 and any regulations made under the Act are:",
       "answers": [
         "Not compulsory, but should be complied with if convenient",
@@ -288,7 +271,6 @@
     },
     {
       "id": "1.18",
-      "category": "general",
       "question": "Under the Health and Safety at Work Act 1974, which of the following have a duty to work safely?",
       "answers": [
         "Employees only",
@@ -301,7 +283,6 @@
     },
     {
       "id": "1.19",
-      "category": "general",
       "question": "What is the MAXIMUM penalty that a Higher Court, can currently impose for a breach of the Health and Safety at Work Act?",
       "answers": [
         "£20,000 fine and two years' imprisonment",
@@ -314,7 +295,6 @@
     },
     {
       "id": "1.20",
-      "category": "general",
       "question": "What do the letters ACOP stand for?",
       "answers": [
         "Accepted Code of Provisions",
@@ -327,7 +307,6 @@
     },
     {
       "id": "1.21",
-      "category": "general",
       "question": "Where should you look for official advice on health and safety matters?",
       "answers": [
         "A set of health and safety guidelines provided by suppliers",
@@ -340,7 +319,6 @@
     },
     {
       "id": "1.22",
-      "category": "general",
       "question": "Regulations that govern health and safety on construction sites:",
       "answers": [
         "Apply only to inexperienced workers",
@@ -353,7 +331,6 @@
     },
     {
       "id": "1.23",
-      "category": "general",
       "question": "Which of the following statements is correct?",
       "answers": [
         "The duty for health and safety falls only on the employer",
@@ -366,7 +343,6 @@
     },
     {
       "id": "1.24",
-      "category": "general",
       "question": "Who of the following would you expect to be responsible for managing health and safety on site?",
       "answers": [
         "Foreman",
@@ -379,7 +355,6 @@
     },
     {
       "id": "1.25",
-      "category": "general",
       "question": "Which of the following is correct for risk assessment?",
       "answers": [
         "It is a good idea but not essential",
@@ -392,7 +367,6 @@
     },
     {
       "id": "1.26",
-      "category": "general",
       "question": "In the context of a risk assessment, what do you understand by the term risk?",
       "answers": [
         "An unsafe act or condition",
@@ -405,7 +379,6 @@
     },
     {
       "id": "1.27",
-      "category": "general",
       "question": "Who would you expect to carry out a risk assessment on your working site?",
       "answers": [
         "The CDM Co-ordinator",
@@ -418,7 +391,6 @@
     },
     {
       "id": "1.28",
-      "category": "general",
       "question": "What is a HAZARD?",
       "answers": [
         "Where an accident is likely to happen",
@@ -431,7 +403,6 @@
     },
     {
       "id": "1.29",
-      "category": "general",
       "question": "What must be done before any work begins?",
       "answers": [
         "Emergency plan",
@@ -444,7 +415,6 @@
     },
     {
       "id": "1.30",
-      "category": "general",
       "question": "Complete the following sentence: A risk assessment:",
       "answers": [
         "Is a piece of paper required by law",
@@ -457,7 +427,6 @@
     },
     {
       "id": "1.31",
-      "category": "general",
       "question": "Why would your supervisor ask you to read the method statement and risk assessment before you start your next job?",
       "answers": [
         "They think you have got nothing better to do",
@@ -470,7 +439,6 @@
     },
     {
       "id": "1.32",
-      "category": "general",
       "question": "What do the blue and white health and safety signs tell you?",
       "answers": [
         "Things you must do",
@@ -483,7 +451,6 @@
     },
     {
       "id": "1.33",
-      "category": "general",
       "question": "What colours are emergency exit signs?",
       "answers": [
         "Green and white",
@@ -496,7 +463,6 @@
     },
     {
       "id": "1.34",
-      "category": "general",
       "question": "What is the main colour on a safety sign stating that you must NOT do something?",
       "answers": [
         "Blue",
@@ -509,7 +475,6 @@
     },
     {
       "id": "1.35",
-      "category": "general",
       "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of signs. What colours are used on a sign indicating a warning, for example 'Fork-lift trucks operating'?",
       "answers": [
         "Blue and white",
@@ -522,7 +487,6 @@
     },
     {
       "id": "1.36",
-      "category": "general",
       "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a prohibited activity, for example 'No access for pedestrians'?",
       "answers": [
         "Green and white",
@@ -535,7 +499,6 @@
     },
     {
       "id": "1.37",
-      "category": "general",
       "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a mandatory activity, for example 'Safety helmets must be worn'?",
       "answers": [
         "Green and white",
@@ -548,7 +511,6 @@
     },
     {
       "id": "1.38",
-      "category": "general",
       "question": "The Health and Safety (Safety Signs and Signals) Regulations require the colour coding of safety signs. What colours are used on a sign indicating a safe condition, for example First Aid kit?",
       "answers": [
         "Red, black and white",
@@ -561,7 +523,6 @@
     },
     {
       "id": "1.39",
-      "category": "general",
       "question": "Why should regular inspections of the workplace take place?",
       "answers": [
         "To check whether the working environment is safe",
@@ -574,7 +535,6 @@
     },
     {
       "id": "1.40",
-      "category": "general",
       "question": "How can you help to prevent accidents?",
       "answers": [
         "Don't report them",
@@ -587,7 +547,6 @@
     },
     {
       "id": "2.1",
-      "category": "manual",
       "question": "If there is a risk of injury from lifting loads what should you think about first?",
       "answers": [
         "Whether the load needs to be lifted at all",
@@ -600,7 +559,6 @@
     },
     {
       "id": "2.2",
-      "category": "manual",
       "question": "Before performing manual lifting what is the first thing you should do?",
       "answers": [
         "Check the headroom",
@@ -613,7 +571,6 @@
     },
     {
       "id": "2.3",
-      "category": "manual",
       "question": "Which is the part of your body MOST LIKELY to be injured during a manual handling activity which involves moving a heavy load?",
       "answers": [
         "Knees",
@@ -626,7 +583,6 @@
     },
     {
       "id": "2.4",
-      "category": "manual",
       "question": "What should you do if your supervisor asks you to move something that you find is too heavy to lift?",
       "answers": [
         "Give it a try using correct lifting methods",
@@ -639,7 +595,6 @@
     },
     {
       "id": "2.5",
-      "category": "manual",
       "question": "What would you NOT consider in making a judgement of the risks from a load?",
       "answers": [
         "Its size and condition",
@@ -652,7 +607,6 @@
     },
     {
       "id": "2.6",
-      "category": "manual",
       "question": "When moving a load fitted with wheels which of the following is generally true?",
       "answers": [
         "Pushing and pulling are equally risky",
@@ -665,7 +619,6 @@
     },
     {
       "id": "2.7",
-      "category": "manual",
       "question": "A manual handling operation is defined as which one of the following?",
       "answers": [
         "Automated effort",
@@ -678,7 +631,6 @@
     },
     {
       "id": "2.8",
-      "category": "manual",
       "question": "What is the MAXIMUM weight that an individual may lift?",
       "answers": [
         "The weight they can lift comfortably",
@@ -691,7 +643,6 @@
     },
     {
       "id": "2.9",
-      "category": "manual",
       "question": "What is the most common type of injury resulting from lifting loads from the floor?",
       "answers": [
         "Vibration white finger",
@@ -704,7 +655,6 @@
     },
     {
       "id": "2.10",
-      "category": "manual",
       "question": "Where a load has to be lifted manually, what is the employer required to do by law?",
       "answers": [
         "Calculate the cost of the exercise",
@@ -717,7 +667,6 @@
     },
     {
       "id": "2.11",
-      "category": "manual",
       "question": "Which of the following is advisable when lifting a load manually?",
       "answers": [
         "Keep legs straight, bend back, use power of legs",
@@ -730,7 +679,6 @@
     },
     {
       "id": "2.12",
-      "category": "manual",
       "question": "In manual handling, which of the following general statements is true?",
       "answers": [
         "You should keep your back bent when lifting",
@@ -743,7 +691,6 @@
     },
     {
       "id": "2.13",
-      "category": "manual",
       "question": "What is the recommended limit for a compact load, that can be safely carried by a fit, male worker?",
       "answers": [
         "50kg",
@@ -756,7 +703,6 @@
     },
     {
       "id": "2.14",
-      "category": "manual",
       "question": "Where there has been a major change in a manual handling operation, what should the employer do?",
       "answers": [
         "Monitor the operation being undertaken",
@@ -769,7 +715,6 @@
     },
     {
       "id": "2.15",
-      "category": "manual",
       "question": "What should be the first consideration when you are about to lift a load on your own?",
       "answers": [
         "Assess whether it is safe to lift it on your own",
@@ -782,7 +727,6 @@
     },
     {
       "id": "2.16",
-      "category": "manual",
       "question": "Which of the following would NOT make a load easier to handle manually?",
       "answers": [
         "Painting it a bright colour",
@@ -795,7 +739,6 @@
     },
     {
       "id": "2.17",
-      "category": "manual",
       "question": "If there is a risk of injury from moving loads what should you think about?",
       "answers": [
         "Advising your supervisor",
@@ -808,7 +751,6 @@
     },
     {
       "id": "2.18",
-      "category": "manual",
       "question": "As an approximate guide the manual handling capacity of a two person team is:",
       "answers": [
         "The sum of their individual capacities",
@@ -821,7 +763,6 @@
     },
     {
       "id": "2.19",
-      "category": "manual",
       "question": "What does 'Kinetic lifting' mean?",
       "answers": [
         "Using a crane or some other mechanical means",
@@ -834,7 +775,6 @@
     },
     {
       "id": "2.20",
-      "category": "manual",
       "question": "What should you do first before lifting or moving a load?",
       "answers": [
         "Put on gloves",
@@ -847,7 +787,6 @@
     },
     {
       "id": "2.21",
-      "category": "manual",
       "question": "Before picking up a load, you should:",
       "answers": [
         "Bend your knees",
@@ -860,7 +799,6 @@
     },
     {
       "id": "2.22",
-      "category": "manual",
       "question": "When picking up an object, you should:",
       "answers": [
         "Bend your arms",
@@ -873,7 +811,6 @@
     },
     {
       "id": "2.23",
-      "category": "manual",
       "question": "When judging 'individual capability' for manual handling, you should assume:",
       "answers": [
         "All women are equally capable",
@@ -886,7 +823,6 @@
     },
     {
       "id": "2.24",
-      "category": "manual",
       "question": "When an article has to be moved for a long distance, you should:",
       "answers": [
         "Use a barrow or trolley",
@@ -899,7 +835,6 @@
     },
     {
       "id": "2.25",
-      "category": "manual",
       "question": "Which is the correct way to lift a load?",
       "answers": [
         "Squat near load, bend back and use leg muscles",
@@ -912,7 +847,6 @@
     },
     {
       "id": "2.26",
-      "category": "manual",
       "question": "Which would you consider to be generally correct when lifting a load?",
       "answers": [
         "Larger loads should be split into smaller loads if possible",
@@ -925,7 +859,6 @@
     },
     {
       "id": "2.27",
-      "category": "manual",
       "question": "If a load has an uneven centre of gravity, how should you lift it?",
       "answers": [
         "Keep the heaviest side of the load away from you",
@@ -938,7 +871,6 @@
     },
     {
       "id": "3.1",
-      "category": "accidents",
       "question": "What should you ensure if you suffer an injury through a manual handling operation?",
       "answers": [
         "You get paid for the job",
@@ -951,7 +883,6 @@
     },
     {
       "id": "3.2",
-      "category": "accidents",
       "question": "Why should a serious accident be reported to the enforcing authority?",
       "answers": [
         "It helps the site find out what caused it",
@@ -964,7 +895,6 @@
     },
     {
       "id": "3.3",
-      "category": "accidents",
       "question": "What immediate action should you take if you suffer an injury through carrying a load?",
       "answers": [
         "Advise your doctor of your injury",
@@ -977,7 +907,6 @@
     },
     {
       "id": "3.4",
-      "category": "accidents",
       "question": "Under RIDDOR, which one of the following must be reported to the enforcing authority?",
       "answers": [
         "Accidents where the injured person wishes to make a claim",
@@ -990,7 +919,6 @@
     },
     {
       "id": "3.5",
-      "category": "accidents",
       "question": "Which of the following has the power to examine an accident record?",
       "answers": [
         "An HSE inspector",
@@ -1003,7 +931,6 @@
     },
     {
       "id": "3.6",
-      "category": "accidents",
       "question": "Which of the following should be recorded in the accident book following an accident?",
       "answers": [
         "The date and time the accident occurred",
@@ -1016,7 +943,6 @@
     },
     {
       "id": "3.7",
-      "category": "accidents",
       "question": "Which one of the following accounts for most accidents each year on construction sites?",
       "answers": [
         "Strikes by moving vehicles",
@@ -1029,7 +955,6 @@
     },
     {
       "id": "3.8",
-      "category": "accidents",
       "question": "Which of the following is NOT classified as a specified injury to a worker under RIDDOR?",
       "answers": [
         "A fractured finger",
@@ -1042,7 +967,6 @@
     },
     {
       "id": "3.9",
-      "category": "accidents",
       "question": "Which one of the following should you do if you witness a serious accident on site?",
       "answers": [
         "Pretend you saw nothing",
@@ -1055,7 +979,6 @@
     },
     {
       "id": "3.10",
-      "category": "accidents",
       "question": "A workmate tells you that he witnessed an accident the previous day and the victim was taken to hospital. He asks you for advice on what he should do. Do you tell them to:",
       "answers": [
         "Speak to the site nurse about what he saw",
@@ -1068,7 +991,6 @@
     },
     {
       "id": "3.11",
-      "category": "accidents",
       "question": "If a person at work suffers an injury (other than a specified injury) due to an accident at work, it is reportable under RIDDOR if they are incapacitated for work for:",
       "answers": [
         "Over 1 day",
@@ -1081,7 +1003,6 @@
     },
     {
       "id": "3.12",
-      "category": "accidents",
       "question": "What must an employer do with their accident records following completion of a construction project?",
       "answers": [
         "They are sent to the Health and Safety Executive",
@@ -1094,7 +1015,6 @@
     },
     {
       "id": "3.13",
-      "category": "accidents",
       "question": "At work who would you report a dangerous occurrence to?",
       "answers": [
         "The emergency services",
@@ -1107,7 +1027,6 @@
     },
     {
       "id": "3.14",
-      "category": "accidents",
       "question": "Following a reportable dangerous occurrence when must the enforcing authority be informed?",
       "answers": [
         "Within 5 days",
@@ -1120,7 +1039,6 @@
     },
     {
       "id": "3.15",
-      "category": "accidents",
       "question": "Accidents causing any injury should always be recorded in:",
       "answers": [
         "The site engineer's day book",
@@ -1133,7 +1051,6 @@
     },
     {
       "id": "3.16",
-      "category": "accidents",
       "question": "Which one of the following is classified as a reportable occupational disease under RIDDOR?",
       "answers": [
         "Mental disorder",
@@ -1146,7 +1063,6 @@
     },
     {
       "id": "3.17",
-      "category": "accidents",
       "question": "When a person is injured at work, who should enter the details in the accident book?",
       "answers": [
         "The injured person's supervisor",
@@ -1159,7 +1075,6 @@
     },
     {
       "id": "3.18",
-      "category": "accidents",
       "question": "If you are involved in a minor accident at work, whose duty is it to report it to site management?",
       "answers": [
         "Any witness to the accident",
@@ -1172,7 +1087,6 @@
     },
     {
       "id": "3.19",
-      "category": "accidents",
       "question": "You have suffered an accident at work which has made you incapable of your normal work for over 7 days. Which of the following actions MUST be taken by your employer?",
       "answers": [
         "The emergency services are asked to attend the site",
@@ -1185,7 +1099,6 @@
     },
     {
       "id": "3.20",
-      "category": "accidents",
       "question": "The collapse of scaffolding is only notifiable to the enforcing authority as a reportable dangerous occurrence when the scaffolding is which one of the following?",
       "answers": [
         "Over 15 metres in height",
@@ -1198,7 +1111,6 @@
     },
     {
       "id": "3.21",
-      "category": "accidents",
       "question": "If there is a fatal accident on site, when must the Health and Safety Executive be informed?",
       "answers": [
         "Without delay",
@@ -1211,7 +1123,6 @@
     },
     {
       "id": "3.22",
-      "category": "accidents",
       "question": "Under which of the following circumstances should an accident be recorded in the site's accident book?",
       "answers": [
         "When an accident causes damage to plant or equipment",
@@ -1224,7 +1135,6 @@
     },
     {
       "id": "3.23",
-      "category": "accidents",
       "question": "Which of the following have to be entered into the accident book?",
       "answers": [
         "All accidents causing any damage",
@@ -1237,7 +1147,6 @@
     },
     {
       "id": "3.24",
-      "category": "accidents",
       "question": "Under which of the following circumstances must injury accidents be recorded in the accident book?",
       "answers": [
         "Only if you break a bone",
@@ -1250,7 +1159,6 @@
     },
     {
       "id": "3.25",
-      "category": "accidents",
       "question": "An entry must be made in the accident book when:",
       "answers": [
         "The person has been off sick for over seven days",
@@ -1263,7 +1171,6 @@
     },
     {
       "id": "3.26",
-      "category": "accidents",
       "question": "Which of the following MUST be recorded in an accident book after you have had an accident?",
       "answers": [
         "Your National Insurance number",
@@ -1276,7 +1183,6 @@
     },
     {
       "id": "3.27",
-      "category": "accidents",
       "question": "Which of the following can you learn from an accident?",
       "answers": [
         "A combination of human error and mechanical failure always causes injury",
@@ -1289,7 +1195,6 @@
     },
     {
       "id": "3.28",
-      "category": "accidents",
       "question": "Could making an entry in the accident book help you if you later make a claim for compensation?",
       "answers": [
         "Only if it is a serious injury",
@@ -1302,7 +1207,6 @@
     },
     {
       "id": "3.29",
-      "category": "accidents",
       "question": "Why is it important to report 'near miss' accidents to your employer?",
       "answers": [
         "It's the law",
@@ -1315,7 +1219,6 @@
     },
     {
       "id": "3.30",
-      "category": "accidents",
       "question": "Who should you report serious accidents to?",
       "answers": [
         "Your workmate",
@@ -1328,7 +1231,6 @@
     },
     {
       "id": "3.31",
-      "category": "accidents",
       "question": "What is the aim of carrying out an accident investigation?",
       "answers": [
         "To determine the cause(s) and prevent similar accidents",
@@ -1341,7 +1243,6 @@
     },
     {
       "id": "3.32",
-      "category": "accidents",
       "question": "You have witnessed a serious accident on your site and are interviewed by an HSE inspector. You should:",
       "answers": [
         "Tell the inspector what your mates said you should say",
