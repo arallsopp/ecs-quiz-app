@@ -90,7 +90,7 @@ function Dashboard({ onClose }) {
             <div className="bg-white rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-4">Performance by Category</h2>
                 <div className="space-y-3">
-                    {stats.categoryPercentages.map((cat, index) => (
+                    {stats.categoryPercentages.map((cat) => (
                         <div key={cat.category}>
                             <div className="flex justify-between text-sm mb-1">
                                 <span className="font-medium capitalize">{cat.category}</span>
