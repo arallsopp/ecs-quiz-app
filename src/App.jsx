@@ -6,6 +6,7 @@ import Countdown from "./components/Countdown.jsx";
 import icon from './assets/icon.png'
 import { saveQuizResult } from './utils/scoreStorage';
 import Dashboard from './components/Dashboard';
+import { getCategoryFromId } from './utils/getCategory';
 
 
 function App() {
@@ -47,9 +48,12 @@ function App() {
     const handleStartQuiz = () => {
 
         // Filter questions by selected categories
-        const filteredQuestions = questionsData.questions.filter(q =>
-            selectedCategories.includes(q.category)
-        );
+        const filteredQuestions = questionsData.questions
+            .map(q => ({
+                ...q,
+                category: getCategoryFromId(q.id) // Add category here
+            }))
+            .filter(q => selectedCategories.includes(q.category));
 
         if (selectedCategories.length === 0) {
             alert('Please select at least one topic');
@@ -168,9 +172,13 @@ function App() {
                             <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
                             <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg p-3">
                                 {questionsData.categories
-                                    .filter(category =>
-                                        questionsData.questions.some(q => q.category === category.id)
-                                    )
+                                    .map(category => ({
+                                        ...category,
+                                        questionCount: questionsData.questions.filter(q =>
+                                            getCategoryFromId(q.id) === category.id
+                                        ).length
+                                    }))
+                                    .filter(category => category.questionCount > 0)
                                     .map(category => (
                                         <label key={category.id} className="flex items-center gap-2 cursor-pointer">
                                             <input
