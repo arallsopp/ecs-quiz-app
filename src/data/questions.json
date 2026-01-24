@@ -1588,6 +1588,330 @@
       ],
       "correctAnswer": 0,
       "explanation": "Engineering controls and safe systems of work should always be considered first."
+    },
+    {
+      "id": "5.1",
+      "question": "Exposure to asbestos fibres may cause which one of the following?",
+      "answers": [
+        "Dermatitis",
+        "Asthma",
+        "Glandular fever",
+        "Asbestosis"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Breathing in asbestos fibres can also lead to a number of other diseases, including lung cancer and mesothelioma."
+    },
+    {
+      "id": "5.2",
+      "question": "Asbestos is suspected in the workplace, during renovation do you:",
+      "answers": [
+        "Remove it",
+        "Paint it",
+        "Ignore it",
+        "Seek guidance immediately"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Competent advice must be sought, to prevent exposure to the worker or others, either at the time, or subsequently."
+    },
+    {
+      "id": "5.3",
+      "question": "Which of the following statements about asbestos is TRUE?",
+      "answers": [
+        "Asbestos is not really a hazard to health",
+        "White asbestos is safe to use",
+        "All asbestos can be a hazard to health",
+        "Only brown and blue asbestos are a hazard to health"
+      ],
+      "correctAnswer": 2,
+      "explanation": "All forms of asbestos can cause fatal diseases."
+    },
+    {
+      "id": "5.4",
+      "question": "While working you discover material you think could be asbestos. What should you do?",
+      "answers": [
+        "Clear any dust and fragments, put them in a bin then carry on working",
+        "Inform the site nurse",
+        "Stop working immediately and report your suspicions to your supervisor",
+        "Dampen the material to prevent further dust being created, then carry on working"
+      ],
+      "correctAnswer": 2,
+      "explanation": "It is essential to stop work if asbestos is found or suspected, and await competent advice on what to do next."
+    },
+    {
+      "id": "5.5",
+      "question": "Can you tell by the smell of a product whether it is likely to cause harm?",
+      "answers": [
+        "No",
+        "Only within an enclosed space",
+        "Yes",
+        "Only if you have been trained"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Many harmful substances have no smell."
+    },
+    {
+      "id": "5.6",
+      "question": "How would you recognise a hazardous substance?",
+      "answers": [
+        "By a symbol on the container",
+        "By its smell",
+        "The colour of the label on the container",
+        "It will be in a suitable container"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A supplier of a packaged hazardous substance must include a label on the packaging incorporating one or more hazard symbols alerting users to the dangers posed by the chemical."
+    },
+    {
+      "id": "5.7",
+      "question": "Which of the following does NOT cause skin problems?",
+      "answers": [
+        "Bitumens",
+        "Solvents",
+        "Asbestos",
+        "Epoxy resins"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Asbestos is potentially very harmful if inhaled, but does not affect the skin significantly."
+    },
+    {
+      "id": "5.8",
+      "question": "When an assessment of hazardous substances has been carried out under the COSHH Regulations, the risks and control measures should be explained to:",
+      "answers": [
+        "The operatives using the substance",
+        "All employees on site",
+        "The accounts department",
+        "The person in charge of the stores"
+      ],
+      "correctAnswer": 0,
+      "explanation": "All those working with the hazardous substances in question need to know about any risks."
+    },
+    {
+      "id": "5.9",
+      "question": "If your hands are very dirty, what should you use to get them clean?",
+      "answers": [
+        "White Spirit",
+        "Paraffin",
+        "Soap and water",
+        "Thinners"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The other substances can remove natural oils from the skin."
+    },
+    {
+      "id": "5.10",
+      "question": "The presence of rats on site creates a risk of catching Weil's disease. What is the EASIEST PRACTICAL MEASURE that you can take to discourage the presence of rats?",
+      "answers": [
+        "Avoid leaving scraps of food lying about",
+        "Lay traps containing rat poison",
+        "Contact the local Environmental Health Officer",
+        "Bring a large cat on site"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The easiest solution is to avoid leaving food around, since this is what attracts vermin."
+    },
+    {
+      "id": "5.11",
+      "question": "Why is personal hygiene so important?",
+      "answers": [
+        "So you don't smell",
+        "Because the COSHH regulations require it",
+        "To protect your own and others' health",
+        "To stop you catching something nasty"
+      ],
+      "correctAnswer": 2,
+      "explanation": ""
+    },
+    {
+      "id": "5.12",
+      "question": "If you have been handling lead, how is it most likely to get into your blood stream?",
+      "answers": [
+        "By not wearing safety goggles",
+        "By not reporting the matter to the HSE",
+        "By not using the correct safety footwear",
+        "By not washing your hands before eating"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The route into the body is ingestion, normally from lead contamination on the hands."
+    },
+    {
+      "id": "5.13",
+      "question": "The number of toilets provided on site depends on:",
+      "answers": [
+        "The type of work being completed",
+        "The ratio of male and female workers on site",
+        "The duration of the work on site",
+        "The number of personnel on site"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Guidance on the provision of welfare facilities is given in HSE publication 'Health and Safety in Construction'."
+    },
+    {
+      "id": "5.14",
+      "question": "Which of the following is not required to be provided under the Construction (Design and Management) Regulations?",
+      "answers": [
+        "Toilet facilities",
+        "Washing facilities",
+        "Hot food",
+        "Drinking water"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Guidance on the provision of welfare facilities as required by CDM is given in HSE publication 'Health and Safety in Construction'."
+    },
+    {
+      "id": "5.15",
+      "question": "The extended use of powered hand-held tools and equipment may lead to which medical condition?",
+      "answers": [
+        "Vibration white finger",
+        "Weil's disease",
+        "Asbestosis",
+        "Dermatitis"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Hand-arm vibration can cause a range of conditions (including vibration white finger) collectively known as hand-arm vibration syndrome, as well as diseases such as carpal tunnel syndrome."
+    },
+    {
+      "id": "5.16",
+      "question": "What must your employer do if the daily personal noise exposure is at or exceeds 85 db(A)?",
+      "answers": [
+        "Provide hearing protection to those employees who ask for it",
+        "Issue hearing protection to those exposed and ensure that it is worn",
+        "Tell employees to buy their own hearing protection",
+        "Report it to the Health and Safety Executive"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is an interim measure under the Control of Noise at Work Regulations 2005 when the daily personal noise exposure is at or exceeds the upper exposure action value of 85 dB(A). Exposure should subsequently be reduced by implementing organizational or technical measures."
+    },
+    {
+      "id": "5.17",
+      "question": "What are the lower and upper action values with regard to daily personal noise exposure, as defined in the Control of Noise at Work Regulations 2005?",
+      "answers": [
+        "85 dB(A) and 90 dB(A)",
+        "80 dB(A) and 85 dB(A)",
+        "70 dB(A) and 80 dB(A)",
+        "75 dB(A) and 85dB(A)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Daily personal noise exposure is the average noise level experienced by an individual over an 8 hour period."
+    },
+    {
+      "id": "5.18",
+      "question": "At or above what level of daily personal noise exposure does an employer have to provide hearing protection if it is requested by an employee?",
+      "answers": [
+        "90 dB(A)",
+        "95 dB(A)",
+        "80 dB(A)",
+        "85 dB(A)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is one of the duties of employers under the Control of Noise at Work Regulations 2005 when the lower exposure action value of 80 dB(A) is reached or exceeded."
+    },
+    {
+      "id": "5.19",
+      "question": "The effects of damage to your hearing by long-term exposure to high noise levels:",
+      "answers": [
+        "Can be corrected by an operation",
+        "Are permanent",
+        "Will be reduced when you change jobs",
+        "Can be reversed to near normal with time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hearing damage due to long-term noise exposure is irreversible."
+    },
+    {
+      "id": "5.20",
+      "question": "Hearing protection should be worn:",
+      "answers": [
+        "In designated areas",
+        "In noisy internal areas only",
+        "At any workplace",
+        "Only on building sites"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Employees must wear hearing protectors when exposed at or above the upper exposure action values and within hearing protection zones."
+    },
+    {
+      "id": "5.21",
+      "question": "Wearing suitable hearing protection:",
+      "answers": [
+        "Stops you hearing distracting conversations",
+        "Stops you hearing all noise",
+        "Brings noise down to an acceptable level",
+        "Repairs damaged hearing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Hearing protection still allows some noise to reach the ear, but, if it has been correctly chosen, will reduce noise levels to an acceptable level."
+    },
+    {
+      "id": "5.22",
+      "question": "Which of the following is one of the recommended means of protecting your hearing?",
+      "answers": [
+        "Rolled tissue paper",
+        "Cotton wool pads",
+        "Soft cloth pads",
+        "Ear defenders"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The others are not considered to be suitable types of hearing protection."
+    },
+    {
+      "id": "5.23",
+      "question": "Which of the following would NOT reduce the risks from hand-arm vibration when using a hammer action tool?",
+      "answers": [
+        "Selecting the lowest vibration tool that is suitable and which can do the work efficiently",
+        "Wearing gloves to keep the hands warm",
+        "Working as a team to share the work out",
+        "Making sure one person does all the work with the tool"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Where tools require constant or frequent use, rotas will avoid individuals having long exposure to vibration. The use of low-vibration tools and keeping the hands warm in cold conditions will also reduce the risks."
+    },
+    {
+      "id": "5.24",
+      "question": "Which of the following animals can carry Weil's disease?",
+      "answers": [
+        "Snake",
+        "Sheep",
+        "Rat",
+        "Pig"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Weil's disease is a serious and sometimes fatal infection that can be transmitted to humans by contact with infected rats. Another form of Leptospirosis infection can be transmitted from cattle to humans."
+    },
+    {
+      "id": "5.25",
+      "question": "You are most likely to catch Weil's disease (Leptospirosis) if you:",
+      "answers": [
+        "Work near wet ground, waterways or sewers",
+        "Work near air conditioning units",
+        "Fix showers or baths",
+        "Drink water from a standpipe"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Anyone who is exposed to rat urine is at risk, particularly sewer workers and farmers. Those in contact with canal or river water are also at risk."
+    },
+    {
+      "id": "5.26",
+      "question": "What should you do if the toilets on your site are continually dirty?",
+      "answers": [
+        "Ignore the problem – its normal on a construction site",
+        "Make sure you tell someone who can sort it out",
+        "Find some cleaning materials and clean it up yourself",
+        "Ask in a nearby cafe or pub if you can use their toilets"
+      ],
+      "correctAnswer": 1,
+      "explanation": "How often welfare facilities on site require cleaning will depend on the number of people on site and how quickly they get dirty. The person in control of the site should make sure someone is responsible for keeping the facilities clean and tidy."
+    },
+    {
+      "id": "5.27",
+      "question": "Excessive sunlight on bare skin can cause which serious health problem?",
+      "answers": [
+        "Dermatitis",
+        "Rickets",
+        "Acne",
+        "Skin cancer"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ultraviolet rays in sunlight can cause sunburn and premature ageing of the skin. The most serious effect, however, is an increased chance of developing skin cancer."
     }
   ]
 }
