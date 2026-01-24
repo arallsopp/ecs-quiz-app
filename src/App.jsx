@@ -5,6 +5,7 @@ import {shuffle} from "./utils/shuffle.js";
 import Countdown from "./components/Countdown.jsx";
 import icon from './assets/icon.png'
 import { saveQuizResult } from './utils/scoreStorage';
+import Dashboard from './components/Dashboard';
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
 
     // Timer state
     const [timeLimit, setTimeLimit] = useState(null);
+
+    // Dashboard state
+    const [showDashboard, setShowDashboard] = useState(false);
 
     const [questions, setQuestions] = useState(questionsData.questions);
 
@@ -147,6 +151,10 @@ function App() {
     };
 
     return (
+        <div>
+            {showDashboard ? (
+                <Dashboard onClose={() => setShowDashboard(false)} />
+            ) : (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {!quizStarted && (
                 <div className="max-w-md mx-auto pt-20 px-4">
@@ -224,6 +232,13 @@ function App() {
                             Start Quiz
                         </button>
                     </div>
+
+                    <button
+                        onClick={() => setShowDashboard(true)}
+                        className="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                    >
+                        View Progress Dashboard
+                    </button>
                 </div>
             )}
 
@@ -301,6 +316,8 @@ function App() {
                     </div>
                 </div>
             )}
+        </div>
+            ) }
         </div>
     );
 }
