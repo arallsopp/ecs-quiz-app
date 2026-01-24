@@ -99,7 +99,7 @@ function App() {
             {!quizStarted && (
                 <div className="max-w-md mx-auto pt-20 px-4">
                     <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
-                    <h1 className="text-4xl font-bold text-center text-gray-100 dark:text-gray-400 mb-8">
+                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-400 mb-8">
                         ECS Health & Safety Quiz
                     </h1>
 
@@ -200,8 +200,7 @@ function App() {
                             </span>
                                 <button
                                     onClick={() => setQuizStarted(false)}
-                                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 hover:text-gray-100"
-                                >
+                                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 hover:text-gray-100">
                                     Quit
                                 </button>
                             </div>
