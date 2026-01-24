@@ -98,14 +98,13 @@ function App() {
             category: currentQuestion.category
         }]);
 
-
         if (correct) setScore(score + 1);
 
         if (mode === 'exam') {
             handleNextQuestion(); //remember, this handles asynchronously, so score won't be updated immediately.
         } else {
             setShowingFeedback(true);
-            // DON'T move to next question yet! You're showing explanation
+            // DON'T move to the next question yet! You're showing explanation
         }
     };
 
@@ -232,21 +231,22 @@ function App() {
                                 <option value="exam">Exam Conditions</option>
                             </select>
                         </div>
-
                         <button
                             onClick={handleStartQuiz}
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
                         >
                             Start Quiz
                         </button>
+                        <button
+                            onClick={() => setShowDashboard(true)}
+                            className="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                        >
+                            View Progress Dashboard
+                        </button>
+
                     </div>
 
-                    <button
-                        onClick={() => setShowDashboard(true)}
-                        className="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
-                    >
-                        View Progress Dashboard
-                    </button>
+
                 </div>
             )}
 
