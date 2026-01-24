@@ -4,6 +4,7 @@ import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
 import Countdown from "./components/Countdown.jsx";
 import icon from './assets/icon.png'
+import { saveQuizResult } from './utils/scoreStorage';
 
 
 function App() {
@@ -19,12 +20,17 @@ function App() {
     // Quiz state
     const [quizStarted, setQuizStarted] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
 
     // Feedback state (only used in practice mode)
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [showingFeedback, setShowingFeedback] = useState(false);
+
+    //support finish quiz and history
+    const [quizAnswers, setQuizAnswers] = useState([]);
+    const [quizStartTime, setQuizStartTime] = useState(null);
 
     // Timer state
     const [timeLimit, setTimeLimit] = useState(null);
@@ -56,6 +62,9 @@ function App() {
         setSelectedAnswer(null);
         setShowingFeedback(false);
 
+        setQuizAnswers([]); // Reset answers
+        setQuizStartTime(Date.now()); // Track start time
+
         // Set timer if exam mode
         if (mode === 'exam') {
             setTimeLimit(questionsToAsk * 0.6 * 60); // Convert to seconds
@@ -68,8 +77,20 @@ function App() {
     const handleAnswerClick = (answerIndex) => {
         setSelectedAnswer(answerIndex);
 
+        //stash current question for easy access
+
+        const currentQuestion = questions[currentQuestionIndex];
         // Check if correct and update score
-        const correct = questions[currentQuestionIndex].correctAnswer === answerIndex;
+        const correct = currentQuestion.correctAnswer === answerIndex;
+
+        // Track this answer
+        setQuizAnswers([...quizAnswers, {
+            questionId: currentQuestion.id,
+            correct,
+            category: currentQuestion.category
+        }]);
+
+
         if (correct) setScore(score + 1);
 
         if (mode === 'exam') {
@@ -88,11 +109,42 @@ function App() {
         if (nextQuestion < questionsToAsk) {
             setCurrentQuestionIndex(nextQuestion);
         } else {
-            setShowScore(true);
+            finishQuiz();
         }
     };
 
-    console.log('Current score:', score); // This will show updates!
+    const finishQuiz = () => {
+        const timeSpent = mode === 'exam' ? Math.floor((Date.now() - quizStartTime) / 1000) : null;
+
+        // Calculate category scores
+        const categoryScores = {};
+        quizAnswers.forEach(answer => {
+            if (!categoryScores[answer.category]) {
+                categoryScores[answer.category] = { correct: 0, total: 0 };
+            }
+            categoryScores[answer.category].total++;
+            if (answer.correct) {
+                categoryScores[answer.category].correct++;
+            }
+        });
+
+        const quizResult = {
+            id: Date.now(),
+            timestamp: new Date().toISOString(),
+            mode,
+            questionsToAsk,
+            score,
+            percentage: parseFloat(((score / questionsToAsk) * 100).toFixed(1)),
+            passed,
+            timeSpent,
+            selectedCategories,
+            categoryScores,
+            answers: quizAnswers
+        };
+
+        saveQuizResult(quizResult);
+        setShowScore(true);
+    };
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
