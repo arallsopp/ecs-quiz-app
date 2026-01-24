@@ -935,6 +935,422 @@
       ],
       "correctAnswer": 2,
       "explanation": "There is less risk of injury if a weight's centre of gravity is near the torso."
+    },
+    {
+      "id": "3.1",
+      "category": "accidents",
+      "question": "What should you ensure if you suffer an injury through a manual handling operation?",
+      "answers": [
+        "You get paid for the job",
+        "The injury is recorded",
+        "You get help and carry on working",
+        "You take time off work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "All injuries must be recorded in the company accident book (BI 510)."
+    },
+    {
+      "id": "3.2",
+      "category": "accidents",
+      "question": "Why should a serious accident be reported to the enforcing authority?",
+      "answers": [
+        "It helps the site find out what caused it",
+        "It is legal requirement",
+        "So that the site manager can see who is to blame",
+        "So that the company will be held responsible"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Serious accidents (specified injuries or those resulting in an absence of over 7 days) must be reported to the enforcing authority under the Reporting of Injuries, Diseases and Dangerous Occurrences Regulations (RIDDOR)."
+    },
+    {
+      "id": "3.3",
+      "category": "accidents",
+      "question": "What immediate action should you take if you suffer an injury through carrying a load?",
+      "answers": [
+        "Advise your doctor of your injury",
+        "Tell your supervisor or employer",
+        "Tell your working companion",
+        "Carry on working as best you can"
+      ],
+      "correctAnswer": 1,
+      "explanation": "All injuries must be recorded in the company accident book (BI 510)."
+    },
+    {
+      "id": "3.4",
+      "category": "accidents",
+      "question": "Under RIDDOR, which one of the following must be reported to the enforcing authority?",
+      "answers": [
+        "Accidents where the injured person wishes to make a claim",
+        "Fracture other than to fingers, thumbs or toes",
+        "All 'near misses' even if no one is hurt",
+        "All accidents causing injury"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is one of a number of reportable 'specified injuries' and must be reported to the enforcing authority under Reporting of Injuries, Diseases and Dangerous Occurrences Regulations (RIDDOR)."
+    },
+    {
+      "id": "3.5",
+      "category": "accidents",
+      "question": "Which of the following has the power to examine an accident record?",
+      "answers": [
+        "An HSE inspector",
+        "An Insurance company",
+        "A doctor",
+        "A workmate"
+      ],
+      "correctAnswer": 0,
+      "explanation": "HSE inspectors have a range of powers, including this one."
+    },
+    {
+      "id": "3.6",
+      "category": "accidents",
+      "question": "Which of the following should be recorded in the accident book following an accident?",
+      "answers": [
+        "The date and time the accident occurred",
+        "Your date of birth",
+        "The weather conditions",
+        "Your National Insurance Number"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The information to be entered in an accident book (BI 510) includes when and where the accident happened, the name and address and occupation of the person who had the accident and details of how the accident happened and the injuries suffered. The weather conditions would only be included if they contributed to the accident."
+    },
+    {
+      "id": "3.7",
+      "category": "accidents",
+      "question": "Which one of the following accounts for most accidents each year on construction sites?",
+      "answers": [
+        "Strikes by moving vehicles",
+        "Electrocution",
+        "Trench collapses",
+        "Slips, trips and falls"
+      ],
+      "correctAnswer": 3,
+      "explanation": "HSE Statistics show clearly that there are more slips, trips and falls than any other types of accident on site."
+    },
+    {
+      "id": "3.8",
+      "category": "accidents",
+      "question": "Which of the following is NOT classified as a specified injury to a worker under RIDDOR?",
+      "answers": [
+        "A fractured finger",
+        "A fractured arm",
+        "Amputation of a finger",
+        "A broken wrist"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Amputation of an arm, hand, finger, thumb, leg, foot or toe are classified as specified injuries, as are bone fractures other than to fingers, thumbs or toes."
+    },
+    {
+      "id": "3.9",
+      "category": "accidents",
+      "question": "Which one of the following should you do if you witness a serious accident on site?",
+      "answers": [
+        "Pretend you saw nothing",
+        "Say nothing in case you get in trouble",
+        "Discuss what to do with your workmates",
+        "Tell your supervisor what you saw happening"
+      ],
+      "correctAnswer": 3,
+      "explanation": "If the supervisor is aware of an accident he can take steps to prevent a recurrence. The employer also has legal duties to report certain incidents to the enforcing authority."
+    },
+    {
+      "id": "3.10",
+      "category": "accidents",
+      "question": "A workmate tells you that he witnessed an accident the previous day and the victim was taken to hospital. He asks you for advice on what he should do. Do you tell them to:",
+      "answers": [
+        "Speak to the site nurse about what he saw",
+        "Tell their supervisor that they saw what happened",
+        "Telephone the hospital to find out how the injured person is",
+        "Say nothing to anyone in case they get someone in trouble"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If the supervisor is aware of an accident he can take steps to prevent a recurrence. The employer also has legal duties to report certain incidents to the enforcing authority."
+    },
+    {
+      "id": "3.11",
+      "category": "accidents",
+      "question": "If a person at work suffers an injury (other than a specified injury) due to an accident at work, it is reportable under RIDDOR if they are incapacitated for work for:",
+      "answers": [
+        "Over 1 day",
+        "Over 7 days",
+        "Over half a day",
+        "Over 2 days"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An over-seven-day injury is one which is not a specified injury but results in the injured person being away from work or unable to do the full range of their normal duties for more than seven days (including any days they wouldn't normally be expected to work such as weekends, rest days or holidays) not counting the day of the injury itself."
+    },
+    {
+      "id": "3.12",
+      "category": "accidents",
+      "question": "What must an employer do with their accident records following completion of a construction project?",
+      "answers": [
+        "They are sent to the Health and Safety Executive",
+        "They are destroyed on site with other non-essential documents",
+        "They are kept safe by the employer",
+        "They are sent to the employer's insurance company"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Accident records must be kept by an employer for at least three years."
+    },
+    {
+      "id": "3.13",
+      "category": "accidents",
+      "question": "At work who would you report a dangerous occurrence to?",
+      "answers": [
+        "The emergency services",
+        "Your supervisor or employer",
+        "Another employee",
+        "The client for the project"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Under RIDDOR, an employer has a legal duty to report certain work-related accidents, but to do this they will need to know that an accident has occurred."
+    },
+    {
+      "id": "3.14",
+      "category": "accidents",
+      "question": "Following a reportable dangerous occurrence when must the enforcing authority be informed?",
+      "answers": [
+        "Within 5 days",
+        "Within 48 hours",
+        "Without delay",
+        "Within 24 hours"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The enforcing authority must be notified by the quickest practicable means."
+    },
+    {
+      "id": "3.15",
+      "category": "accidents",
+      "question": "Accidents causing any injury should always be recorded in:",
+      "answers": [
+        "The site engineer's day book",
+        "Your employer's accident recording system",
+        "Your personal diary",
+        "The main contractor's diary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "All accidents should be recorded in the accident book (BI 510)."
+    },
+    {
+      "id": "3.16",
+      "category": "accidents",
+      "question": "Which one of the following is classified as a reportable occupational disease under RIDDOR?",
+      "answers": [
+        "Mental disorder",
+        "Occupational asthma",
+        "Amputation",
+        "Influenza"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certain occupational diseases likely to have been caused or made worse by work are reportable under RIDDOR. This would include occupational asthma where the person's work includes significant or regular exposure to a known respiratory sensitizer."
+    },
+    {
+      "id": "3.17",
+      "category": "accidents",
+      "question": "When a person is injured at work, who should enter the details in the accident book?",
+      "answers": [
+        "The injured person's supervisor",
+        "The injured person or anyone acting for them",
+        "The site manager or engineer",
+        "The site safety manager"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is the procedure for recording accidents internally in the accident book (BI 510)."
+    },
+    {
+      "id": "3.18",
+      "category": "accidents",
+      "question": "If you are involved in a minor accident at work, whose duty is it to report it to site management?",
+      "answers": [
+        "Any witness to the accident",
+        "The police, fire or ambulance who attend",
+        "It is your own responsibility",
+        "The site foreman should report it"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Employers rely on employees to advise them of occurrences at work."
+    },
+    {
+      "id": "3.19",
+      "category": "accidents",
+      "question": "You have suffered an accident at work which has made you incapable of your normal work for over 7 days. Which of the following actions MUST be taken by your employer?",
+      "answers": [
+        "The emergency services are asked to attend the site",
+        "The local hospital is informed",
+        "The relevant enforcing authority is informed",
+        "A deduction is made from your wages for days lost"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An over-seven-day injury is one which is not a specified injury but results in the injured person being away from work or unable to do the full range of their normal duties for more than seven days (including any days they wouldn't normally be expected to work such as weekends, rest days or holidays) not counting the day of the injury itself."
+    },
+    {
+      "id": "3.20",
+      "category": "accidents",
+      "question": "The collapse of scaffolding is only notifiable to the enforcing authority as a reportable dangerous occurrence when the scaffolding is which one of the following?",
+      "answers": [
+        "Over 15 metres in height",
+        "Any height",
+        "Over 10 metres in height",
+        "Over 5 metres in height"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is one of the requirements of RIDDOR."
+    },
+    {
+      "id": "3.21",
+      "category": "accidents",
+      "question": "If there is a fatal accident on site, when must the Health and Safety Executive be informed?",
+      "answers": [
+        "Without delay",
+        "Within 10 days",
+        "Within 7 days",
+        "Within 5 days"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The enforcing authority must be notified by the quickest practicable means."
+    },
+    {
+      "id": "3.22",
+      "category": "accidents",
+      "question": "Under which of the following circumstances should an accident be recorded in the site's accident book?",
+      "answers": [
+        "When an accident causes damage to plant or equipment",
+        "Only when a person is injured and will be off work for more than seven days",
+        "When the injury is serious enough for first aid to be needed",
+        "When an accident causes injury to an employee while at work"
+      ],
+      "correctAnswer": 3,
+      "explanation": "An accident causing an injury to an employee at work should be recorded in the accident book (BI 510)."
+    },
+    {
+      "id": "3.23",
+      "category": "accidents",
+      "question": "Which of the following have to be entered into the accident book?",
+      "answers": [
+        "All accidents causing any damage",
+        "All accidents causing an injury",
+        "Only accidents causing serious injury",
+        "Only accidents causing time off work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An accident causing an injury to an employee at work should be recorded in the accident book (BI 510)."
+    },
+    {
+      "id": "3.24",
+      "category": "accidents",
+      "question": "Under which of the following circumstances must injury accidents be recorded in the accident book?",
+      "answers": [
+        "Only if you break a bone",
+        "Only if you have time off work",
+        "Any time they occur",
+        "Only if you need to go to hospital"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An accident causing an injury to an employee at work should be recorded in the accident book (BI 510)."
+    },
+    {
+      "id": "3.25",
+      "category": "accidents",
+      "question": "An entry must be made in the accident book when:",
+      "answers": [
+        "The person has been off sick for over seven days",
+        "Management thinks it is appropriate",
+        "An accident causes personal injury to an employee",
+        "The severity of the accident may result in a compensation claim"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An accident causing an injury to an employee at work should be recorded in the accident book (BI 510)."
+    },
+    {
+      "id": "3.26",
+      "category": "accidents",
+      "question": "Which of the following MUST be recorded in an accident book after you have had an accident?",
+      "answers": [
+        "Your National Insurance number",
+        "Your date of birth",
+        "Your occupation",
+        "Your phone number"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The information to be entered in an accident book (BI 510) includes when and where the accident happened, the name, address and occupation of the person who had the accident and details of how the accident happened and the injuries suffered."
+    },
+    {
+      "id": "3.27",
+      "category": "accidents",
+      "question": "Which of the following can you learn from an accident?",
+      "answers": [
+        "A combination of human error and mechanical failure always causes injury",
+        "Ideas on how you would prevent it happening again",
+        "That mechanical failures are most dangerous",
+        "How human error is always a cause"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An accident investigation should not only assess the cause, but also how similar accidents can be prevented in the future."
+    },
+    {
+      "id": "3.28",
+      "category": "accidents",
+      "question": "Could making an entry in the accident book help you if you later make a claim for compensation?",
+      "answers": [
+        "Only if it is a serious injury",
+        "No",
+        "Only in the event of a fatality",
+        "Yes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is laid down in Social Security Legislation."
+    },
+    {
+      "id": "3.29",
+      "category": "accidents",
+      "question": "Why is it important to report 'near miss' accidents to your employer?",
+      "answers": [
+        "It's the law",
+        "To make the figures look good",
+        "So lessons can be learned, preventing an accident next time",
+        "So that someone can be disciplined"
+      ],
+      "correctAnswer": 2,
+      "explanation": "HSE advises that 'near misses' should be investigated to prevent their recurrence."
+    },
+    {
+      "id": "3.30",
+      "category": "accidents",
+      "question": "Who should you report serious accidents to?",
+      "answers": [
+        "Your workmate",
+        "Your employer or supervisor",
+        "The police",
+        "The ambulance service"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If the supervisor is aware of an accident he can take steps to prevent a recurrence. The employer also has legal duties to report certain incidents to the enforcing authority."
+    },
+    {
+      "id": "3.31",
+      "category": "accidents",
+      "question": "What is the aim of carrying out an accident investigation?",
+      "answers": [
+        "To determine the cause(s) and prevent similar accidents",
+        "To establish what injuries were sustained",
+        "To find out who is at fault",
+        "To establish the cost of any damage incurred"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An accident investigation should not only assess the cause, but also how similar accidents can be prevented in the future."
+    },
+    {
+      "id": "3.32",
+      "category": "accidents",
+      "question": "You have witnessed a serious accident on your site and are interviewed by an HSE inspector. You should:",
+      "answers": [
+        "Tell the inspector what your mates said you should say",
+        "Ask your supervisor what you should say to the inspector",
+        "Co-operate fully with the inspector and tell them exactly what you saw",
+        "Don't tell them anything"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This is good practice, but it can also be an offence to withhold important information from an inspector."
     }
   ]
 }
