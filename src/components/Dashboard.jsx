@@ -2,24 +2,25 @@ import { useState, useEffect } from 'react';
 import { getQuizStats, getQuizHistory, clearQuizHistory } from '../utils/scoreStorage';
 
 function Dashboard({ onClose }) {
-    const [stats, setStats] = useState(null);
-    const [history, setHistory] = useState([]);
 
-    useEffect(() => {
-        loadStats();
-    }, []);
+        const [stats, setStats] = useState(null);
+        const [history, setHistory] = useState([]);
 
-    const loadStats = () => {
-        setStats(getQuizStats());
-        setHistory(getQuizHistory());
-    };
-
-    const handleClearHistory = () => {
-        if (window.confirm('Are you sure you want to clear all quiz history?')) {
-            clearQuizHistory();
+        useEffect(() => {
+            const loadStats = () => {
+                setStats(getQuizStats());
+                setHistory(getQuizHistory());
+            };
             loadStats();
-        }
-    };
+        }, []);
+
+        const handleClearHistory = () => {
+            if (window.confirm('Are you sure you want to clear all quiz history?')) {
+                clearQuizHistory();
+                setStats(getQuizStats());
+                setHistory(getQuizHistory());
+            }
+        };
 
     if (!stats) {
         return (
