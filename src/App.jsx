@@ -324,7 +324,7 @@ function App() {
                             </span>
                                 <button
                                     onClick={() => setQuizStarted(false)}
-                                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 hover:text-gray-100">
+                                    className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 hover:text-gray-100 dark:hover:text-gray-100">
                                     Quit
                                 </button>
                             </div>
