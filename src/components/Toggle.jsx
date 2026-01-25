@@ -6,9 +6,9 @@ function Toggle({ checked, onChange, label, count }) {
           {label}
         </span>
                 {count !== undefined && (
-                    <span className="ml-2 text-xs text-gray-500 dark:text-gray-400">
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
             ({count} {count === 1 ? 'question' : 'questions'})
-          </span>
+          </div>
                 )}
             </div>
 

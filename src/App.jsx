@@ -175,7 +175,7 @@ function App() {
                     <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
                             <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
-                            <div className="space-y-2 max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg p-3">
+                            <div className="max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
                                 {questionsData.categories
                                     .map(category => ({
                                         ...category,
