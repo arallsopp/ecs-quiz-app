@@ -21,10 +21,13 @@ function About({ onClose }) {
                     <div className="border-t pt-4 text-xs text-gray-500 space-y-1">
                         <p>Written for Edward Allsopp</p>
                         <p>January 2025</p>
-                        <p>Uses the <a href="https://www.ecscard.org.uk/getmedia/2bfce807-2289-4a51-a23e-b1c6f801f3e3/ECS-HSE-Revision-Guide-24-pdf.pdf"
-                                       target="_blank"
-                                       >revision guide</a>
-                        from <a href="https://www.ecscard.org.uk"
+                        <p>Uses the <a
+                            className="text-blue-600 hover:underline"
+                            href="https://www.ecscard.org.uk/getmedia/2bfce807-2289-4a51-a23e-b1c6f801f3e3/ECS-HSE-Revision-Guide-24-pdf.pdf"
+                            target="_blank"
+                        >revision guide</a> from <a
+                            className="text-blue-600 hover:underline"
+                            href="https://www.ecscard.org.uk"
                             target="_blank">ECScard.org</a>
                         </p>
                     </div>

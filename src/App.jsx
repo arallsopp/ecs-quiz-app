@@ -7,6 +7,7 @@ import icon from './assets/icon.png'
 import { saveQuizResult } from './utils/scoreStorage';
 import Dashboard from './components/Dashboard';
 import { getCategoryFromId } from './utils/getCategory';
+import About from './components/About';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
 
     // Dashboard state
     const [showDashboard, setShowDashboard] = useState(false);
+
+    //about state
+    const [showAbout, setShowAbout] = useState(false);
 
     const [questions, setQuestions] = useState(questionsData.questions);
 
@@ -155,6 +159,7 @@ function App() {
 
     return (
         <main role="main">
+            {showAbout && <About onClose={() => setShowAbout(false)} />}
             {showDashboard ? (
                 <Dashboard onClose={() => setShowDashboard(false)} />
             ) : (
@@ -243,7 +248,12 @@ function App() {
                         >
                             View Progress Dashboard
                         </button>
-
+                        <button
+                            onClick={() => setShowAbout(true)}
+                            className="w-full mt-2 text-sm text-gray-600 hover:text-gray-900"
+                        >
+                            About
+                        </button>
                     </div>
 
 
