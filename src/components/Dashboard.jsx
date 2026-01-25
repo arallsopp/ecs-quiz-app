@@ -8,13 +8,13 @@ function Dashboard({ onClose }) {
 
     // escape key closes
     useEffect(() => {
-        const handleEscape = (e) => {
-            if (e.key === 'Escape') {
+        const handleEscapeOrEnter = (e) => {
+            if (e.key === 'Escape' || e.key === 'Enter') {
                 onClose();
             }
         };
-        document.addEventListener('keydown', handleEscape);
-        return () => document.removeEventListener('keydown', handleEscape);
+        document.addEventListener('keydown', handleEscapeOrEnter);
+        return () => document.removeEventListener('keydown', handleEscapeOrEnter);
     }, [onClose]);
 
     const handleClearHistory = () => {
