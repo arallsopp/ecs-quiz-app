@@ -206,7 +206,7 @@ function App() {
 
                     <div className="bg-white dark:bg-slate-900 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
-                            <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include {/* todo: context scroll for more */}</span>
+                            <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include ({selectedCategories.length} of {questionsData.categories.length}) {/* todo: context scroll for more */}</span>
                             <div className="max-h-48 md:max-h-full md:p-2 md:grid md:gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
                                 {questionsData.categories
                                     .map(category => ({
