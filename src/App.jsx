@@ -166,9 +166,9 @@ function App() {
             ) : (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {!quizStarted && (
-                <div className="max-w-md sm:max-w-full mx-auto pt-20 px-4">
-                    <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
-                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-400 mb-8">
+                <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
+                    <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6 md:inline md:w-20 md:h-20" />
+                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-400 mb-8 md:inline">
                         ECS Health & Safety Quiz
                     </h1>
 
