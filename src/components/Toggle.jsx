@@ -2,7 +2,9 @@ function Toggle({ checked, onChange, label, count }) {
     return (
         <label className="flex items-center justify-between p-3 rounded-lg cursor-pointer md:bg-gray-50 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
             <div className="flex-1">
-        <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+        <span className={`text-sm font-medium text-gray-900 dark:text-gray-100
+            ${checked ? 'opacity-100' : 'opacity-60'} `
+        }>
           {label}
         </span>
                 {count !== undefined && (
