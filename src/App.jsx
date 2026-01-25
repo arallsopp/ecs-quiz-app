@@ -68,6 +68,9 @@ function App() {
         // Shuffle questions
         setQuestions(shuffle([...filteredQuestions]));
 
+        // Avoid issue where user can select more questions than category selection allows
+        setQuestionsToAsk(filteredQuestions.length);
+
         // Reset everything
         setCurrentQuestionIndex(0);
         setScore(0);
@@ -118,7 +121,7 @@ function App() {
         setShowingFeedback(false);
 
         const nextQuestion = currentQuestionIndex + 1;
-        if ((nextQuestion < questionsToAsk) && (nextQuestion < questions.length)) {
+        if ((nextQuestion < questionsToAsk)) {
             //we are either at the end, or there weren't enough questions in the selected categories
             setCurrentQuestionIndex(nextQuestion);
         } else {
