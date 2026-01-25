@@ -118,7 +118,8 @@ function App() {
         setShowingFeedback(false);
 
         const nextQuestion = currentQuestionIndex + 1;
-        if (nextQuestion < questionsToAsk) {
+        if ((nextQuestion < questionsToAsk) && (nextQuestion < questions.length)) {
+            //we are either at the end, or there weren't enough questions in the selected categories
             setCurrentQuestionIndex(nextQuestion);
         } else {
             finishQuiz();
