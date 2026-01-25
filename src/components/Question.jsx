@@ -33,7 +33,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
                             ${!showingFeedback && 'border-transparent bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-900 dark:text-gray-300'}
                             ${showingFeedback && answer.originalIndex === questionData.correctAnswer && 'bg-green-100 dark:bg-green-950 border-green-600 text-green-900 dark:text-green-100'}
                             ${showingFeedback && selectedAnswer === answer.originalIndex && selectedAnswer !== questionData.correctAnswer && 'bg-red-100 dark:bg-red-950 border-red-600 text-red-900 dark:text-red-100'}
-                            ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'dark: border-gray-800 bg-gray-50 dark:bg-gray-950 text-gray-400 dark:text-gray-600'}
+                            ${showingFeedback && selectedAnswer !== answer.originalIndex && answer.originalIndex !== questionData.correctAnswer && 'dark:border-gray-800 bg-gray-50 dark:bg-gray-950 text-gray-400 dark:text-gray-600'}
                         `}
                         disabled={showingFeedback}
                         onClick={() => onAnswer(answer.originalIndex)}
