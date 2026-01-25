@@ -10,6 +10,9 @@ import { getCategoryFromId } from './utils/getCategory';
 import About from './components/About';
 import Toggle from './components/Toggle';
 
+/* todo: use the categories from the questions JSON.
+         name them in full on screen.
+ */
 
 function App() {
 
@@ -151,6 +154,7 @@ function App() {
         document.addEventListener('keydown', handleEnter);
         return () => document.removeEventListener('keydown', handleEnter);
     },[quizStarted,showScore,setShowScore,setShowDashboard,showDashboard,handleStartQuiz]);
+    { /* todo: including handleStartQuiz in the deps make this change on every render. */}
 
 
     const finishQuiz = () => {
