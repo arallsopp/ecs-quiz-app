@@ -1,9 +1,21 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { getQuizStats, getQuizHistory, clearQuizHistory } from '../utils/scoreStorage';
 
 function Dashboard({ onClose }) {
     const [history, setHistory] = useState(() => getQuizHistory());
     const [stats, setStats] = useState(() => getQuizStats());
+
+    // escape key closes
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+                onClose();
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+        return () => document.removeEventListener('keydown', handleEscape);
+    }, [onClose]);
 
     const handleClearHistory = () => {
         if (window.confirm('Are you sure you want to clear all quiz history?')) {
