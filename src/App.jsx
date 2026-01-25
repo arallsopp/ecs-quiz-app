@@ -154,7 +154,7 @@ function App() {
     };
 
     return (
-        <div>
+        <main role="main">
             {showDashboard ? (
                 <Dashboard onClose={() => setShowDashboard(false)} />
             ) : (
@@ -326,7 +326,7 @@ function App() {
             )}
         </div>
             ) }
-        </div>
+        </main>
     );
 }
 
