@@ -196,13 +196,13 @@ function App() {
             {!quizStarted && (
                 <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
                     <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6 md:inline md:w-20 md:h-20" />
-                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-400 mb-8 md:inline">
+                    <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8 md:inline">
                         ECS Health & Safety Quiz
                     </h1>
 
                     <div className="bg-white dark:bg-slate-900 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
-                            <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
+                            <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include {/* todo: context scroll for more */}</span>
                             <div className="max-h-48 md:max-h-full md:p-2 md:grid md:gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
                                 {questionsData.categories
                                     .map(category => ({
@@ -303,12 +303,13 @@ function App() {
                                 {mode === 'exam' && !showScore && (
                                     <div className="min-w-[40px] sm:min-w-[90px]">
                                         <Countdown
-                                            promptClassName="hidden sm:inline "
+                                            className="dark:text-gray-200"
+                                            promptClassName="hidden sm:inline"
                                             initialSeconds={timeLimit}
                                             onComplete={() => setShowScore(true)}
                                         />
                                     </div>
-                                )} <span className="text-sm text-gray-600">
+                                )} <span className="text-sm text-gray-600 dark:text-gray-300">
                                 Question {currentQuestionIndex + 1} of {questionsToAsk}
                             </span>
                             </div>
@@ -330,12 +331,12 @@ function App() {
                     <div className="flex-1 px-6 py-8">
                         <div className="max-w-4xl mx-auto">
                             {showScore ? (
-                                <div className="bg-white dark:bg-black text-black dark:text-gray-400 rounded-lg shadow-md p-8 text-center">
+                                <div className="bg-white dark:bg-black text-black dark:text-gray-200 rounded-lg shadow-md p-8 text-center">
                                     <h2 className="text-3xl font-bold">Finished</h2>
                                     <div className="text-6xl font-bold mb-4">
                                         {((score / questionsToAsk) * 100).toFixed(1)}%
                                     </div>
-                                    <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
+                                    <p className="text-xl text-gray-600 dark:text-gray-200 mb-6">
                                         You scored {score} out of {questionsToAsk}
                                     </p>
                                     {passed ? (
