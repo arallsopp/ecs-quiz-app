@@ -62,8 +62,8 @@ function Dashboard({ onClose }) {
                 </div>
             </div>
 
-            {/* Progress Chart */}
-            <div className="bg-white rounded-lg shadow-md p-6">
+            {/* Progress Chart -- currently hidden as its not working */}
+            <div className="bg-white hidden rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-4">Recent Progress</h2>
                 <div className="h-64 flex items-end justify-around gap-2">
                     {stats.trend.map((point, index) => (
@@ -112,7 +112,7 @@ function Dashboard({ onClose }) {
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
                     <div className="bg-green-50 rounded-lg p-4">
-                        <div className="text-sm text-green-800 font-medium">💪 Strongest Category</div>
+                        <div className="text-sm text-green-800 font-medium">Strongest Category</div>
                         <div className="text-lg font-bold text-green-900 capitalize">
                             {stats.strongestCategory.category}
                         </div>
@@ -121,7 +121,7 @@ function Dashboard({ onClose }) {
                         </div>
                     </div>
                     <div className="bg-orange-50 rounded-lg p-4">
-                        <div className="text-sm text-orange-800 font-medium">📚 Needs Practice</div>
+                        <div className="text-sm text-orange-800 font-medium">Needs Practice</div>
                         <div className="text-lg font-bold text-orange-900 capitalize">
                             {stats.weakestCategory.category}
                         </div>
