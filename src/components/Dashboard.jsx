@@ -30,7 +30,27 @@ function Dashboard({ onClose }) {
     }
     console.log(stats.trend);
     return (
-        <div className="dark:bg-black max-w-6xl mx-auto p-6 space-y-6">
+        <div className="fixed inset-0 bg-black/50 z-50 overflow-y-auto">
+            <div className="min-h-screen p-4 md:p-6">
+                <div className="max-w-6xl mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-2xl">
+                    {/* Sticky header */}
+                    <div className="sticky top-0 z-10 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 rounded-t-lg">
+                        <div className="flex items-center justify-between">
+                            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+                                Your Progress Dashboard
+                            </h1>
+                            <button
+                                onClick={onClose}
+                                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 text-2xl w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                aria-label="Close dashboard"
+                            >
+                                ✕
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Scrollable content */}
+                    <div className="dark:bg-black max-w-6xl mx-auto p-6 space-y-6">
             {/* Header */}
             <div className="flex items-center justify-between">
                 <h1 className="text-3xl font-bold">Your Progress Dashboard</h1>
@@ -63,7 +83,7 @@ function Dashboard({ onClose }) {
             </div>
 
             {/* Progress Chart --now using a fixed height container, still not working*/}
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <div className="bg-white    dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Recent Progress</h2>
                 <div className="h-64 flex items-end justify-around gap-2 mb-8">
                     {stats.trend.map((point, index) => (
@@ -174,6 +194,9 @@ function Dashboard({ onClose }) {
                 >
                     Take Another Quiz
                 </button>
+            </div>
+        </div>
+                </div>
             </div>
         </div>
     );
