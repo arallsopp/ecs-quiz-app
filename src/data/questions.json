@@ -1912,6 +1912,78 @@
       ],
       "correctAnswer": 3,
       "explanation": "Ultraviolet rays in sunlight can cause sunburn and premature ageing of the skin. The most serious effect, however, is an increased chance of developing skin cancer."
+    },
+    {
+      "id": "6.1",
+      "question": "An emergency route(s) must be provided on construction sites to ensure:",
+      "answers": [
+        "Safe passage to the open air",
+        "Safe passage to the rest area",
+        "Safe passage to a secure place of safety",
+        "Safe passage to the ground from heigh"
+      ],
+      "correctAnswer": 2,
+      "explanation": ""
+    },
+    {
+      "id": "7.1",
+      "question": "Most deaths on site are caused by:",
+      "answers": [
+        "Vehicle movements",
+        "Falling from height",
+        "Solvent inhalation",
+        "Chemical burns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Although the other dangers can kill or cause injury, falling from height is the bigger cause of fatalities."
+    },
+    {
+      "id": "8.1",
+      "question": "What precaution should you take before adjusting an electrical tool?",
+      "answers": [
+        "Check the lead is not twisted or knotted",
+        "Wear safety footwear with steel toe caps",
+        "Disconnect from the power source",
+        "Wear the correct personal protective equipment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Do not adjust tools which could still be live or operate."
+    },
+    {
+      "id": "9.1",
+      "question": "Why may a confined space be dangerous to work in?",
+      "answers": [
+        "There may not be sufficient working space",
+        "Air in the space may be unbreathable due to poisonous gas",
+        "Temperature and poor ventilation may affect the worker",
+        "All of the hazards mentioned"
+      ],
+      "correctAnswer": 3,
+      "explanation": "There can be a range of hazards associated with confined spaces, and these can include all of those mentioned."
+    },
+    {
+      "id": "10.1",
+      "question": "The specific effects on the human body of a major electric shock are one of the following:",
+      "answers": [
+        "Dermatitis",
+        "Burns and cardiac arrest",
+        "Broken bones",
+        "Chest pains"
+      ],
+      "correctAnswer": 3,
+      "explanation": ""
+    },
+    {
+      "id": "11.1",
+      "question": "ou are on site and you need to dispose of some waste liquid which has oil in it and you are not sure what to do with it. What should you do?",
+      "answers": [
+        "Dispose of it in a sealed container into the site skip",
+        "Pour it onto the ground, it will soak away",
+        "Take it outside and set light to it",
+        "Ask your supervisor about the correct way to deal with this waste"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Dealing with hazardous/special waste will include proper storage and segregation before it is taken away by an authorised waste carrier as required by environmental\nlegislation. An oil spillage could also get into the ground or drains, which may also be an offence under environmental law. Burning waste on site is also an offence, under air pollution legislation, and can lead to local complaints."
     }
   ]
 }
