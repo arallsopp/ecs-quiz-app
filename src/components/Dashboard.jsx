@@ -62,23 +62,26 @@ function Dashboard({ onClose }) {
                 </div>
             </div>
 
-            {/* Progress Chart -- currently hidden as its not working */}
+            {/* Progress Chart --now using a fixed height container, still not working*/}
             <div className="bg-white hidden rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-4">Recent Progress</h2>
-                <div className="h-64 flex items-end justify-around gap-2">
-                    {stats.trend.map((point, index) => (
-                        <div key={index} className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                                className="w-full bg-blue-600 rounded-t transition-all hover:bg-blue-700"
-                                style={{ height: `${point.percentage}%` }}
-                                title={`${point.percentage}%`}
-                            />
-                            <div className="text-xs text-gray-600 transform -rotate-45 origin-top-left mt-2">
-                                {point.date}
+                <div className="h-64 relative">
+                    <div className="absolute inset-0 flex items-end justify-around gap-2">
+                        {stats.trend.map((point, index) => (
+                            <div key={index} className="flex-1 flex flex-col items-center gap-2">
+                                <div
+                                    className="w-full bg-blue-600 rounded-t transition-all hover:bg-blue-700"
+                                    style={{ height: `${point.percentage}%` }}
+                                    title={`${point.percentage}%`}
+                                />
+                                <div className="text-xs text-gray-600 whitespace-nowrap">
+                                    {point.date}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
+
                 <div className="mt-8 flex justify-between text-sm text-gray-600">
                     <span>0%</span>
                     <span>50%</span>
