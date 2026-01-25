@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import {shuffle} from "../utils/shuffle.js";
 
 function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
@@ -11,6 +11,17 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
         }));
         return shuffle(withIndex);
     }, [questionData]);
+
+    // allow enter to hit the continue button, if we are showing it.
+    useEffect(() => {
+        const handleEnter = (e) => {
+            if (e.key === 'Enter' && showingFeedback) {
+                onNextQuestion();
+            }
+        };
+        document.addEventListener('keydown', handleEnter);
+        return () => document.removeEventListener('keydown', handleEnter);
+    }, [onNextQuestion, showingFeedback]);
 
     return (
         <div className="space-y-6">
