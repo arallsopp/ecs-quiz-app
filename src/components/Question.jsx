@@ -12,7 +12,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
         return shuffle(withIndex);
     }, [questionData]);
 
-    // allow enter to hit the continue button, if we are showing it.
+    // allow key:enter to hit the continue button, if we are showing it.
     useEffect(() => {
         const handleEnter = (e) => {
             if (e.key === 'Enter' && showingFeedback) {

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
@@ -128,6 +128,20 @@ function App() {
             finishQuiz();
         }
     };
+
+    // allow key:enter to show stats page when quiz is finished.
+    useEffect(() => {
+        const handleEnter = (e) => {
+            if (e.key === 'Enter' && showScore) {
+                // you are at the end
+                setQuizStarted(false);
+                setShowDashboard(true);
+            }
+        };
+        document.addEventListener('keydown', handleEnter);
+        return () => document.removeEventListener('keydown', handleEnter);
+    }, [showScore]);
+
 
     const finishQuiz = () => {
         const timeSpent = mode === 'exam' ? Math.floor((Date.now() - quizStartTime) / 1000) : null;
