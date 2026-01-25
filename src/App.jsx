@@ -132,15 +132,25 @@ function App() {
     // allow key:enter to show stats page when quiz is finished.
     useEffect(() => {
         const handleEnter = (e) => {
-            if (e.key === 'Enter' && showScore) {
-                // you are at the end
-                setQuizStarted(false);
-                setShowDashboard(true);
+            console.log('show score is ',showScore);
+            if (e.key === 'Enter') {
+                if (showScore) {
+                    // you are at the end
+                    setQuizStarted(false); //not playing
+                    setShowScore(false); //not showing score
+                    setShowDashboard(true); //show the analysis, we will go back to splash.
+                }else if(!quizStarted) {
+                    //we are on the dash screen, start the quiz
+                    if(!showDashboard){
+                        handleStartQuiz();
+                    }
+                }
             }
+
         };
         document.addEventListener('keydown', handleEnter);
         return () => document.removeEventListener('keydown', handleEnter);
-    }, [showScore]);
+    },[quizStarted,showScore,setShowScore,setShowDashboard,showDashboard,handleStartQuiz]);
 
 
     const finishQuiz = () => {
