@@ -319,7 +319,7 @@ function App() {
                             </div>
 
                             <div className="flex items-center gap-4">
-                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">
+                            <span className="px-3 py-1 text-gray-600 dark:text-gray-300 text-sm rounded-full">
                                 {mode === 'exam' ? 'Exam Mode' : 'Practice Mode'}
                             </span>
                                 <button

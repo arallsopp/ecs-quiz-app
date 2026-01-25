@@ -26,7 +26,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
     return (
         <div className="space-y-6">
             <div>
-                <div className="text-sm text-gray-500 mb-2">
+                <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
                     Category: {questionData.category}
                 </div>
                 <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-200">
