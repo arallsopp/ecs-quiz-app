@@ -185,21 +185,19 @@ function App() {
                                     }))
                                     .filter(category => category.questionCount > 0)
                                     .map(category => (
-                                        <label key={category.id} className="flex items-center gap-2 cursor-pointer">
-                                            <input
-                                                type="checkbox"
-                                                checked={selectedCategories.includes(category.id)}
-                                                onChange={(e) => {
-                                                    if (e.target.checked) {
-                                                        setSelectedCategories([...selectedCategories, category.id]);
-                                                    } else {
-                                                        setSelectedCategories(selectedCategories.filter(id => id !== category.id));
-                                                    }
-                                                }}
-                                                className="w-4 h-4 text-blue-600 dark:text-blue-400 rounded"
-                                            />
-                                            <span className="text-sm text-black dark:text-white">{category.name}</span>
-                                        </label>
+                                        <Toggle
+                                            key={category.id}
+                                            checked={selectedCategories.includes(category.id)}
+                                            onChange={(checked) => {
+                                                if (checked) {
+                                                    setSelectedCategories([...selectedCategories, category.id]);
+                                                } else {
+                                                    setSelectedCategories(selectedCategories.filter(id => id !== category.id));
+                                                }
+                                            }}
+                                            label={category.name}
+                                            count={category.questionCount}
+                                        />
                                     ))
                                 }
                             </div>
