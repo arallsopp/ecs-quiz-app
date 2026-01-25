@@ -200,7 +200,7 @@ function App() {
                         ECS Health & Safety Quiz
                     </h1>
 
-                    <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md p-6 space-y-4">
+                    <div className="bg-white dark:bg-slate-900 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
                             <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
                             <div className="max-h-48 md:max-h-full md:p-2 md:grid md:gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
@@ -237,7 +237,7 @@ function App() {
                                 Select All
                             </button> |     <button
                                 onClick={() => setSelectedCategories([])}
-                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline dark:text-gray-400"
+                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
                             >
                                 None
                             </button>
@@ -284,7 +284,7 @@ function App() {
                         </button>
                         <button
                             onClick={() => setShowAbout(true)}
-                            className="w-full mt-2 text-sm text-gray-600 hover:text-gray-900"
+                            className="w-full mt-2 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
                         >
                             About
                         </button>

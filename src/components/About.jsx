@@ -1,7 +1,7 @@
 function About({ onClose }) {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-md w-full p-6">
+            <div className="bg-white dark:bg-gray-800 dark:border dark:border-gray-700 rounded-lg shadow-xl max-w-md w-full p-6">
                 <div className="flex justify-between items-start mb-4">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-200">About</h2>
                     <button
