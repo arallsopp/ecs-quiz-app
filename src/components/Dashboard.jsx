@@ -62,7 +62,7 @@ function Dashboard({ onClose }) {
                     </div>
 
                     {/* Scrollable content */}
-                    <div className="dark:bg-black max-w-6xl mx-auto p-6 space-y-6">
+                    <div className="dark:bg-gray-900 max-w-6xl mx-auto p-6 space-y-6">
 
             {/* Overview Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
