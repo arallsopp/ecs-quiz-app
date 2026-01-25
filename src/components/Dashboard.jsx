@@ -28,7 +28,7 @@ function Dashboard({ onClose }) {
             </div>
         );
     }
-
+    console.log(stats.trend);
     return (
         <div className="dark:bg-black max-w-6xl mx-auto p-6 space-y-6">
             {/* Header */}
@@ -63,26 +63,23 @@ function Dashboard({ onClose }) {
             </div>
 
             {/* Progress Chart --now using a fixed height container, still not working*/}
-            <div className="bg-white hidden rounded-lg shadow-md p-6">
-                <h2 className="text-xl font-semibold mb-4">Recent Progress</h2>
-                <div className="h-64 relative">
-                    <div className="absolute inset-0 flex items-end justify-around gap-2">
-                        {stats.trend.map((point, index) => (
-                            <div key={index} className="flex-1 flex flex-col items-center gap-2">
-                                <div
-                                    className="w-full bg-blue-600 rounded-t transition-all hover:bg-blue-700"
-                                    style={{ height: `${point.percentage}%` }}
-                                    title={`${point.percentage}%`}
-                                />
-                                <div className="text-xs text-gray-600 whitespace-nowrap">
-                                    {point.date}
-                                </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Recent Progress</h2>
+                <div className="h-64 flex items-end justify-around gap-2 mb-8">
+                    {stats.trend.map((point, index) => (
+                        <div key={index} className="flex-1 flex flex-col items-center justify-end gap-2 h-full">
+                            <div
+                                className="w-full bg-blue-600 dark:bg-blue-500 rounded-t transition-all hover:bg-blue-700 dark:hover:bg-blue-600"
+                                style={{ height: `${point.percentage}%` }}
+                                title={`${point.percentage}%`}
+                            />
+                            <div className="text-xs text-gray-600 dark:text-gray-400 whitespace-nowrap">
+                                {point.date}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
-
-                <div className="mt-8 flex justify-between text-sm text-gray-600">
+                <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
                     <span>0%</span>
                     <span>50%</span>
                     <span>100%</span>
