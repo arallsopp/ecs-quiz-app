@@ -166,7 +166,7 @@ function App() {
             ) : (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {!quizStarted && (
-                <div className="max-w-md mx-auto pt-20 px-4">
+                <div className="max-w-md sm:max-w-full mx-auto pt-20 px-4">
                     <img src={icon} alt="ECS" className="w-32 h-32 mx-auto mb-6" />
                     <h1 className="text-4xl font-bold text-center text-gray-800 dark:text-gray-400 mb-8">
                         ECS Health & Safety Quiz
@@ -175,7 +175,7 @@ function App() {
                     <div className="bg-white dark:bg-slate-900 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
                             <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Topics to Include </span>
-                            <div className="max-h-48 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
+                            <div className="max-h-48 md:max-h-full md:p-2 md:grid md:gap-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 overflow-y-auto border border-gray-200 dark:border-gray-700 dark:bg-slate-800 rounded-lg">
                                 {questionsData.categories
                                     .map(category => ({
                                         ...category,
@@ -214,33 +214,35 @@ function App() {
                                 None
                             </button>
                         </div>
-                        <div>
-                            <label htmlFor="questionsToAsk"
-                                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Number of
-                                Questions </label> <input
-                            id="questionsToAsk"
-                            type="number"
-                            min="1"
-                            max={questionsData.questions.length}
-                            value={questionsToAsk}
-                            onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
-                            className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2"
-                        />
-                        </div>
+                        <div className="sm:grid sm:grid-cols-2 sm:gap-2">
+                            <div>
+                                <label htmlFor="questionsToAsk"
+                                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Number of
+                                    Questions </label> <input
+                                id="questionsToAsk"
+                                type="number"
+                                min="1"
+                                max={questionsData.questions.length}
+                                value={questionsToAsk}
+                                onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
+                                className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2 sm:h-10"
+                            />
+                            </div>
 
-                        <div>
-                            <label htmlFor="mode"
-                                   className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Mode </label>
-                            <select
-                                id="mode"
-                                value={mode}
-                                onChange={(e) => setMode(e.target.value)}
-                                className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2">
-                                <option value="practice">Practice Mode</option>
-                                <option value="exam">Exam Conditions</option>
-                            </select>
-                        </div>
-                        <button
+                            <div>
+                                <label htmlFor="mode"
+                                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"> Mode </label>
+                                <select
+                                    id="mode"
+                                    value={mode}
+                                    onChange={(e) => setMode(e.target.value)}
+                                    className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2 sm:h-10">
+                                    <option value="practice">Practice Mode</option>
+                                    <option value="exam">Exam Conditions</option>
+                                </select>
+                            </div>
+                            </div>
+                            <button
                             onClick={handleStartQuiz}
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
                         >
