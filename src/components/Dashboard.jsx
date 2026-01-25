@@ -63,10 +63,6 @@ function Dashboard({ onClose }) {
 
                     {/* Scrollable content */}
                     <div className="dark:bg-black max-w-6xl mx-auto p-6 space-y-6">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <h1 className="text-3xl font-bold">Your Progress Dashboard</h1>
-            </div>
 
             {/* Overview Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

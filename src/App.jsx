@@ -69,7 +69,7 @@ function App() {
         setQuestions(shuffle([...filteredQuestions]));
 
         // Avoid issue where user can select more questions than category selection allows
-        setQuestionsToAsk(filteredQuestions.length);
+        setQuestionsToAsk(Math.min(questionsToAsk,filteredQuestions.length));
 
         // Reset everything
         setCurrentQuestionIndex(0);
@@ -324,12 +324,25 @@ function App() {
                                             { mode === "exam" &&  <span>✗ FAIL. You needed 86% ({passingScore}/{questionsToAsk}) to pass</span>}
                                         </p>
                                     )}
+                                    <div className="sm:grid sm:grid-cols-2 gap-2">
                                     <button
-                                        onClick={() => setQuizStarted(false)}
-                                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+                                        onClick={() => {
+                                            setQuizStarted(false);
+                                            setShowDashboard(true);
+                                        }}
+                                        className="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                                    >
+                                        View Progress Dashboard
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setQuizStarted(false);
+                                        }}
+                                        className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
                                     >
                                         Back to Home
                                     </button>
+                                    </div>
                                 </div>
                             ) : (
                                 <Question
