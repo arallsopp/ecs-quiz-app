@@ -8,6 +8,7 @@ import { saveQuizResult } from './utils/scoreStorage';
 import Dashboard from './components/Dashboard';
 import { getCategoryFromId } from './utils/getCategory';
 import About from './components/About';
+import Toggle from './components/Toggle';
 
 
 function App() {
@@ -208,6 +209,11 @@ function App() {
                                 className="text-xs text-blue-600 dark:text-blue-400 hover:underline mt-2"
                             >
                                 Select All
+                            </button> |     <button
+                                onClick={() => setSelectedCategories([])}
+                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline dark:text-gray-400"
+                            >
+                                None
                             </button>
                         </div>
                         <div>
