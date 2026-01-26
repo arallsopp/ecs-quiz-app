@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { getQuizStats, getQuizHistory, clearQuizHistory } from '../utils/scoreStorage';
+import { getCategoryById } from '../utils/getCategory.jsx';
 
 function Dashboard({ onClose }) {
     const [history, setHistory] = useState(() => getQuizHistory());
@@ -127,7 +128,7 @@ function Dashboard({ onClose }) {
                     {stats.categoryPercentages.map((cat) => (
                         <div key={cat.category}>
                             <div className="flex justify-between text-sm mb-1">
-                                <span className="font-medium capitalize">{cat.category}</span>
+                                <span className="font-medium capitalize">{getCategoryById(cat.category).name}</span>
                                 <span className="text-gray-600 dark:text-gray-400">{cat.correct}/{cat.total} ({cat.percentage}%)</span>
                             </div>
                             <div className="h-3 bg-gray-200 dark:bg-gray-900 rounded-full overflow-hidden">
@@ -148,7 +149,7 @@ function Dashboard({ onClose }) {
                     <div className="bg-green-50 dark:bg-gray-700 rounded-lg p-4">
                         <div className="text-sm text-green-800 dark:text-gray-100 font-medium">Strongest Category</div>
                         <div className="text-lg font-bold text-green-900 dark:text-green-400 capitalize">
-                            {stats.strongestCategory.category}
+                            {getCategoryById(stats.strongestCategory.category).name}
                         </div>
                         <div className="text-sm text-green-700 dark:text-green-400">
                             {stats.strongestCategory.percentage}% correct
@@ -157,7 +158,7 @@ function Dashboard({ onClose }) {
                     <div className="bg-orange-50 dark:bg-gray-700 rounded-lg p-4">
                         <div className="text-sm text-orange-800 dark:text-gray-100 font-medium">Needs Practice</div>
                         <div className="text-lg font-bold text-orange-900 dark:text-orange-400 capitalize">
-                            {stats.weakestCategory.category}
+                            {getCategoryById(stats.weakestCategory.category).name }
                         </div>
                         <div className="text-sm text-orange-700 dark:text-orange-400">
                             {stats.weakestCategory.percentage}% correct
