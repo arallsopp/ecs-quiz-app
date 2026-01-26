@@ -3998,7 +3998,19 @@
         "Keep the tops off, to prevent pressure from building up"
       ],
       "correctAnswer": 2,
-      "explanation": ""
+      "explanation": "Any spillage could get into the ground or drains, which is likely to be an offence under environmental legislation."
+    },
+    {
+      "id": "11.21",
+      "question": "What can help to prevent harm to the environment from oil spillages?",
+      "answers": [
+        "A supply of water to flush the spill away",
+        "Cover the spillage with soil",
+        "Turning liquid containers upside down so the top can't come off",
+        "Store oils in an area that can catch any spills, such as a bund or a drip tray."
+      ],
+      "correctAnswer": 3,
+      "explanation": "The use of a bund (fully walled storage area) or a drip tray will help any spillage to be contained in a small area for clear up. Any spillage could get into the ground or drains, which is likely to be an offence under environmental legislation."
     }
   ]
 }
