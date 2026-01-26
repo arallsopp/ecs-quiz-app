@@ -10,56 +10,67 @@
   "categories": [
     {
       "id": "general",
+      "sectionNumber": 1,
       "name": "General Health and Safety at Work",
       "examQuestions": 6
     },
     {
       "id": "manual",
+      "sectionNumber": 2,
       "name": "Manual Handling Operations",
       "examQuestions": 4
     },
     {
       "id": "accidents",
+      "sectionNumber": 3,
       "name": "Reporting Accidents",
       "examQuestions": 3
     },
     {
       "id": "ppe",
+      "sectionNumber": 4,
       "name": "Personal Protective Equipment at Work",
       "examQuestions": 4
     },
     {
       "id": "health",
+      "sectionNumber": 5,
       "name": "Health and Hygiene",
       "examQuestions": 3
     },
     {
       "id": "fire",
+      "sectionNumber": 6,
       "name": "Fire and Emergency",
       "examQuestions": 9
     },
     {
       "id": "height",
+      "sectionNumber": 7,
       "name": "Work at Height",
       "examQuestions": 5
     },
     {
       "id": "equipment",
+      "sectionNumber": 8,
       "name": "Work Equipment",
       "examQuestions": 4
     },
     {
       "id": "hazards",
+      "sectionNumber": 9,
       "name": "Special Site Hazards",
       "examQuestions": 3
     },
     {
       "id": "electro",
+      "sectionNumber": 10,
       "name": "Electrotechnical",
       "examQuestions": 6
     },
     {
       "id": "environmental",
+      "sectionNumber": 11,
       "name": "Environmental",
       "examQuestions": 3
     }

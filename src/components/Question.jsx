@@ -1,5 +1,6 @@
 import { useMemo, useEffect } from "react";
 import {shuffle} from "../utils/shuffle.js";
+import { getCategoryName } from "../utils/getCategory.js";
 
 function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
 
@@ -27,7 +28,7 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
         <div className="space-y-6">
             <div>
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                    Category: {questionData.category}
+                    {getCategoryName(questionData.id)}
                 </div>
                 <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-gray-200">
                     {questionData.question}
