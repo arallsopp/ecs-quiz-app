@@ -3330,6 +3330,114 @@
     },
     {
       "id": "10.1",
+      "question": "In accordance with the Electricity at Work regulations, when considering whether to work live a responsible person should:",
+      "answers": [
+        "Carry out a risk assessment",
+        "Only work dead",
+        "Only work live",
+        "Do as the client demands"
+      ],
+      "correctAnswer": 0,
+      "explanation": "To identify and assess the risks involved and the methods of controlling them."
+    },
+    {
+      "id": "10.2",
+      "question": "The normal procedure for working on electrical equipment should be which one of the following?",
+      "answers": [
+        "Dead working",
+        "Wearing insulated gloves",
+        "Using insulated tools",
+        "Live working"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dead working should be considered as the norm and work on or near live conductors should rarely be permitted."
+    },
+    {
+      "id": "10.3",
+      "question": "Test instruments used for working on electrical systems should:",
+      "answers": [
+        "Be yellow in colour",
+        "Be less than 10 years old",
+        "Have non-insulated test probes",
+        "Have insulated test probes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "To protect the user from electric shock whilst using the instrument. i.e. handling the probes."
+    },
+    {
+      "id": "10.4",
+      "question": "Under the Electricity at Work Regulations, live working is considered:",
+      "answers": [
+        "As entirely acceptable",
+        "To be normally permitted",
+        "Only to be allowed in exceptional circumstances",
+        "Never to be allowed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Extra controls must be employed, including training, supervision and use of suitable tools and protective equipment."
+    },
+    {
+      "id": "10.5",
+      "question": "Which of the following would you use to replace the fuse in a plug if fuses were NOT available?",
+      "answers": [
+        "A nail",
+        "A piece of silver paper",
+        "A bit of wire",
+        "None of the options listed"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A fuse is often the main safety device in an electrical circuit. A blown fuse must only be replaced by a fuse of the correct type and rating."
+    },
+    {
+      "id": "10.6",
+      "question": "To prove a circuit or equipment is dead after isolation what is the FIRST activity in the sequence of events?",
+      "answers": [
+        "Make sure equipment is not working",
+        "Check between line and earth",
+        "Check that the voltage detector is working on a proving device, known live source or in built test feature",
+        "Check between line and neutral"
+      ],
+      "correctAnswer": 2,
+      "explanation": "This will prove that that the voltage detector (such as a two-pole voltage detector or proprietary test lamp) is working, i.e. indicating voltage."
+    },
+    {
+      "id": "10.7",
+      "question": "The nominal single phase voltage in the UK is?",
+      "answers": [
+        "230 volts",
+        "240 volts",
+        "415 volts",
+        "400 volts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "This is the nominal voltage for public electricity supply systems within Europe."
+    },
+    {
+      "id": "10.8",
+      "question": "When is live working permissible?",
+      "answers": [
+        "When the person carrying out the work is a competent person",
+        "When it is unreasonable in all circumstances for the equipment to be made dead and suitable precautions are taken",
+        "When the means of isolation cannot be identified",
+        "When the person working on the equipment is wearing rubber gloves"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a requirement under r.14 of the EAW Regulations. However, it does not mean that live working is then 'safe'."
+    },
+    {
+      "id": "10.9",
+      "question": "Which of the following is NOT a requirement of low voltage safe isolation practice?",
+      "answers": [
+        "Ensuring that the correct point of isolation is identified",
+        "The person carrying out the work is issued with insulating gloves",
+        "A caution notice should be applied at the point of isolation",
+        "The conductors are proved to be dead at the point of work"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Safe isolation practice refers to dead working. The use of insulating gloves will generally only be applicable to live working."
+    },
+    {
+      "id": "10.10",
       "question": "The specific effects on the human body of a major electric shock are one of the following:",
       "answers": [
         "Dermatitis",
@@ -3337,20 +3445,560 @@
         "Broken bones",
         "Chest pains"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": ""
     },
     {
+      "id": "10.11",
+      "question": "The lowest level of electrical current which can harm the human body is normally measured in:",
+      "answers": [
+        "Microamps",
+        "Kiloamps",
+        "Amps",
+        "Milliamps"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Research has shown that a person is in serious danger of a fatal electric shock at, or above, approximately 30 milliamps."
+    },
+    {
+      "id": "10.12",
+      "question": "With regard to the effect of electrical current on the human body, one of the following is correct:",
+      "answers": [
+        "A 6 amp circuit breaker should prevent a person receiving a fatal electric shock",
+        "A 3 amp fuse should prevent a person receiving a fatal electric shock",
+        "A 30 mA Residual Current Device (RCD) should prevent a person receiving a fatal electric shock",
+        "A 5 amp rewireable fuse should prevent a person receiving a fatal electric shock"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An RCD is a mechanical switching device intended to cause the opening of the contacts when the residual current attains a given value under specified conditions."
+    },
+    {
+      "id": "10.13",
+      "question": "Where mains voltage is used to supply portable equipment on a construction site, what additional protection is required?",
+      "answers": [
+        "Step-down transformer",
+        "Step-down generator",
+        "Cable avoidance tool",
+        "Residual current device (RCD)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Reduced low voltage systems (e.g. 110 volt centre point earthed) are strongly preferred in such circumstances. Where only mains voltage (230 V) equipment is available, however, a 30 mA RCD will give additional protection against fatal electric shock."
+    },
+    {
+      "id": "10.14",
+      "question": "What colour cable USUALLY signifies 110 volt power supply on site?",
+      "answers": [
+        "Black",
+        "Red",
+        "Blue",
+        "Yellow"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Yellow is the usual colour of cables, socket outlets, plugs and transformers etc which are used with a 110 volt supply."
+    },
+    {
+      "id": "10.15",
+      "question": "A portable electric generator on site has two power outlets, 110 volts and 230 volts. What colour would the 110 volt outlet be?",
+      "answers": [
+        "Black",
+        "Yellow",
+        "Red",
+        "Blue"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Yellow is the usual colour of cables, socket outlets, plugs and transformers etc which are used with a 110 volt supply."
+    },
+    {
+      "id": "10.16",
+      "question": "Where there is no local means of isolation for equipment or circuits to be worked on, which of the following is the preferred method of isolation?",
+      "answers": [
+        "Use a suitable device such as a circuit breaker",
+        "Isolation of the individual circuit breaker or fuse",
+        "Pulling out the distributor's cut-out fuse",
+        "Disconnecting the individual circuit from the DB"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Isolating the whole installation or distribution board is the safest method."
+    },
+    {
+      "id": "10.17",
+      "question": "What action should you take if a workmate gets an electric shock?",
+      "answers": [
+        "Phone the electricity board immediately",
+        "Dial 999 and ask for the fire brigade",
+        "Cut off the power and call for help",
+        "Try to pull them to safety"
+      ],
+      "correctAnswer": 2,
+      "explanation": "If you can switch the power off, the electric hazard will be removed. First aid assistance will then probably be required. Do not touch someone who is still in contact with live electrical cables as you could also receive an electric shock."
+    },
+    {
+      "id": "10.18",
+      "question": "A residual current device is designed to operate in the event of one of the following:",
+      "answers": [
+        "Overload",
+        "Earth fault",
+        "Lightning strike on the supply",
+        "Short-circuit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An RCD provides additional protection against the risk of electric shock."
+    },
+    {
+      "id": "10.19",
+      "question": "Electrical installations on construction sites should be periodically inspected and tested:",
+      "answers": [
+        "Every 3 months",
+        "Every year",
+        "Every 6 months",
+        "Every month"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Three monthly inspections of construction site installations are recommended in IET Guidance Note 3."
+    },
+    {
+      "id": "10.20",
+      "question": "The maximum AC voltage which the human body can withstand without long term physiological effects in dry conditions is:",
+      "answers": [
+        "110 volts",
+        "230 volts",
+        "50 volts",
+        "400 volts"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Regarded as a non-fatal voltage level."
+    },
+    {
+      "id": "10.21",
+      "question": "Which of the following statements is true with regard to the dangers of electricity?",
+      "answers": [
+        "Electricity is perfectly safe so long as you wear cotton gloves",
+        "Electricity is only dangerous if you are not wearing wellington boots",
+        "Electricity is only dangerous in wet weather",
+        "Electricity is dangerous at any time because you cannot tell by looking at a cable whether or not it is live"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The features which make electricity so dangerous are that you cannot see, hear or smell it. It can give you a very unpleasant surprise. Always assume that cables are live."
+    },
+    {
+      "id": "10.22",
+      "question": "What is the most serious effect that electric shock can have if you come into contact with a live part?",
+      "answers": [
+        "The electric current can cause a slight tingling in the fingers",
+        "The electric current can cause burn marks on the fingers",
+        "The electric current can cause the heart to stop, resulting in death",
+        "The electric current can cause the finger muscles to twitch"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Contact with live electrical parts can be fatal. If you do not know otherwise, always assume that electrical parts are live."
+    },
+    {
+      "id": "10.23",
+      "question": "Your job involves you working near to hanging electrical cables which have bare ends. What should you do?",
+      "answers": [
+        "Touch the cables to see if they are live",
+        "Carry on working, as there shouldn't be a problem",
+        "Inform your supervisor and keep well away",
+        "Attempt to push the cables back into the ceiling void so that you can start work"
+      ],
+      "correctAnswer": 2,
+      "explanation": "You must always assume that exposed cables are live until you know they are not. Contact with live electrical cables can kill."
+    },
+    {
+      "id": "10.24",
+      "question": "For all live working activities it is necessary to:",
+      "answers": [
+        "Carry out a risk assessment as required by the EAW Regulations.",
+        "Wear rubber gloves only",
+        "Be accompanied",
+        "Keep your fingers crossed"
+      ],
+      "correctAnswer": 0,
+      "explanation": ""
+    },
+    {
+      "id": "10.25",
+      "question": "An electrical Permit to Work is primarily a statement that:",
+      "answers": [
+        "Someone else has taken responsibility for the work",
+        "The circuit or equipment is live",
+        "Certain instructions need to be followed",
+        "The circuit or equipment has been isolated and is safe to work on"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Permits to work describe the procedures that prevent a major hazard, such as electricity or moving machinery, from causing harm, usually by isolation to effectively ensure (in the case of electricity) 'dead' working with no chance of it going 'live'."
+    },
+    {
+      "id": "10.26",
+      "question": "The probes of voltage detectors and test instruments used on electrical systems should be:",
+      "answers": [
+        "Manufactured in the UK",
+        "Accompanied by a calibration certificate",
+        "Shaped or have barriers to prevent finger contact with the tips",
+        "Coloured red"
+      ],
+      "correctAnswer": 2,
+      "explanation": "In addition, to protect against damage by overcurrent whilst in use, the probes or instrument should incorporate suitable high breaking capacity (hbc) fuses with a low current rating (usually not exceeding 500 mA), or current-limiting resistors."
+    },
+    {
+      "id": "10.27",
+      "question": "Which of the following does the Electricity at Work (EAW) regulations apply to?",
+      "answers": [
+        "All persons engaged for work purposes",
+        "Self employed persons only",
+        "Employees only",
+        "Employers only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The EAW Regulations impose duties on employers, employees and the self employed."
+    },
+    {
+      "id": "10.28",
+      "question": "The Electricity at Work Regulations require that:",
+      "answers": [
+        "Persons working with electricity must have the appropriate level of knowledge and experience",
+        "A training course is necessary before anyone can work with electricity",
+        "Only electricians can work with electricity",
+        "Anyone supervised can work with electricity"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Competency is a requirement of r.16 of the EAW Regulations."
+    },
+    {
+      "id": "10.29",
+      "question": "The Electricity at Work Regulations apply to:",
+      "answers": [
+        "Only low voltage systems",
+        "Only extra-low voltage systems",
+        "All voltage systems",
+        "Only high voltage systems"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The EAW Regulations cover the safe use of electricity in work activities, irrespective of voltage."
+    },
+    {
+      "id": "10.30",
+      "question": "Which of the following should be used to prove a circuit or equipment is dead after isolation?",
+      "answers": [
+        "A lamp holder with a length of flex attached",
+        "A proprietary test lamp or two-pole voltage detector",
+        "A voltage stick",
+        "A multimeter"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accident history has shown that using incorrectly set multimeters or makeshift devices for voltage detection has often caused accidents. The use of non-contact voltage indicators (voltage sticks) is also not advised as the sole means of proving dead."
+    },
+    {
+      "id": "10.31",
+      "question": "Which of the following is NOT a suitable means of isolating a circuit?",
+      "answers": [
+        "Removing a fuse and locking the distribution board",
+        "Putting insulating tape over the circuit breaker",
+        "Padlocking the isolating switch",
+        "Fitting a padlocked circuit breaker lockout"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The isolating device should be switched off or the fuse removed. The switch, circuit breaker or enclosure should then be locked and the key removed. A notice or label should also be posted to warn that someone is working on the circuit or apparatus."
+    },
+    {
+      "id": "10.32",
+      "question": "Which of the following work procedures on electrical systems will always require a permit-to-work to be issued?",
+      "answers": [
+        "Dead working on low-voltage systems",
+        "Live working on low-voltage systems",
+        "Dead working on high-voltage systems",
+        "Live working on high-voltage systems"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An electrical permit-to-work should state what circuit or equipment has been made safe, how that has been achieved and what work is to be done. A permit should not, therefore, be used for live working. Such a permit is always required for work on high-voltage systems, but can also be used for low-voltage systems."
+    },
+    {
+      "id": "10.33",
+      "question": "Optical fibre cable remnants should not be left lying around on site because:",
+      "answers": [
+        "They can be hot and burn upon contact",
+        "Laser beams still exist in the cut pieces",
+        "They can pierce the skin or eyes",
+        "They are toxic"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Fibre fragments can enter the bloodstream and cause infections in the skin or eyes. All fibre waste, particularly small pieces, should be placed in suitable receptacles."
+    },
+    {
+      "id": "10.34",
+      "question": "Why should the end of an optical fibre cable never be pointed towards your own or anyone else's eyes?",
+      "answers": [
+        "The beam can transfer a strong electric current",
+        "The colour of the beam is very hypnotic",
+        "The beam can bore a hole through the skin",
+        "The beam can damage the eyes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Exposure to light sources such as lasers or highly concentrated visible or infrared light beams, associated with the testing or use of optical fibres, can cause damage to the eyes, or even blindness."
+    },
+    {
+      "id": "10.35",
+      "question": "The use of a multi-lock hasp with the appropriate number of padlocks is a recommended method of safe isolation where:",
+      "answers": [
+        "Individual circuit breaker locking off devices are not available",
+        "Individual circuit breakers are not identified at the distribution board",
+        "More than one person will be working on circuits supplied from the same distribution board",
+        "You know the health and safety inspector is in the area"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A multi-lock hasp can be used to prevent operation of the isolator until such time that all persons working on the electrical installation have completed their work and removed their padlocks from the hasp."
+    },
+    {
+      "id": "10.36",
+      "question": "Which of the following procedures should be used when more than one person will be working on circuits supplied from a distribution board which has been switched off?",
+      "answers": [
+        "The use of a multi-lock hasp on the isolator with a padlock for each operative",
+        "Blowing a horn before the power is switched on again",
+        "Giving each operative a volt stick",
+        "Telling everyone what time the power will be switched on again"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A multi-lock hasp can be used to prevent operation of the isolator until such time that all persons working on the electrical installation have completed their work and removed their padlocks from the hasp."
+    },
+    {
       "id": "11.1",
-      "question": "ou are on site and you need to dispose of some waste liquid which has oil in it and you are not sure what to do with it. What should you do?",
+      "question": "You are on site and you need to dispose of some waste liquid which has oil in it and you are not sure what to do with it. What should you do?",
       "answers": [
         "Dispose of it in a sealed container into the site skip",
         "Pour it onto the ground, it will soak away",
         "Take it outside and set light to it",
-        "Ask your supervisor about the correct way to deal with this waste"
+        "Ask your supervisor about the correct way to deal with this waste."
       ],
       "correctAnswer": 3,
-      "explanation": "Dealing with hazardous/special waste will include proper storage and segregation before it is taken away by an authorised waste carrier as required by environmental\nlegislation. An oil spillage could also get into the ground or drains, which may also be an offence under environmental law. Burning waste on site is also an offence, under air pollution legislation, and can lead to local complaints."
+      "explanation": "Dealing with hazardous/special waste will include proper storage and segregation before it is taken away by an authorised waste carrier as required by environmental legislation. An oil spillage could also get into the ground or drains, which may also be an offence under environmental law. Burning waste on site is also an offence, under air pollution legislation, and can lead to local complaints."
+    },
+    {
+      "id": "11.2",
+      "question": "How should you get rid of hazardous/special waste?",
+      "answers": [
+        "Put it at the bottom of any site skip",
+        "In accordance with the correct site waste rules",
+        "Take it home, they wont want it on site",
+        "Take it to the nearest local authority waste tip"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Hazardous Waste Regulations (Special Waste Regulations in Scotland) require hazardous/special waste to be properly segregated or otherwise treated, and then recovered or disposed of in an officially approved way."
+    },
+    {
+      "id": "11.3",
+      "question": "Which of the following is classed as hazardous/special waste?",
+      "answers": [
+        "Non-asbestos Insulation",
+        "Polythene and shrink wrap",
+        "Empty cement bags",
+        "Fluorescent light tubes"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Hazardous wastes (special wastes in Scotland) are specified in waste legislation. Fluorescent tubes are included because of their mercury content."
+    },
+    {
+      "id": "11.4",
+      "question": "Which of the following should be disposed of as hazardous/special waste?",
+      "answers": [
+        "Timber, plywood and MDF off-cuts",
+        "Glass fibre insulation",
+        "Aerosol sealant canisters",
+        "Used nuisance dust masks"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Hazardous wastes (special wastes in Scotland) are specified in waste legislation. Aerosol sealants are included because they can explode if not recovered or disposed of properly, and they may still contain hazardous solvents."
+    },
+    {
+      "id": "11.5",
+      "question": "You need to clean up some oil that has leaked from machinery onto the ground. What is the right way to do this?",
+      "answers": [
+        "Put the oily contaminated soil into the general waste skip",
+        "Put the oily contaminated soil into a suitable container that takes hazardous waste",
+        "Put it under some off-cuts so that the oil cannot be seen",
+        "Wash the oil away with water and detergent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Oil-contaminated wastes are classified as hazardous/special waste in waste legislation. The Hazardous Waste Regulations (Special Waste Regulations in Scotland) require such waste to be properly segregated or otherwise treated, and then recovered or disposed of in an approved way. Following the other options would be an offence under waste legislation."
+    },
+    {
+      "id": "11.6",
+      "question": "Other site workers are complaining that you are generating too much dust. What should you do?",
+      "answers": [
+        "Tell them you have nearly finished",
+        "Stop work and inform your supervisor",
+        "Ignore them – it's none of their business",
+        "Issue the other site workers with dust masks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Excessive dust may be a health hazard to you and those around you, but even if it is not a health hazard, excessive dust can be a 'statutory nuisance (under the Environmental Protection Act). Even when it is not a statutory nuisance, it can lead to complaints from neighbours and possible damage to neighbouring property."
+    },
+    {
+      "id": "11.7",
+      "question": "Who needs to understand relevant environmental risks on a construction site?",
+      "answers": [
+        "Only the principal contractor",
+        "Only the subcontractors",
+        "Everyone working on the site",
+        "Only the environmental clerk of works"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The actions of everyone on site determine how well the risks to the environment (such as water pollution, or creating a local nuisance) are controlled."
+    },
+    {
+      "id": "11.8",
+      "question": "Under environmental law, which statement is true?",
+      "answers": [
+        "Companies and individuals can be prosecuted if they do not follow the law",
+        "Companies can be prosecuted, but not individuals",
+        "It is legal to transport business waste without proper paperwork",
+        "It is legal to disturb protected species' habitats"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Most environmental law is enforced against companies, but the regulator in the relevant part of the UK (the Environment Agency, SEPA or NIEA) can also prosecute company officers and even have powers to prosecute employees if they wilfully contribute to environmental harm."
+    },
+    {
+      "id": "11.9",
+      "question": "Do individuals have any responsibility for sustainability when on site?",
+      "answers": [
+        "No, it is dealt with by the site manager",
+        "No, it is a matter for the Environment Agency/NIEA/SEPA",
+        "Only on sites where there is asbestos",
+        "Yes, on every site"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Your responsibility is to follow the site and company rules aimed at environmental protection and sustainability, and to help your company to comply with relevant legal requirements, such as the need to segregate waste properly (e.g. so that it can be recovered)."
+    },
+    {
+      "id": "11.10",
+      "question": "Which of the following is NOT best practice from a sustainability point of view?",
+      "answers": [
+        "Saving materials, fuel, water and energy",
+        "Looking after the people working on or near the site",
+        "Protecting the environment",
+        "Sending unused and waste copper cables to landfill"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Option D would be wasting a valuable natural resource (copper) that could be effectively recovered for later use or recycling. Reusing or recycling copper has less environmental impact than mining and extracting new copper reserves."
+    },
+    {
+      "id": "11.11",
+      "question": "Which of the following does NOT help sustainability during construction projects?",
+      "answers": [
+        "Leaving engines and motors running when they are not needed",
+        "Segregating waste",
+        "Vehicle sharing or using public transport to get to work",
+        "Avoiding overheating site huts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Leaving engines running unnecessarily generates local air pollution and carbon dioxide emissions (which contribute to global warming), and also increases the noise nuisance."
+    },
+    {
+      "id": "11.12",
+      "question": "Which of the following should you do on site in the interest of sustainability?",
+      "answers": [
+        "Run plant and equipment when they are not needed",
+        "Bury waste material",
+        "Comply with site instructions on handling waste materials",
+        "Pour waste liquids down a drain off-site"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Your actions will help your company, and others working on site, to achieve more sustainable work practices, such as waste recovery."
+    },
+    {
+      "id": "11.13",
+      "question": "Which of the following is NOT part of 'environmentally-friendly' construction?",
+      "answers": [
+        "Creating a dust nuisance to residents in neighbouring properties",
+        "Preventing water and soil pollution",
+        "Saving energy",
+        "Minimising the amount of waste you create during a job"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Neighbours outside the site are an important part of the wider environment. They may be affected by nuisance (such as noise, dust or even light at night), and they may complain to the client, main contractor or the local enforcing authority. Creating certain types of nuisance is an offence under the Environmental Protection Act."
+    },
+    {
+      "id": "11.14",
+      "question": "From an environmental point of view, why should materials be reused, where possible?",
+      "answers": [
+        "To save the client money",
+        "A lot of energy and raw materials go into making most construction products",
+        "It makes less mess on site",
+        "Its' a European Union Law"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Although reducing the amount of waste is the first priority, the re-use of materials can also contribute to effective waste management."
+    },
+    {
+      "id": "11.15",
+      "question": "Which action will help to minimise waste?",
+      "answers": [
+        "Only take or open what you need and return or reseal anything left over",
+        "Use new materials/packs at the beginning of each day",
+        "Leave materials unprotected in the rain",
+        "Always order much more than usually required – just in case you need it"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The hierarchy for managing waste is to reduce/reuse/recover. Reducing the amount of waste is therefore the first priority."
+    },
+    {
+      "id": "11.16",
+      "question": "Which of the following is good environmental practice?",
+      "answers": [
+        "Over-ordering materials",
+        "Segregating waste into different types",
+        "Leaving skips uncovered in wet weather",
+        "Leaving motors running when they are not needed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is good practice, since it will help with waste recovery. If the waste is classified as hazardous waste (special waste in Scotland) proper segregation is also a legal requirement."
+    },
+    {
+      "id": "11.17",
+      "question": "Do individuals have any responsibility for minimising the amount of waste created on site?",
+      "answers": [
+        "Only if asbestos removal is being carried out",
+        "Yes, everyone on site has this responsibility",
+        "No, it's the responsibility of the client",
+        "Only during site clean-up, at the end of the project"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Your actions will help your company, and others on site, to procure sensibly and to organise the job so that materials and substances are not wasted. Waste reduction is the best option when trying to manage site waste."
+    },
+    {
+      "id": "11.18",
+      "question": "If you have unused material left, what should you do before you consider putting non-hazardous waste items into a skip?",
+      "answers": [
+        "Make sure there is a label on it",
+        "Put it in a plastic bag and put it in a skip",
+        "Check whether someone else on your team can make use of it",
+        "Weigh it"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Although reducing the amount of waste is the first priority, the reuse of waste materials is much better than disposal, which is the most expensive option and which should be the last resort. Reuse is a better waste management option than recovery."
+    },
+    {
+      "id": "11.19",
+      "question": "Why should different types of waste be separated on site?",
+      "answers": [
+        "It will take up less room in the skip",
+        "So the local council can charge Landfill Tax",
+        "So the main contractor can check what's being thrown away",
+        "So waste can be recovered more easily"
+      ],
+      "correctAnswer": 3,
+      "explanation": "This is good practice, since waste recovery can save both energy and materials, compared to creating brand new materials or items. It will also cut the amount of waste that goes to landfill. If the waste is classed as hazardous (special waste in Scotland) then the effective separation of different wastes is a legal requirement."
+    },
+    {
+      "id": "11.20",
+      "question": "When storing liquids (such as oils, fuels or chemicals) on-site, what must you do?",
+      "answers": [
+        "Always use the nearest container",
+        "Use a transparent container so you can check how much liquid is in it",
+        "Ensure the liquid material is stored safely and securely, and out of the way of site traffic",
+        "Keep the tops off, to prevent pressure from building up"
+      ],
+      "correctAnswer": 2,
+      "explanation": ""
     }
   ]
 }
