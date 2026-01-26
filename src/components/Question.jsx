@@ -1,6 +1,6 @@
 import { useMemo, useEffect } from "react";
 import {shuffle} from "../utils/shuffle.js";
-import {getCategoryById, getCategoryName} from "../utils/getCategory.jsx";
+import {getCategoryName} from "../utils/getCategory.jsx";
 
 function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onNextQuestion }) {
 

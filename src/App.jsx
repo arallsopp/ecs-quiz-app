@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useCallback} from 'react'
 import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
@@ -53,7 +53,7 @@ function App() {
     const passingScore = Math.ceil(questionsToAsk * 0.86);
     const passed = score >= passingScore;
 
-    const handleStartQuiz = () => {
+    const handleStartQuiz = useCallback(() => {
 
         // Filter questions by selected categories
         const filteredQuestions = questionsData.questions
@@ -91,7 +91,7 @@ function App() {
 
         // Start the quiz
         setQuizStarted(true);
-    };
+    });
 
     const handleAnswerClick = (answerIndex) => {
         setSelectedAnswer(answerIndex);
@@ -135,27 +135,20 @@ function App() {
     // allow key:enter to show stats page when quiz is finished.
     useEffect(() => {
         const handleEnter = (e) => {
-            console.log('show score is ',showScore);
             if (e.key === 'Enter') {
                 if (showScore) {
-                    // you are at the end
-                    setQuizStarted(false); //not playing
-                    setShowScore(false); //not showing score
-                    setShowDashboard(true); //show the analysis, we will go back to splash.
-                }else if(!quizStarted) {
-                    //we are on the dash screen, start the quiz
-                    if(!showDashboard){
-                        handleStartQuiz();
-                    }
+                    setQuizStarted(false);
+                    setShowScore(false);
+                    setShowDashboard(true);
+                } else if (!quizStarted && !showDashboard) {
+                    handleStartQuiz();
                 }
             }
-
         };
+
         document.addEventListener('keydown', handleEnter);
         return () => document.removeEventListener('keydown', handleEnter);
-    },[quizStarted,showScore,setShowScore,setShowDashboard,showDashboard,handleStartQuiz]);
-    { /* todo: including handleStartQuiz in the deps make this change on every render. */}
-
+    }, [quizStarted, showScore, showDashboard, handleStartQuiz]);
 
     const finishQuiz = () => {
         const timeSpent = mode === 'exam' ? Math.floor((Date.now() - quizStartTime) / 1000) : null;
