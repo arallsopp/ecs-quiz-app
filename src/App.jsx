@@ -51,20 +51,10 @@ function App() {
     //about state
     const [showAbout, setShowAbout] = useState(false);
 
-    //flashcard state
-    const [flashcardStats, setFlashcardStats] = useState({ gotIt: 0, needsPractice: 0 });
-
     const [questions, setQuestions] = useState(questionsData.questions);
 
     const passingScore = Math.ceil(questionsToAsk * 0.86);
     const passed = score >= passingScore;
-
-    const handleFlashcardMark = (questionId, gotIt) => {
-        setFlashcardStats(prev => ({
-            gotIt: gotIt ? prev.gotIt + 1 : prev.gotIt,
-            needsPractice: gotIt ? prev.needsPractice : prev.needsPractice + 1
-        }));
-    };
 
     const handleFlashcardNext = () => {
         const nextQuestion = currentQuestionIndex + 1;
@@ -170,7 +160,7 @@ function App() {
         const handleEnter = (e) => {
             if (e.key === 'Enter') {
                 if (showScore) {
-                    // score at end is shown, advance to dashbaord
+                    // score at end is shown, advance to dashboard
                     setQuizStarted(false);
                     setShowScore(false);
                     setShowDashboard(true);
@@ -451,7 +441,6 @@ function App() {
                                             <Flashcard
                                                 questionData={questions[currentQuestionIndex]}
                                                 onNext={handleFlashcardNext}
-                                                onMark={handleFlashcardMark}
                                                 currentIndex={currentQuestionIndex}
                                                 total={questionsToAsk}
                                             />

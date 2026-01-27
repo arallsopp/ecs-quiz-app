@@ -4,23 +4,22 @@ import { getCategoryName } from '../utils/getCategory';
 import { addPracticeCard, removePracticeCard } from '../utils/scoreStorage';
 import { getPracticeCards } from '../utils/scoreStorage';
 
-function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
+function Flashcard({ questionData, onNext, currentIndex, total }) {
     const [flipped, setFlipped] = useState(false);
     const isMarkedForPractice = getPracticeCards().includes(questionData.id);
 
     const handleMark = (gotIt) => {
         if (gotIt) {
-            // They got it - remove from practice list
             removePracticeCard(questionData.id);
         } else {
-            // They need practice - add to practice list
             addPracticeCard(questionData.id);
         }
 
-        onMark(questionData.id, gotIt);
+        // Remove onMark(questionData.id, gotIt); - DELETE THIS LINE
         setFlipped(false);
         onNext();
     };
+
 
     useEffect(() => {
         const handleKeyPress = (e) => {
@@ -39,7 +38,7 @@ function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
 
         document.addEventListener('keydown', handleKeyPress);
         return () => document.removeEventListener('keydown', handleKeyPress);
-    }, [flipped]);
+    }, [flipped, handleMark, onNext, questionData.id, setFlipped]);
 
     return (
         <div className="max-w-2xl mx-auto">
