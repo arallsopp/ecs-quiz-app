@@ -10,9 +10,14 @@ import { getCategoryFromId } from './utils/getCategory';
 import About from './components/About';
 import Toggle from './components/Toggle';
 import Flashcard from './components/Flashcard';
+import { getPracticeCards } from './utils/scoreStorage';
 
 
 function App() {
+
+    //practice cards only
+    const [practiceCardsOnly, setPracticeCardsOnly] = useState(false);
+    const practiceCardCount = getPracticeCards().length;
 
     // Quiz settings (set on splash screen)
     const [questionsToAsk, setQuestionsToAsk] = useState(8);
@@ -72,16 +77,26 @@ function App() {
 
 
     const handleStartQuiz = useCallback(() => {
-
-        // Filter questions by selected categories
-        const filteredQuestions = questionsData.questions
+        let filteredQuestions = questionsData.questions
             .map(q => ({
                 ...q,
-                category: getCategoryFromId(q.id) // Add category here
+                category: getCategoryFromId(q.id)
             }))
             .filter(q => selectedCategories.includes(q.category));
 
-        if (selectedCategories.length === 0) {
+        // If in flashcard mode and "practice cards only" is checked
+        if (mode === 'flashcard' && practiceCardsOnly) {
+            const practiceCardIds = getPracticeCards();
+            filteredQuestions = filteredQuestions.filter(q =>
+                practiceCardIds.includes(q.id)
+            );
+
+            // Update question count to match practice cards
+            setQuestionsToAsk(Math.min(filteredQuestions.length, questionsToAsk));
+        }
+
+        // Shuffle the filtered questions
+         if (selectedCategories.length === 0) {
             alert('Please select at least one topic');
             return;
         }
@@ -109,7 +124,7 @@ function App() {
 
         // Start the quiz
         setQuizStarted(true);
-    });
+    }, [selectedCategories, mode, questionsToAsk, practiceCardsOnly]);
 
     const handleAnswerClick = (answerIndex) => {
         setSelectedAnswer(answerIndex);
@@ -312,6 +327,24 @@ function App() {
                                 </select>
                             </div>
                             </div>
+
+                        {/* practice flashcards */}
+                        {mode === 'flashcard' && practiceCardCount > 0 && (
+                            <div className="mb-4">
+                                <label className="flex items-center gap-2 p-3 rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800">
+                                    <input
+                                        type="checkbox"
+                                        checked={practiceCardsOnly}
+                                        onChange={(e) => setPracticeCardsOnly(e.target.checked)}
+                                        className="w-4 h-4 text-blue-600 rounded"
+                                    />
+                                    <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+          Practice marked cards only ({practiceCardCount} cards)
+        </span>
+                                </label>
+                            </div>
+                        )}
+
                             <button
                             onClick={handleStartQuiz}
                             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"

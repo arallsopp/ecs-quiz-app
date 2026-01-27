@@ -1,11 +1,22 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { getQuizStats, getQuizHistory, clearQuizHistory } from '../utils/scoreStorage';
+import {getQuizStats, getQuizHistory, clearQuizHistory, removePracticeCard} from '../utils/scoreStorage';
 import { getCategoryById } from '../utils/getCategory.jsx';
+import { getPracticeCards, clearPracticeCards } from '../utils/scoreStorage';
+import questionsData from '../data/questions.json'; //need this for practice cards
+
 
 function Dashboard({ onClose }) {
-    const [history, setHistory] = useState(() => getQuizHistory());
     const [stats, setStats] = useState(() => getQuizStats());
+    const [history, setHistory] = useState(() => getQuizHistory());
+    const [practiceCards, setPracticeCards] = useState(() => getPracticeCards());
+
+    const handleClearPracticeCards = () => {
+        if (window.confirm('Clear all practice cards?')) {
+            clearPracticeCards();
+            setPracticeCards([]);
+        }
+    };
 
     // escape key closes
     useEffect(() => {
@@ -92,6 +103,57 @@ function Dashboard({ onClose }) {
                         {stats.passRate}%</div>
                 </div>
             </div>
+
+            {/* Practice Cards Section */}
+            {practiceCards.length > 0 && (
+                <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                    <div className="flex items-center justify-between mb-4">
+                        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                            Cards Marked for Practice
+                        </h2>
+                        <button
+                            onClick={handleClearPracticeCards}
+                            className="text-sm text-red-600 hover:text-red-700 dark:text-red-400"
+                        >
+                            Clear All
+                        </button>
+                    </div>
+
+                    <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-4 rounded mb-4">
+                        <p className="text-sm text-orange-800 dark:text-orange-200">
+                            You have <strong>{practiceCards.length}</strong> card{practiceCards.length !== 1 ? 's' : ''} marked for practice.
+                            Start a flashcard session with "Practice marked cards only" to review them.
+                        </p>
+                    </div>
+
+                    <div className="space-y-2 max-h-64 overflow-y-auto">
+                        {practiceCards.map(cardId => {
+                            const question = questionsData.questions.find(q => q.id === cardId);
+                            if (!question) return null;
+
+                            return (
+                                <div key={cardId} className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                  <span className="text-xs font-mono text-gray-500 dark:text-gray-400">
+                                    {cardId}
+                                  </span>
+                                  <span
+                                      className="flex-1 text-sm text-gray-700 dark:text-gray-300">
+                                      {question.question.substring(0, 100)}...
+                                  </span>
+                                  <button
+                                        onClick={() => {
+                                            removePracticeCard(cardId);
+                                            setPracticeCards(getPracticeCards());
+                                        }}
+                                        className="text-xs text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                                        > ✓
+                                  </button>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
 
             {/* Progress Chart --now using a fixed height container, still not working*/}
             <div className="bg-white    dark:bg-gray-800 rounded-lg shadow-md p-6">

@@ -1,11 +1,22 @@
 // src/components/Flashcard.jsx
 import { useState, useEffect } from 'react';
 import { getCategoryName } from '../utils/getCategory';
+import { addPracticeCard, removePracticeCard } from '../utils/scoreStorage';
+import { getPracticeCards } from '../utils/scoreStorage';
 
 function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
     const [flipped, setFlipped] = useState(false);
+    const isMarkedForPractice = getPracticeCards().includes(questionData.id);
 
     const handleMark = (gotIt) => {
+        if (gotIt) {
+            // They got it - remove from practice list
+            removePracticeCard(questionData.id);
+        } else {
+            // They need practice - add to practice list
+            addPracticeCard(questionData.id);
+        }
+
         onMark(questionData.id, gotIt);
         setFlipped(false);
         onNext();
@@ -35,7 +46,14 @@ function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
             {/* Progress */}
             <div className="mb-4 flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
                 <span>Card {currentIndex + 1} of {total}</span>
-                <span className="text-xs">{getCategoryName(questionData.id)}</span>
+                <div className="flex items-center gap-2">
+                    {isMarkedForPractice && (
+                        <span className="text-xs bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 px-2 py-1 rounded">
+          📌 Marked
+        </span>
+                    )}
+                    <span className="text-xs">{getCategoryName(questionData.id)}</span>
+                </div>
             </div>
 
             {/* Card */}
