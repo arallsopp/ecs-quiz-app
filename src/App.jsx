@@ -263,7 +263,16 @@ function App() {
                                 <select
                                     id="mode"
                                     value={mode}
-                                    onChange={(e) => setMode(e.target.value)}
+                                    onChange={(e) => {
+                                        const newMode = e.target.value;
+                                        setMode(newMode);
+
+                                        if (newMode === 'exam') {
+                                            // Auto-configure for official exam conditions
+                                            setQuestionsToAsk(50);
+                                            setSelectedCategories(questionsData.categories.map(c => c.id));
+                                        }
+                                    }}
                                     className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2 sm:h-10">
                                     <option value="practice">Practice Mode</option>
                                     <option value="exam">Exam Conditions</option>
