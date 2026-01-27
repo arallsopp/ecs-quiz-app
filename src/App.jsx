@@ -9,10 +9,8 @@ import Dashboard from './components/Dashboard';
 import { getCategoryFromId } from './utils/getCategory';
 import About from './components/About';
 import Toggle from './components/Toggle';
+import Flashcard from './components/Flashcard';
 
-/* todo: use the categories from the questions JSON.
-         name them in full on screen.
- */
 
 function App() {
 
@@ -48,10 +46,30 @@ function App() {
     //about state
     const [showAbout, setShowAbout] = useState(false);
 
+    //flashcard state
+    const [flashcardStats, setFlashcardStats] = useState({ gotIt: 0, needsPractice: 0 });
+
     const [questions, setQuestions] = useState(questionsData.questions);
 
     const passingScore = Math.ceil(questionsToAsk * 0.86);
     const passed = score >= passingScore;
+
+    const handleFlashcardMark = (questionId, gotIt) => {
+        setFlashcardStats(prev => ({
+            gotIt: gotIt ? prev.gotIt + 1 : prev.gotIt,
+            needsPractice: gotIt ? prev.needsPractice : prev.needsPractice + 1
+        }));
+    };
+
+    const handleFlashcardNext = () => {
+        const nextQuestion = currentQuestionIndex + 1;
+        if (nextQuestion < questionsToAsk) {
+            setCurrentQuestionIndex(nextQuestion);
+        } else {
+            setShowScore(true);
+        }
+    };
+
 
     const handleStartQuiz = useCallback(() => {
 
@@ -288,6 +306,7 @@ function App() {
                                     }}
                                     className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2 sm:h-10">
                                     <option value="practice">Practice Mode</option>
+                                    <option value="flashcard">Flashcard Study</option>
                                     <option value="exam">Exam Conditions</option>
                                 </select>
                             </div>
@@ -392,13 +411,27 @@ function App() {
                                     </div>
                                 </div>
                             ) : (
-                                <Question
-                                    questionData={questions[currentQuestionIndex]}
-                                    onAnswer={handleAnswerClick}
-                                    selectedAnswer={selectedAnswer}
-                                    showingFeedback={showingFeedback}
-                                    onNextQuestion={handleNextQuestion}
-                                />
+                                <>
+                                    {(mode === "flashcard")
+                                        ? (
+                                            <Flashcard
+                                                questionData={questions[currentQuestionIndex]}
+                                                onNext={handleFlashcardNext}
+                                                onMark={handleFlashcardMark}
+                                                currentIndex={currentQuestionIndex}
+                                                total={questionsToAsk}
+                                            />
+                                        ) : (
+                                            <Question
+                                                questionData={questions[currentQuestionIndex]}
+                                                onAnswer={handleAnswerClick}
+                                                selectedAnswer={selectedAnswer}
+                                                showingFeedback={showingFeedback}
+                                                onNextQuestion={handleNextQuestion}
+                                            />
+                                        )
+                                    }
+                                </>
                             )}
                         </div>
                     </div>
