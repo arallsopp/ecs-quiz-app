@@ -217,10 +217,13 @@ function App() {
                                             key={category.id}
                                             checked={selectedCategories.includes(category.id)}
                                             onChange={(checked) => {
-                                                if (checked) {
-                                                    setSelectedCategories([...selectedCategories, category.id]);
-                                                } else {
-                                                    setSelectedCategories(selectedCategories.filter(id => id !== category.id));
+                                                if (mode !== 'exam') {
+                                                    // In practice mode, you're allowed to toggle the selection
+                                                    if (checked) {
+                                                        setSelectedCategories([...selectedCategories, category.id]);
+                                                    } else {
+                                                        setSelectedCategories(selectedCategories.filter(id => id !== category.id));
+                                                    }
                                                 }
                                             }}
                                             label={category.name}
@@ -230,17 +233,26 @@ function App() {
                                 }
                             </div>
 
-                            <button
-                                onClick={() => setSelectedCategories(questionsData.categories.map(c => c.id))}
-                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline mt-2"
-                            >
-                                Select All
-                            </button> |     <button
-                                onClick={() => setSelectedCategories([])}
-                                className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                            >
-                                None
-                            </button>
+                            {mode !== 'exam' && (
+                                <div className="flex gap-1 mt-2 text-xs">
+                                    Select
+                                    <button
+                                        onClick={() => setSelectedCategories(questionsData.categories.map(c => c.id))}
+                                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                                    > All
+                                    </button>|
+                                    <button
+                                        onClick={() => setSelectedCategories([])}
+                                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                                    > None
+                                    </button>
+                                </div>
+                            )}
+                            {mode === 'exam' && (
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                                    Exam mode: 50 questions, all categories, 30 minutes
+                                </p>
+                            )}
                         </div>
                         <div className="sm:grid sm:grid-cols-2 sm:gap-2">
                             <div>
@@ -252,6 +264,7 @@ function App() {
                                 min="1"
                                 max={questionsData.questions.length}
                                 value={questionsToAsk}
+                                disabled={mode === 'exam'}
                                 onChange={(e) => setQuestionsToAsk(parseInt(e.target.value) || 1)}
                                 className="w-full rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-slate-800 dark:text-white px-4 py-2 sm:h-10"
                             />
