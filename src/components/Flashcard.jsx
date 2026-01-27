@@ -1,8 +1,9 @@
 // src/components/Flashcard.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getCategoryName } from '../utils/getCategory';
 import { addPracticeCard, removePracticeCard } from '../utils/scoreStorage';
 import { getPracticeCards } from '../utils/scoreStorage';
+
 
 function Flashcard({ questionData, onNext, currentIndex, total }) {
     const [flipped, setFlipped] = useState(false);
@@ -18,6 +19,29 @@ function Flashcard({ questionData, onNext, currentIndex, total }) {
         setFlipped(false);
         onNext();
     };
+
+    // Keyboard shortcuts
+    useEffect(() => {
+        const handleKeyPress = (e) => {
+            if (!flipped) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setFlipped(true);
+                }
+            } else {
+                if (e.key === '1') {
+                    e.preventDefault();
+                    handleMark(false);
+                } else if (e.key === '2') {
+                    e.preventDefault();
+                    handleMark(true);
+                }
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyPress);
+        return () => document.removeEventListener('keydown', handleKeyPress);
+    });
 
     return (
         <div className="max-w-2xl mx-auto">

@@ -179,6 +179,7 @@ function App() {
 
         // Calculate category scores
         const categoryScores = {};
+
         quizAnswers.forEach(answer => {
             if (!categoryScores[answer.category]) {
                 categoryScores[answer.category] = { correct: 0, total: 0 };
@@ -398,12 +399,20 @@ function App() {
                             {showScore ? (
                                 <div className="bg-white dark:bg-black text-black dark:text-gray-200 rounded-lg shadow-md p-8 text-center">
                                     <h2 className="text-3xl font-bold">Finished</h2>
+                                    { mode === "flashcard" && (
+                                        <div className="text-xl mb-4">
+                                            You reviewed {questionsToAsk} flashcards.
+                                        </div>
+                                    )}
+                                    { mode !== "flashcard" && (<>
                                     <div className="text-6xl font-bold mb-4">
                                         {((score / questionsToAsk) * 100).toFixed(1)}%
                                     </div>
                                     <p className="text-xl text-gray-600 dark:text-gray-200 mb-6">
                                         You scored {score} out of {questionsToAsk}
                                     </p>
+                                    </>)
+                                    }
                                     {passed ? (
                                         <p className="text-2xl text-green-600 font-bold mb-6">
                                             ✓ PASS
