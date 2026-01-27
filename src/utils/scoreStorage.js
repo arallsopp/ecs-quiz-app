@@ -1,4 +1,51 @@
 const STORAGE_KEY = 'ecs_quiz_history';
+const PRACTICE_CARDS_KEY = 'ecs_practice_cards';
+
+export const addPracticeCard = (questionId) => {
+    try {
+        const cards = getPracticeCards();
+        if (!cards.includes(questionId)) {
+            cards.push(questionId);
+            localStorage.setItem(PRACTICE_CARDS_KEY, JSON.stringify(cards));
+        }
+        return true;
+    } catch (error) {
+        console.error('Failed to save practice card:', error);
+        return false;
+    }
+};
+
+export const removePracticeCard = (questionId) => {
+    try {
+        const cards = getPracticeCards();
+        const filtered = cards.filter(id => id !== questionId);
+        localStorage.setItem(PRACTICE_CARDS_KEY, JSON.stringify(filtered));
+        return true;
+    } catch (error) {
+        console.error('Failed to remove practice card:', error);
+        return false;
+    }
+};
+
+export const getPracticeCards = () => {
+    try {
+        const data = localStorage.getItem(PRACTICE_CARDS_KEY);
+        return data ? JSON.parse(data) : [];
+    } catch (error) {
+        console.error('Failed to load practice cards:', error);
+        return [];
+    }
+};
+
+export const clearPracticeCards = () => {
+    try {
+        localStorage.removeItem(PRACTICE_CARDS_KEY);
+        return true;
+    } catch (error) {
+        console.error('Failed to clear practice cards:', error);
+        return false;
+    }
+};
 
 export const saveQuizResult = (result) => {
     try {
