@@ -155,6 +155,7 @@ function App() {
         const handleEnter = (e) => {
             if (e.key === 'Enter') {
                 if (showScore) {
+                    // score at end is shown, advance to dashbaord
                     setQuizStarted(false);
                     setShowScore(false);
                     setShowDashboard(true);

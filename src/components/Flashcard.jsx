@@ -1,5 +1,5 @@
 // src/components/Flashcard.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getCategoryName } from '../utils/getCategory';
 
 function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
@@ -10,6 +10,25 @@ function Flashcard({ questionData, onNext, onMark, currentIndex, total }) {
         setFlipped(false);
         onNext();
     };
+
+    useEffect(() => {
+        const handleKeyPress = (e) => {
+            if (!flipped) {
+                if (e.key === ' ' || e.key === 'Enter') {
+                    setFlipped(true);
+                }
+            } else {
+                if (e.key === '1') {
+                    handleMark(false);
+                } else if (e.key === '2') {
+                    handleMark(true);
+                }
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyPress);
+        return () => document.removeEventListener('keydown', handleKeyPress);
+    }, [flipped]);
 
     return (
         <div className="max-w-2xl mx-auto">
