@@ -60,8 +60,8 @@ function Dashboard({ onClose }) {
                     {/* Sticky header */}
                     <div className="sticky top-0 z-10 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 rounded-t-lg">
                         <div className="flex items-center justify-between">
-                            <h1 className="text-2xl md:text-3xl font-bold text-primary-800 dark:text-gray-100">
-                                Your Progress Dashboard
+                            <h1 className="text-2xl md:text-3xl font-bold text-primary-800 dark:text-primary-100">
+                                Your Progress Dashboard bob
                             </h1>
                             <button
                                 onClick={onClose}

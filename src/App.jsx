@@ -221,7 +221,7 @@ function App() {
             {!quizStarted && (
                 <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
                     <img src={icon} alt="ECS" className="w-auto h-10 mx-auto mb-6 md:inline md:mr-2" />
-                    <h1 className="text-3xl font-bold text-center text-primary-500 dark:text-gray-200 mb-8 md:inline">
+                    <h1 className="text-3xl font-bold text-center text-primary-500 dark:text-primary-200 mb-8 md:inline">
                          Health & Safety Quiz
                     </h1>
 
