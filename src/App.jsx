@@ -217,17 +217,17 @@ function App() {
             {showDashboard ? (
                 <Dashboard onClose={() => setShowDashboard(false)} />
             ) : (
-        <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
+        <div className="min-h-screen bg-primary-50 dark:bg-black">
             {!quizStarted && (
                 <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
                     <img src={icon} alt="ECS" className="w-auto h-10 mx-auto mb-6 md:inline md:mr-2" />
-                    <h1 className="text-3xl font-bold text-center text-primary-500 dark:text-primary-200 mb-8 md:inline">
+                    <h1 className="text-3xl font-bold text-center text-primary-500 dark:text-primary-300 mb-8 md:inline">
                          Health & Safety Quiz
                     </h1>
 
-                    <div className="bg-white dark:bg-slate-900 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
+                    <div className="bg-white dark:bg-primary-950 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
                         <div className="mb-4">
-                            <div className="flex items-center justify-between text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <div className="flex items-center justify-between text-sm font-medium text-primary-700 dark:text-gray-300 mb-2">
                                 <div>Topics to Include</div>
                                 <div>({selectedCategories.length} of {questionsData.categories.length}) {/* todo: context scroll for more */}</div>
                             </div>
