@@ -3,7 +3,7 @@ import questionsData from './data/questions.json'
 import Question from './components/Question'
 import {shuffle} from "./utils/shuffle.js";
 import Countdown from "./components/Countdown.jsx";
-import icon from './assets/icon.png'
+import icon from './assets/ecs-logo.png'
 import { saveQuizResult } from './utils/scoreStorage';
 import Dashboard from './components/Dashboard';
 import { getCategoryFromId } from './utils/getCategory';
@@ -220,9 +220,9 @@ function App() {
         <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {!quizStarted && (
                 <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
-                    <img src={icon} alt="ECS" className="w-20 h-20 mx-auto mb-6 md:inline md:w-20 md:h-20" />
+                    <img src={icon} alt="ECS" className="w-auto h-10 mx-auto mb-6 md:inline md:mr-2" />
                     <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8 md:inline">
-                        ECS Health & Safety Quiz
+                         Health & Safety Quiz
                     </h1>
 
                     <div className="bg-white dark:bg-slate-900 dark:text-gray-100 rounded-lg shadow-md p-6 space-y-4">
