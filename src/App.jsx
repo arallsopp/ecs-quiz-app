@@ -13,8 +13,6 @@ import Flashcard from './components/Flashcard';
 import { getPracticeCards } from './utils/scoreStorage';
 import UpdatePrompt from './components/UpdatePrompt';
 
-export default App;
-
 
 function App() {
 
