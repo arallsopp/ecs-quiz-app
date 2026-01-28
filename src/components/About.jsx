@@ -22,11 +22,11 @@ function About({ onClose }) {
                         <p>Written for Edward Allsopp</p>
                         <p>January 2025</p>
                         <p>Uses the <a
-                            className="text-blue-600 hover:underline"
+                            className="text-primary-500 hover:underline"
                             href="https://www.ecscard.org.uk/getmedia/2bfce807-2289-4a51-a23e-b1c6f801f3e3/ECS-HSE-Revision-Guide-24-pdf.pdf"
                             target="_blank"
                         >revision guide</a> from <a
-                            className="text-blue-600 hover:underline"
+                            className="text-primary-500 hover:underline"
                             href="https://www.ecscard.org.uk"
                             target="_blank">ECScard.org</a>
                         </p>
@@ -35,7 +35,7 @@ function About({ onClose }) {
 
                 <button
                     onClick={onClose}
-                    className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg"
+                    className="mt-6 w-full bg-primary-500 hover:bg-primary-600 text-white py-2 rounded-lg"
                 >
                     Close
                 </button>

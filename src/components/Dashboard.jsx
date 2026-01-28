@@ -60,7 +60,7 @@ function Dashboard({ onClose }) {
                     {/* Sticky header */}
                     <div className="sticky top-0 z-10 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 rounded-t-lg">
                         <div className="flex items-center justify-between">
-                            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100">
+                            <h1 className="text-2xl md:text-3xl font-bold text-primary-900 dark:text-gray-100">
                                 Your Progress Dashboard
                             </h1>
                             <button
@@ -80,11 +80,11 @@ function Dashboard({ onClose }) {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Total Quizzes</div>
-                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{stats.totalQuizzes}</div>
+                    <div className="text-3xl font-bold text-primary-500 dark:text-blue-400">{stats.totalQuizzes}</div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Questions Answered</div>
-                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">{stats.totalQuestions}</div>
+                    <div className="text-3xl font-bold text-primary-500 dark:text-blue-400">{stats.totalQuestions}</div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Average Score</div>
@@ -239,7 +239,7 @@ function Dashboard({ onClose }) {
                 <span className="text-sm text-gray-600 dark:text-gray-100 max-w-20 sm:max-w-40">
                   {new Date(quiz.timestamp).toLocaleString()}
                 </span>
-                                <span className="px-2 py-1 bg-blue-100 dark:bg-gray-800 text-blue-800 dark:text-blue-100 text-xs rounded">
+                                <span className="px-2 py-1 bg-primary-100 dark:bg-gray-800 text-primary-800 dark:text-blue-100 text-xs rounded">
                   {quiz.mode}
                 </span>
                                 <span className="text-sm">

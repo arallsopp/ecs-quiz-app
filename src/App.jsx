@@ -221,7 +221,7 @@ function App() {
             {!quizStarted && (
                 <div className="max-w-md sm:max-w-full mx-auto pt-20 md:pt-5 px-4">
                     <img src={icon} alt="ECS" className="w-auto h-10 mx-auto mb-6 md:inline md:mr-2" />
-                    <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-gray-200 mb-8 md:inline">
+                    <h1 className="text-3xl font-bold text-center text-primary-500 dark:text-gray-200 mb-8 md:inline">
                          Health & Safety Quiz
                     </h1>
 
@@ -266,18 +266,18 @@ function App() {
                                     Select
                                     <button
                                         onClick={() => setSelectedCategories(questionsData.categories.map(c => c.id))}
-                                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        className="text-primary-500 dark:text-blue-400 hover:underline"
                                     > All
                                     </button>|
                                     <button
                                         onClick={() => setSelectedCategories([])}
-                                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                                        className="text-primary-500 dark:text-blue-400 hover:underline"
                                     > None
                                     </button>
                                 </div>
                             )}
                             {mode === 'exam' && (
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                                <p className="text-xs text-primary-600 dark:text-gray-400 mt-2">
                                     Exam mode: 50 questions, all categories, 30 minutes
                                 </p>
                             )}
@@ -330,7 +330,7 @@ function App() {
                                         type="checkbox"
                                         checked={practiceCardsOnly}
                                         onChange={(e) => setPracticeCardsOnly(e.target.checked)}
-                                        className="w-4 h-4 text-blue-600 rounded"
+                                        className="w-4 h-4 text-primary-500 rounded"
                                     />
                                     <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
           Practice marked cards only ({practiceCardCount} cards)
@@ -341,7 +341,7 @@ function App() {
 
                             <button
                             onClick={handleStartQuiz}
-                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                            className="w-full bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 px-4 rounded-lg transition-colors"
                         >
                             Start Quiz
                         </button>
@@ -440,7 +440,7 @@ function App() {
                                         onClick={() => {
                                             setQuizStarted(false);
                                         }}
-                                        className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+                                        className="w-full mt-4 bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg"
                                     >
                                         Back to Home
                                     </button>

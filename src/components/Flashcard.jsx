@@ -94,8 +94,8 @@ function Flashcard({ questionData, onNext, currentIndex, total }) {
 
                     {/* Explanation - only visible when flipped */}
                     {flipped && questionData.explanation && (
-                        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded">
-                            <p className="text-sm text-blue-900 dark:text-blue-100">
+                        <div className="mt-6 p-4 bg-primary-100 dark:bg-blue-900/20 border-l-4 border-primary-500 rounded">
+                            <p className="text-sm text-primary-900 dark:text-blue-100">
                                 <strong>Explanation:</strong> {questionData.explanation}
                             </p>
                         </div>
@@ -106,7 +106,7 @@ function Flashcard({ questionData, onNext, currentIndex, total }) {
                         <div className="pt-4">
                             <button
                                 onClick={() => setFlipped(true)}
-                                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium"
+                                className="w-full bg-primary-500 hover:bg-primary-600 text-white py-3 rounded-lg font-medium"
                             >
                                 Show Answer
                             </button>

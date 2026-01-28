@@ -64,16 +64,16 @@ function Question({ questionData, onAnswer, selectedAnswer, showingFeedback, onN
             </div>
 
             {showingFeedback && (
-                <div className="bg-blue-50 dark:bg-blue-950 border-l-4 border-blue-600 p-4 rounded">
-                    <div className="font-semibold text-blue-900 dark:text-blue-100 mb-2">
+                <div className="bg-primary-100 dark:bg-blue-950 border-l-4 border-primary-600 p-4 rounded">
+                    <div className="font-semibold text-primary-900 dark:text-blue-100 mb-2">
                         {selectedAnswer === questionData.correctAnswer ? '✓ Correct!' : '✗ Incorrect'}
                     </div>
-                    <p className=" text-blue-800 dark:text-blue-200 text-sm">
+                    <p className=" text-primary-800 dark:text-blue-200 text-sm">
                         {questionData.explanation}
                     </p>
                     <button
                         onClick={onNextQuestion}
-                        className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
+                        className="mt-4 bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg"
                     >
                         Continue →
                     </button>
