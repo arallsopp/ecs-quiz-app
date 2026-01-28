@@ -11,6 +11,9 @@ import About from './components/About';
 import Toggle from './components/Toggle';
 import Flashcard from './components/Flashcard';
 import { getPracticeCards } from './utils/scoreStorage';
+import UpdatePrompt from './components/UpdatePrompt';
+
+export default App;
 
 
 function App() {
@@ -210,6 +213,8 @@ function App() {
 
     return (
         <main role="main">
+            <UpdatePrompt />
+
             {showAbout && <About onClose={() => setShowAbout(false)} />}
             {showDashboard ? (
                 <Dashboard onClose={() => setShowDashboard(false)} />
