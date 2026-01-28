@@ -347,7 +347,7 @@ function App() {
                         </button>
                         <button
                             onClick={() => setShowDashboard(true)}
-                            className="w-full mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                            className="w-full mt-4 bg-primary-800 hover:bg-primary-900 text-white font-medium py-3 px-4 rounded-lg transition-colors"
                         >
                             View Progress Dashboard
                         </button>

@@ -60,7 +60,7 @@ function Dashboard({ onClose }) {
                     {/* Sticky header */}
                     <div className="sticky top-0 z-10 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-4 rounded-t-lg">
                         <div className="flex items-center justify-between">
-                            <h1 className="text-2xl md:text-3xl font-bold text-primary-900 dark:text-gray-100">
+                            <h1 className="text-2xl md:text-3xl font-bold text-primary-800 dark:text-gray-100">
                                 Your Progress Dashboard
                             </h1>
                             <button
@@ -79,26 +79,26 @@ function Dashboard({ onClose }) {
             {/* Overview Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                    <div className="text-sm text-gray-600 dark:text-gray-100">Total Quizzes</div>
-                    <div className="text-3xl font-bold text-primary-500 dark:text-blue-400">{stats.totalQuizzes}</div>
+                    <div className="text-sm text-gray-800 dark:text-gray-100">Total Quizzes</div>
+                    <div className="text-3xl font-bold text-primary-400 dark:text-blue-400">{stats.totalQuizzes}</div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Questions Answered</div>
-                    <div className="text-3xl font-bold text-primary-500 dark:text-blue-400">{stats.totalQuestions}</div>
+                    <div className="text-3xl font-bold text-primary-400 dark:text-blue-400">{stats.totalQuestions}</div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Average Score</div>
                     <div className={`text-3xl font-bold ${stats.averagePercentage >= 86
-                        ? 'text-green-600 dark:text-green-400' 
-                        : 'text-red-600 dark:text-red-400'
+                        ? 'text-success-600 dark:text-success-400' 
+                        : 'text-warning-600 dark:text-warning-400'
                         }`}>
                         {stats.averagePercentage}%</div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                     <div className="text-sm text-gray-600 dark:text-gray-100">Pass Rate</div>
                     <div className={`text-3xl font-bold ${stats.passRate >= 50
-                        ? 'text-green-600 dark:text-green-400'
-                        : 'text-red-600 dark:text-red-400'
+                        ? 'text-success-600 dark:text-success-400'
+                        : 'text-warning-600 dark:text-warning-400'
                     }`}>
                         {stats.passRate}%</div>
                 </div>
@@ -113,14 +113,14 @@ function Dashboard({ onClose }) {
                         </h2>
                         <button
                             onClick={handleClearPracticeCards}
-                            className="text-sm text-red-600 hover:text-red-700 dark:text-red-400"
+                            className="text-sm text-danger-600 hover:text-danger-700 dark:text-warning-400"
                         >
                             Clear All
                         </button>
                     </div>
 
-                    <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 p-4 rounded mb-4">
-                        <p className="text-sm text-orange-800 dark:text-orange-200">
+                    <div className="bg-warning-50 dark:bg-orange-900/20 border-l-4 border-warning-500 p-4 rounded mb-4">
+                        <p className="text-sm text-warning-800 dark:text-orange-200">
                             You have <strong>{practiceCards.length}</strong> card{practiceCards.length !== 1 ? 's' : ''} marked for practice.
                             Start a flashcard session with "Practice marked cards only" to review them.
                         </p>
@@ -156,7 +156,7 @@ function Dashboard({ onClose }) {
             )}
 
             {/* Progress Chart --now using a fixed height container, still not working*/}
-            <div className="bg-white    dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <div className="bg-white  dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Recent Progress</h2>
                 <div className="h-64 flex items-end justify-around gap-2 mb-8">
                     {stats.trend.map((point, index) => (
@@ -164,8 +164,8 @@ function Dashboard({ onClose }) {
                             <div
                                 className={`w-full 
                                 ${point.percentage >= 86 
-                                    ? 'bg-green-600 dark:bg-green-700 hover:bg-green-800 dark:hover:bg-green-600'
-                                    : 'bg-red-600 dark:bg-red-700 hover:bg-red-800 dark:hover:bg-red-600' } 
+                                    ? 'bg-success-500 dark:bg-success-700 hover:bg-success-600 dark:hover:bg-success-600'
+                                    : 'bg-warning-500 dark:bg-warning-700 hover:bg-warning-600 dark:hover:bg-warning-600' } 
                                   rounded-t transition-all`}
                                 style={{ height: `${point.percentage}%` }}
                                 title={`${point.percentage}%`}
@@ -196,9 +196,9 @@ function Dashboard({ onClose }) {
                             <div className="h-3 bg-gray-200 dark:bg-gray-900 rounded-full overflow-hidden">
                                 <div
                                     className={`h-full rounded-full transition-all ${
-                                        cat.percentage >= 86 ? 'bg-green-500' :
-                                            cat.percentage >= 70 ? 'bg-yellow-500' :
-                                                'bg-red-500'
+                                        cat.percentage >= 86 ? 'bg-success-500' :
+                                            cat.percentage >= 70 ? 'bg-warning-500' :
+                                                'bg-danger-500'
                                     }`}
                                     style={{ width: `${cat.percentage}%` }}
                                 />
@@ -208,21 +208,21 @@ function Dashboard({ onClose }) {
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="bg-green-50 dark:bg-gray-700 rounded-lg p-4">
-                        <div className="text-sm text-green-800 dark:text-gray-100 font-medium">Strongest Category</div>
-                        <div className="text-lg font-bold text-green-900 dark:text-green-400 capitalize">
+                    <div className="bg-success-50 dark:bg-gray-700 rounded-lg p-4">
+                        <div className="text-sm text-success-800 dark:text-gray-100 font-medium">Strongest Category</div>
+                        <div className="text-lg font-bold text-success-900 dark:text-success-400 capitalize">
                             {getCategoryById(stats.strongestCategory.category).name}
                         </div>
-                        <div className="text-sm text-green-700 dark:text-green-400">
+                        <div className="text-sm text-success-700 dark:text-success-400">
                             {stats.strongestCategory.percentage}% correct
                         </div>
                     </div>
-                    <div className="bg-orange-50 dark:bg-gray-700 rounded-lg p-4">
-                        <div className="text-sm text-orange-800 dark:text-gray-100 font-medium">Needs Practice</div>
-                        <div className="text-lg font-bold text-orange-900 dark:text-orange-400 capitalize">
+                    <div className="bg-warning-50 dark:bg-gray-700 rounded-lg p-4">
+                        <div className="text-sm text-warning-800 dark:text-gray-100 font-medium">Needs Practice</div>
+                        <div className="text-lg font-bold text-warning-900 dark:text-orange-400 capitalize">
                             {getCategoryById(stats.weakestCategory.category).name }
                         </div>
-                        <div className="text-sm text-orange-700 dark:text-orange-400">
+                        <div className="text-sm text-warning-700 dark:text-orange-400">
                             {stats.weakestCategory.percentage}% correct
                         </div>
                     </div>
@@ -234,12 +234,12 @@ function Dashboard({ onClose }) {
                 <h2 className="text-xl font-semibold mb-4">Recent Attempts</h2>
                 <div className="space-y-2">
                     {history.slice(-10).reverse().map(quiz => (
-                        <div key={quiz.id} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div key={quiz.id} className={`flex items-center justify-between p-3 ${(quiz.passed ? 'bg-success-50' : 'bg-warning-50')} dark:bg-gray-700 rounded-lg`}>
                             <div className="flex items-center gap-4">
                 <span className="text-sm text-gray-600 dark:text-gray-100 max-w-20 sm:max-w-40">
                   {new Date(quiz.timestamp).toLocaleString()}
                 </span>
-                                <span className="px-2 py-1 bg-primary-100 dark:bg-gray-800 text-primary-800 dark:text-blue-100 text-xs rounded">
+                                <span className={`px-2 py-1 ${quiz.passed ? `bg-success-200`:`bg-warning-200`} primary-100 dark:bg-gray-800 text-primary-800 dark:text-blue-100 text-xs rounded`}>
                   {quiz.mode}
                 </span>
                                 <span className="text-sm">
@@ -247,7 +247,7 @@ function Dashboard({ onClose }) {
                 </span>
                             </div>
                             <div className="flex items-center gap-2">
-                <span className={`text-lg font-bold ${quiz.passed ? 'text-green-600' : 'text-red-600'}`}>
+                <span className={`text-lg font-bold ${quiz.passed ? 'text-success-600' : 'text-warning-600'}`}>
                   {quiz.percentage}% {quiz.passed ? '✓' : '✗'}
                 </span>
                             </div>
@@ -260,7 +260,7 @@ function Dashboard({ onClose }) {
             <div className="flex justify-between">
                 <button
                     onClick={handleClearHistory}
-                    className="text-red-600 hover:text-red-700 text-sm"
+                    className="text-danger-600 hover:text-danger-700 text-sm"
                 >
                     Clear All History
                 </button>
